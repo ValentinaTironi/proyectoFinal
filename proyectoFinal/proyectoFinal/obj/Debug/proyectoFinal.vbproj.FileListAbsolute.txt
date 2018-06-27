@@ -1,0 +1,15 @@
+C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinal\proyectoFinal\bin\Debug\proyectoFinal.exe.config
+C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinal\proyectoFinal\bin\Debug\proyectoFinal.exe
+C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinal\proyectoFinal\bin\Debug\proyectoFinal.pdb
+C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinal\proyectoFinal\bin\Debug\proyectoFinal.xml
+C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.vbprojResolveAssemblyReference.cache
+C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.Loginfrm.resources
+C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.Resources.resources
+C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.vbproj.GenerateResource.cache
+C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.vbproj.CoreCompileInputs.cache
+C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.exe
+C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.xml
+C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.pdb
+C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmPresentacion.resources
+C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmPrincipal.resources
+C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmMiCuenta.resources
