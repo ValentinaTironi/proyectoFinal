@@ -32,6 +32,7 @@ Public Class Loginfrm
     End Sub
 
     Private Function Login(user As String, password As String) As Boolean
-        Return user = "valentina" And password = "password"
+        Return user = "user" And password = "password"
     End Function
+
 End Class

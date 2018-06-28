@@ -42,8 +42,13 @@ Partial Class frmMiCuenta
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(550, 346)
         Me.Controls.Add(Me.PictureBox1)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmMiCuenta"
+        Me.ShowIcon = False
+        Me.ShowInTaskbar = False
         Me.Text = "Mi Cuenta"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
