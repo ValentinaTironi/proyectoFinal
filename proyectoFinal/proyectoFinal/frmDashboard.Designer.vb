@@ -85,7 +85,7 @@ Partial Class frmDashboard
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmDashboard"
-        Me.Text = "Dashboard"
+        Me.Text = " "
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
         Me.PerformLayout()

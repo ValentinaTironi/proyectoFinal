@@ -27,14 +27,20 @@ Partial Class frmPrincipal
         Me.mnuItemUsuario = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnMiCuenta = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarSesiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OtraOpciónDelMenúToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.EmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EquiposToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HistorialToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EmpleadosToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EquiposToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClientesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PorUsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuUsuario.SuspendLayout()
         Me.SuspendLayout()
         '
         'mnuUsuario
         '
-        Me.mnuUsuario.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuItemDashboard, Me.mnuItemUsuario, Me.OtraOpciónDelMenúToolStripMenuItem})
+        Me.mnuUsuario.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuItemUsuario, Me.mnuItemDashboard, Me.EmpleadosToolStripMenuItem, Me.EquiposToolStripMenuItem, Me.ClientesToolStripMenuItem, Me.HistorialToolStripMenuItem})
         Me.mnuUsuario.Location = New System.Drawing.Point(0, 0)
         Me.mnuUsuario.Name = "mnuUsuario"
         Me.mnuUsuario.Size = New System.Drawing.Size(763, 24)
@@ -66,26 +72,60 @@ Partial Class frmPrincipal
         Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión"
         '
-        'OtraOpciónDelMenúToolStripMenuItem
+        'EmpleadosToolStripMenuItem
         '
-        Me.OtraOpciónDelMenúToolStripMenuItem.Name = "OtraOpciónDelMenúToolStripMenuItem"
-        Me.OtraOpciónDelMenúToolStripMenuItem.Size = New System.Drawing.Size(135, 20)
-        Me.OtraOpciónDelMenúToolStripMenuItem.Text = "Otra opción del menú"
+        Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
+        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(77, 20)
+        Me.EmpleadosToolStripMenuItem.Text = "Empleados"
         '
-        'ToolStrip1
+        'EquiposToolStripMenuItem
         '
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(763, 25)
-        Me.ToolStrip1.TabIndex = 4
-        Me.ToolStrip1.Text = "ToolStrip1"
+        Me.EquiposToolStripMenuItem.Name = "EquiposToolStripMenuItem"
+        Me.EquiposToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
+        Me.EquiposToolStripMenuItem.Text = "Equipos"
+        '
+        'ClientesToolStripMenuItem
+        '
+        Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
+        Me.ClientesToolStripMenuItem.Text = "Clientes"
+        '
+        'HistorialToolStripMenuItem
+        '
+        Me.HistorialToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmpleadosToolStripMenuItem1, Me.EquiposToolStripMenuItem1, Me.ClientesToolStripMenuItem1, Me.PorUsuariosToolStripMenuItem})
+        Me.HistorialToolStripMenuItem.Name = "HistorialToolStripMenuItem"
+        Me.HistorialToolStripMenuItem.Size = New System.Drawing.Size(63, 20)
+        Me.HistorialToolStripMenuItem.Text = "Historial"
+        '
+        'EmpleadosToolStripMenuItem1
+        '
+        Me.EmpleadosToolStripMenuItem1.Name = "EmpleadosToolStripMenuItem1"
+        Me.EmpleadosToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.EmpleadosToolStripMenuItem1.Text = "Empleados"
+        '
+        'EquiposToolStripMenuItem1
+        '
+        Me.EquiposToolStripMenuItem1.Name = "EquiposToolStripMenuItem1"
+        Me.EquiposToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.EquiposToolStripMenuItem1.Text = "Equipos"
+        '
+        'ClientesToolStripMenuItem1
+        '
+        Me.ClientesToolStripMenuItem1.Name = "ClientesToolStripMenuItem1"
+        Me.ClientesToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.ClientesToolStripMenuItem1.Text = "Clientes"
+        '
+        'PorUsuariosToolStripMenuItem
+        '
+        Me.PorUsuariosToolStripMenuItem.Name = "PorUsuariosToolStripMenuItem"
+        Me.PorUsuariosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.PorUsuariosToolStripMenuItem.Text = "Por Usuarios"
         '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(763, 365)
-        Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.mnuUsuario)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.mnuUsuario
@@ -102,7 +142,13 @@ Partial Class frmPrincipal
     Friend WithEvents mnuItemUsuario As ToolStripMenuItem
     Friend WithEvents btnMiCuenta As ToolStripMenuItem
     Friend WithEvents CerrarSesiónToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents OtraOpciónDelMenúToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents mnuItemDashboard As ToolStripMenuItem
+    Friend WithEvents EmpleadosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EquiposToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ClientesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HistorialToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EmpleadosToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents EquiposToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ClientesToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents PorUsuariosToolStripMenuItem As ToolStripMenuItem
 End Class
