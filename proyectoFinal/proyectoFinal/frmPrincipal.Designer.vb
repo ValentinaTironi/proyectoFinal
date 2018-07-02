@@ -23,35 +23,30 @@ Partial Class frmPrincipal
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.mnuUsuario = New System.Windows.Forms.MenuStrip()
-        Me.mnuItemDashboard = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuItemUsuario = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnMiCuenta = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarSesiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuItemDashboard = New System.Windows.Forms.ToolStripMenuItem()
         Me.EmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EquiposToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AdministradoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HistorialToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EmpleadosToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.EquiposToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClientesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PorUsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RaspberrypiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuUsuario.SuspendLayout()
         Me.SuspendLayout()
         '
         'mnuUsuario
         '
-        Me.mnuUsuario.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuItemUsuario, Me.mnuItemDashboard, Me.EmpleadosToolStripMenuItem, Me.EquiposToolStripMenuItem, Me.ClientesToolStripMenuItem, Me.HistorialToolStripMenuItem})
+        Me.mnuUsuario.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuItemUsuario, Me.mnuItemDashboard, Me.EmpleadosToolStripMenuItem, Me.ClientesToolStripMenuItem, Me.RaspberrypiToolStripMenuItem, Me.HistorialToolStripMenuItem})
         Me.mnuUsuario.Location = New System.Drawing.Point(0, 0)
         Me.mnuUsuario.Name = "mnuUsuario"
         Me.mnuUsuario.Size = New System.Drawing.Size(763, 24)
         Me.mnuUsuario.TabIndex = 2
         Me.mnuUsuario.Text = "MenuStrip1"
-        '
-        'mnuItemDashboard
-        '
-        Me.mnuItemDashboard.Name = "mnuItemDashboard"
-        Me.mnuItemDashboard.Size = New System.Drawing.Size(76, 20)
-        Me.mnuItemDashboard.Text = "Dashboard"
         '
         'mnuItemUsuario
         '
@@ -63,26 +58,33 @@ Partial Class frmPrincipal
         'btnMiCuenta
         '
         Me.btnMiCuenta.Name = "btnMiCuenta"
-        Me.btnMiCuenta.Size = New System.Drawing.Size(180, 22)
+        Me.btnMiCuenta.Size = New System.Drawing.Size(143, 22)
         Me.btnMiCuenta.Text = "Mi cuenta"
         '
         'CerrarSesiónToolStripMenuItem
         '
         Me.CerrarSesiónToolStripMenuItem.Name = "CerrarSesiónToolStripMenuItem"
-        Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.CerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión"
+        '
+        'mnuItemDashboard
+        '
+        Me.mnuItemDashboard.Name = "mnuItemDashboard"
+        Me.mnuItemDashboard.Size = New System.Drawing.Size(76, 20)
+        Me.mnuItemDashboard.Text = "Dashboard"
         '
         'EmpleadosToolStripMenuItem
         '
+        Me.EmpleadosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AdministradoresToolStripMenuItem})
         Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
         Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(77, 20)
         Me.EmpleadosToolStripMenuItem.Text = "Empleados"
         '
-        'EquiposToolStripMenuItem
+        'AdministradoresToolStripMenuItem
         '
-        Me.EquiposToolStripMenuItem.Name = "EquiposToolStripMenuItem"
-        Me.EquiposToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
-        Me.EquiposToolStripMenuItem.Text = "Equipos"
+        Me.AdministradoresToolStripMenuItem.Name = "AdministradoresToolStripMenuItem"
+        Me.AdministradoresToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AdministradoresToolStripMenuItem.Text = "Administradores"
         '
         'ClientesToolStripMenuItem
         '
@@ -121,17 +123,23 @@ Partial Class frmPrincipal
         Me.PorUsuariosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.PorUsuariosToolStripMenuItem.Text = "Por Usuarios"
         '
+        'RaspberrypiToolStripMenuItem
+        '
+        Me.RaspberrypiToolStripMenuItem.Name = "RaspberrypiToolStripMenuItem"
+        Me.RaspberrypiToolStripMenuItem.Size = New System.Drawing.Size(94, 20)
+        Me.RaspberrypiToolStripMenuItem.Text = "Raspberry-pi's"
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(763, 365)
         Me.Controls.Add(Me.mnuUsuario)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.mnuUsuario
         Me.Name = "frmPrincipal"
         Me.Text = "Clifford"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.mnuUsuario.ResumeLayout(False)
         Me.mnuUsuario.PerformLayout()
         Me.ResumeLayout(False)
@@ -144,11 +152,12 @@ Partial Class frmPrincipal
     Friend WithEvents CerrarSesiónToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents mnuItemDashboard As ToolStripMenuItem
     Friend WithEvents EmpleadosToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents EquiposToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ClientesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HistorialToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EmpleadosToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents EquiposToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents ClientesToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents PorUsuariosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AdministradoresToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RaspberrypiToolStripMenuItem As ToolStripMenuItem
 End Class

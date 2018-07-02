@@ -17,6 +17,7 @@
         frmDashboard.MdiParent = Me
 
         closeForms()
+        'esto hace que el form hijo se adapte al padre
         frmDashboard.Dock = DockStyle.Fill
         frmDashboard.Show()
     End Sub
