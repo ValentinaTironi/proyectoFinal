@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmDashboard
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,12 +20,16 @@ Partial Class frmDashboard
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"1", "Prueba prueba prueba prueba", "25-02-2018", "Valentina"}, -1)
+        Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"2", "Clifford clifford clifford clifford ", "26-03-2018", "Elián"}, -1)
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.tblNotifications = New System.Windows.Forms.TableLayoutPanel()
+        Me.lvwUltimosEventos = New System.Windows.Forms.ListView()
+        Me.columnDescripcion = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.columnFecha = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.columnUsuario = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.columnId = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.SuspendLayout()
         '
         'Label3
@@ -38,40 +42,38 @@ Partial Class frmDashboard
         Me.Label3.TabIndex = 7
         Me.Label3.Text = "Últimos eventos"
         '
-        'Label2
+        'lvwUltimosEventos
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(524, 75)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(37, 13)
-        Me.Label2.TabIndex = 6
-        Me.Label2.Text = "Fecha"
+        Me.lvwUltimosEventos.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.columnId, Me.columnDescripcion, Me.columnFecha, Me.columnUsuario})
+        Me.lvwUltimosEventos.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lvwUltimosEventos.FullRowSelect = True
+        Me.lvwUltimosEventos.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1, ListViewItem2})
+        Me.lvwUltimosEventos.Location = New System.Drawing.Point(12, 81)
+        Me.lvwUltimosEventos.Name = "lvwUltimosEventos"
+        Me.lvwUltimosEventos.Size = New System.Drawing.Size(743, 199)
+        Me.lvwUltimosEventos.TabIndex = 8
+        Me.lvwUltimosEventos.UseCompatibleStateImageBehavior = False
+        Me.lvwUltimosEventos.View = System.Windows.Forms.View.Details
         '
-        'Label1
+        'columnDescripcion
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(184, 72)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(63, 13)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Descripción"
+        Me.columnDescripcion.Text = "Descripción"
+        Me.columnDescripcion.Width = 515
         '
-        'tblNotifications
+        'columnFecha
         '
-        Me.tblNotifications.AutoSize = True
-        Me.tblNotifications.ColumnCount = 2
-        Me.tblNotifications.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.tblNotifications.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.tblNotifications.Location = New System.Drawing.Point(51, 91)
-        Me.tblNotifications.Name = "tblNotifications"
-        Me.tblNotifications.RowCount = 5
-        Me.tblNotifications.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.91667!))
-        Me.tblNotifications.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33.0!))
-        Me.tblNotifications.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.08333!))
-        Me.tblNotifications.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.tblNotifications.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31.0!))
-        Me.tblNotifications.Size = New System.Drawing.Size(665, 159)
-        Me.tblNotifications.TabIndex = 4
+        Me.columnFecha.Text = "Fecha"
+        Me.columnFecha.Width = 89
+        '
+        'columnUsuario
+        '
+        Me.columnUsuario.Text = "Usuario"
+        Me.columnUsuario.Width = 94
+        '
+        'columnId
+        '
+        Me.columnId.Text = "ID"
+        Me.columnId.Width = 39
         '
         'frmDashboard
         '
@@ -79,10 +81,8 @@ Partial Class frmDashboard
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(767, 292)
+        Me.Controls.Add(Me.lvwUltimosEventos)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.tblNotifications)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -95,7 +95,9 @@ Partial Class frmDashboard
     End Sub
 
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents tblNotifications As TableLayoutPanel
+    Friend WithEvents lvwUltimosEventos As ListView
+    Friend WithEvents columnDescripcion As ColumnHeader
+    Friend WithEvents columnFecha As ColumnHeader
+    Friend WithEvents columnUsuario As ColumnHeader
+    Friend WithEvents columnId As ColumnHeader
 End Class

@@ -9,6 +9,7 @@
         frmMiCuenta.MdiParent = Me
 
         closeForms()
+
         frmMiCuenta.Dock = DockStyle.Fill
         frmMiCuenta.Show()
     End Sub
@@ -16,13 +17,13 @@
     Private Sub mnuItemDashboard_Click(sender As Object, e As EventArgs) Handles mnuItemDashboard.Click
         frmDashboard.MdiParent = Me
 
+        'closeForms()
         closeForms()
         'esto hace que el form hijo se adapte al padre
         frmDashboard.Dock = DockStyle.Fill
         frmDashboard.Show()
     End Sub
 
-    'Funciones propias
     Private Function closeForms()
         'Cierra todos las ventanas abiertas expecto el actual
         My.Application.OpenForms.Cast(Of Form)() _
@@ -30,5 +31,4 @@
               .ToList() _
               .ForEach(Sub(form) form.Close())
     End Function
-
 End Class

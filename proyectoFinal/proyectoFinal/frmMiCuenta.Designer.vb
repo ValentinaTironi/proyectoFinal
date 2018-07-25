@@ -23,11 +23,10 @@ Partial Class frmMiCuenta
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMiCuenta))
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.picPerfil = New System.Windows.Forms.PictureBox()
         Me.lblPuestoDeTrabajo = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -35,19 +34,27 @@ Partial Class frmMiCuenta
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.lblApellido = New System.Windows.Forms.Label()
+        Me.lblNombreusuario = New System.Windows.Forms.Label()
+        Me.lblNombre = New System.Windows.Forms.Label()
+        Me.lblEmail = New System.Windows.Forms.Label()
+        Me.lblFechaNacimiento = New System.Windows.Forms.Label()
+        Me.lblDireccion = New System.Windows.Forms.Label()
+        Me.lblTelefono = New System.Windows.Forms.Label()
+        Me.lblCedula = New System.Windows.Forms.Label()
+        CType(Me.picPerfil, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'PictureBox1
+        'picPerfil
         '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(32, 35)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(180, 204)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
+        Me.picPerfil.Image = CType(resources.GetObject("picPerfil.Image"), System.Drawing.Image)
+        Me.picPerfil.Location = New System.Drawing.Point(32, 35)
+        Me.picPerfil.Name = "picPerfil"
+        Me.picPerfil.Size = New System.Drawing.Size(180, 204)
+        Me.picPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picPerfil.TabIndex = 0
+        Me.picPerfil.TabStop = False
         '
         'lblPuestoDeTrabajo
         '
@@ -78,24 +85,6 @@ Partial Class frmMiCuenta
         Me.Label2.Size = New System.Drawing.Size(58, 16)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Apellido"
-        '
-        'TableLayoutPanel1
-        '
-        Me.TableLayoutPanel1.ColumnCount = 1
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(437, 58)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 8
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.64286!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.35714!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(190, 229)
-        Me.TableLayoutPanel1.TabIndex = 4
         '
         'Label3
         '
@@ -160,21 +149,108 @@ Partial Class frmMiCuenta
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.Controls.Add(Me.lblCedula)
+        Me.Panel1.Controls.Add(Me.lblTelefono)
+        Me.Panel1.Controls.Add(Me.lblDireccion)
+        Me.Panel1.Controls.Add(Me.lblFechaNacimiento)
+        Me.Panel1.Controls.Add(Me.lblEmail)
+        Me.Panel1.Controls.Add(Me.lblNombre)
+        Me.Panel1.Controls.Add(Me.lblNombreusuario)
+        Me.Panel1.Controls.Add(Me.lblApellido)
         Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.Label7)
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.TableLayoutPanel1)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.lblPuestoDeTrabajo)
-        Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.Controls.Add(Me.picPerfil)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(663, 331)
         Me.Panel1.TabIndex = 11
+        '
+        'lblApellido
+        '
+        Me.lblApellido.AutoSize = True
+        Me.lblApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblApellido.Location = New System.Drawing.Point(473, 121)
+        Me.lblApellido.Name = "lblApellido"
+        Me.lblApellido.Size = New System.Drawing.Size(42, 16)
+        Me.lblApellido.TabIndex = 13
+        Me.lblApellido.Text = "Tironi"
+        '
+        'lblNombreusuario
+        '
+        Me.lblNombreusuario.AutoSize = True
+        Me.lblNombreusuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNombreusuario.Location = New System.Drawing.Point(473, 63)
+        Me.lblNombreusuario.Name = "lblNombreusuario"
+        Me.lblNombreusuario.Size = New System.Drawing.Size(90, 16)
+        Me.lblNombreusuario.TabIndex = 14
+        Me.lblNombreusuario.Text = "valentinatironi"
+        '
+        'lblNombre
+        '
+        Me.lblNombre.AutoSize = True
+        Me.lblNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNombre.Location = New System.Drawing.Point(473, 91)
+        Me.lblNombre.Name = "lblNombre"
+        Me.lblNombre.Size = New System.Drawing.Size(64, 16)
+        Me.lblNombre.TabIndex = 15
+        Me.lblNombre.Text = "Valentina"
+        '
+        'lblEmail
+        '
+        Me.lblEmail.AutoSize = True
+        Me.lblEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEmail.Location = New System.Drawing.Point(473, 148)
+        Me.lblEmail.Name = "lblEmail"
+        Me.lblEmail.Size = New System.Drawing.Size(42, 16)
+        Me.lblEmail.TabIndex = 16
+        Me.lblEmail.Text = "Email"
+        '
+        'lblFechaNacimiento
+        '
+        Me.lblFechaNacimiento.AutoSize = True
+        Me.lblFechaNacimiento.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFechaNacimiento.Location = New System.Drawing.Point(473, 177)
+        Me.lblFechaNacimiento.Name = "lblFechaNacimiento"
+        Me.lblFechaNacimiento.Size = New System.Drawing.Size(72, 16)
+        Me.lblFechaNacimiento.TabIndex = 17
+        Me.lblFechaNacimiento.Text = "23-12-2000"
+        '
+        'lblDireccion
+        '
+        Me.lblDireccion.AutoSize = True
+        Me.lblDireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDireccion.Location = New System.Drawing.Point(473, 207)
+        Me.lblDireccion.Name = "lblDireccion"
+        Me.lblDireccion.Size = New System.Drawing.Size(183, 16)
+        Me.lblDireccion.TabIndex = 18
+        Me.lblDireccion.Text = "Daniel García Avecedo10481"
+        '
+        'lblTelefono
+        '
+        Me.lblTelefono.AutoSize = True
+        Me.lblTelefono.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTelefono.Location = New System.Drawing.Point(473, 237)
+        Me.lblTelefono.Name = "lblTelefono"
+        Me.lblTelefono.Size = New System.Drawing.Size(71, 16)
+        Me.lblTelefono.TabIndex = 19
+        Me.lblTelefono.Text = "092807665"
+        '
+        'lblCedula
+        '
+        Me.lblCedula.AutoSize = True
+        Me.lblCedula.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCedula.Location = New System.Drawing.Point(473, 263)
+        Me.lblCedula.Name = "lblCedula"
+        Me.lblCedula.Size = New System.Drawing.Size(64, 16)
+        Me.lblCedula.TabIndex = 20
+        Me.lblCedula.Text = "52404551"
         '
         'frmMiCuenta
         '
@@ -191,18 +267,17 @@ Partial Class frmMiCuenta
         Me.ShowInTaskbar = False
         Me.Text = "Mi Cuenta"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picPerfil, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents picPerfil As PictureBox
     Friend WithEvents lblPuestoDeTrabajo As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
@@ -210,4 +285,12 @@ Partial Class frmMiCuenta
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents lblCedula As Label
+    Friend WithEvents lblTelefono As Label
+    Friend WithEvents lblDireccion As Label
+    Friend WithEvents lblFechaNacimiento As Label
+    Friend WithEvents lblEmail As Label
+    Friend WithEvents lblNombre As Label
+    Friend WithEvents lblNombreusuario As Label
+    Friend WithEvents lblApellido As Label
 End Class
