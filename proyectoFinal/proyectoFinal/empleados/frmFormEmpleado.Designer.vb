@@ -22,6 +22,7 @@ Partial Class frmFormEmpleado
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmFormEmpleado))
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.txtApellido = New System.Windows.Forms.TextBox()
         Me.txtCedula = New System.Windows.Forms.TextBox()
@@ -33,11 +34,15 @@ Partial Class frmFormEmpleado
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.chkAdmin = New System.Windows.Forms.CheckBox()
+        Me.btnAtras = New System.Windows.Forms.Button()
+        Me.btnAgregar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(489, 80)
+        Me.txtNombre.Location = New System.Drawing.Point(523, 80)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(100, 20)
         Me.txtNombre.TabIndex = 1
@@ -65,7 +70,7 @@ Partial Class frmFormEmpleado
         '
         'txtPassword
         '
-        Me.txtPassword.Location = New System.Drawing.Point(489, 180)
+        Me.txtPassword.Location = New System.Drawing.Point(523, 180)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(100, 20)
         Me.txtPassword.TabIndex = 5
@@ -79,14 +84,14 @@ Partial Class frmFormEmpleado
         '
         'txtCuentaBancaria
         '
-        Me.txtCuentaBancaria.Location = New System.Drawing.Point(489, 127)
+        Me.txtCuentaBancaria.Location = New System.Drawing.Point(523, 127)
         Me.txtCuentaBancaria.Name = "txtCuentaBancaria"
         Me.txtCuentaBancaria.Size = New System.Drawing.Size(100, 20)
         Me.txtCuentaBancaria.TabIndex = 3
         '
         'txtPuestoTrabajo
         '
-        Me.txtPuestoTrabajo.Location = New System.Drawing.Point(489, 236)
+        Me.txtPuestoTrabajo.Location = New System.Drawing.Point(523, 236)
         Me.txtPuestoTrabajo.Name = "txtPuestoTrabajo"
         Me.txtPuestoTrabajo.Size = New System.Drawing.Size(100, 20)
         Me.txtPuestoTrabajo.TabIndex = 7
@@ -115,18 +120,63 @@ Partial Class frmFormEmpleado
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(397, 80)
+        Me.Label3.Location = New System.Drawing.Point(431, 80)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(82, 192)
         Me.Label3.TabIndex = 10
         Me.Label3.Text = "Contraseña*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Apellido*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Cédula*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Puesto de" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "trabajo" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(548, 289)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(60, 16)
+        Me.Label4.TabIndex = 11
+        Me.Label4.Text = "¿Admin?"
+        '
+        'chkAdmin
+        '
+        Me.chkAdmin.AutoSize = True
+        Me.chkAdmin.Location = New System.Drawing.Point(614, 290)
+        Me.chkAdmin.Name = "chkAdmin"
+        Me.chkAdmin.Size = New System.Drawing.Size(15, 14)
+        Me.chkAdmin.TabIndex = 12
+        Me.chkAdmin.UseVisualStyleBackColor = True
+        '
+        'btnAtras
+        '
+        Me.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAtras.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnAtras.Image = CType(resources.GetObject("btnAtras.Image"), System.Drawing.Image)
+        Me.btnAtras.Location = New System.Drawing.Point(12, 17)
+        Me.btnAtras.Name = "btnAtras"
+        Me.btnAtras.Size = New System.Drawing.Size(47, 41)
+        Me.btnAtras.TabIndex = 60
+        Me.btnAtras.UseVisualStyleBackColor = True
+        '
+        'btnAgregar
+        '
+        Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAgregar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnAgregar.Image = CType(resources.GetObject("btnAgregar.Image"), System.Drawing.Image)
+        Me.btnAgregar.Location = New System.Drawing.Point(678, 12)
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.Size = New System.Drawing.Size(47, 41)
+        Me.btnAgregar.TabIndex = 62
+        Me.btnAgregar.UseVisualStyleBackColor = True
         '
         'frmFormEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ClientSize = New System.Drawing.Size(722, 338)
+        Me.ClientSize = New System.Drawing.Size(737, 338)
+        Me.Controls.Add(Me.btnAgregar)
+        Me.Controls.Add(Me.btnAtras)
+        Me.Controls.Add(Me.chkAdmin)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -160,4 +210,8 @@ Partial Class frmFormEmpleado
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents chkAdmin As CheckBox
+    Friend WithEvents btnAtras As Button
+    Friend WithEvents btnAgregar As Button
 End Class

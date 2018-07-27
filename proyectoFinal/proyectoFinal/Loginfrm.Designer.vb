@@ -37,6 +37,7 @@ Partial Class Loginfrm
         Me.btnAceptar = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -81,7 +82,7 @@ Partial Class Loginfrm
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(270, 255)
+        Me.btnAceptar.Location = New System.Drawing.Point(278, 255)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(94, 23)
         Me.btnAceptar.TabIndex = 4
@@ -90,7 +91,7 @@ Partial Class Loginfrm
         'btnCancelar
         '
         Me.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancelar.Location = New System.Drawing.Point(50, 255)
+        Me.btnCancelar.Location = New System.Drawing.Point(40, 255)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(94, 23)
         Me.btnCancelar.TabIndex = 5
@@ -106,14 +107,26 @@ Partial Class Loginfrm
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
         '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(50, 232)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(126, 17)
+        Me.CheckBox1.TabIndex = 7
+        Me.CheckBox1.Text = "Recordar contraseña"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
         'Loginfrm
         '
         Me.AcceptButton = Me.btnAceptar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.CancelButton = Me.btnCancelar
         Me.ClientSize = New System.Drawing.Size(438, 290)
+        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAceptar)
@@ -135,4 +148,5 @@ Partial Class Loginfrm
     End Sub
 
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents CheckBox1 As CheckBox
 End Class

@@ -72,6 +72,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clientes\frmCliente.Designer.vb">
+      <DependentUpon>frmCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="clientes\frmCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clientes\frmFormCliente.Designer.vb">
+      <DependentUpon>frmFormCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="clientes\frmFormCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="empleados\frmEmpleado.Designer.vb">
       <DependentUpon>frmEmpleado.vb</DependentUpon>
     </Compile>
@@ -96,10 +108,10 @@
     <Compile Include="frmCasetas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmClientes.Designer.vb">
+    <Compile Include="clientes\frmClientes.Designer.vb">
       <DependentUpon>frmClientes.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmClientes.vb">
+    <Compile Include="clientes\frmClientes.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDashboard.Designer.vb">
@@ -114,16 +126,16 @@
     <Compile Include="empleados\frmEmpleados.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHistorialCasetas.Designer.vb">
+    <Compile Include="historial\frmHistorialCasetas.Designer.vb">
       <DependentUpon>frmHistorialCasetas.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmHistorialCasetas.vb">
+    <Compile Include="historial\frmHistorialCasetas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHistorialClientes.Designer.vb">
+    <Compile Include="historial\frmHistorialClientes.Designer.vb">
       <DependentUpon>frmHistorialClientes.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmHistorialClientes.vb">
+    <Compile Include="historial\frmHistorialClientes.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMiCuenta.Designer.vb">
@@ -169,6 +181,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="clientes\frmCliente.resx">
+      <DependentUpon>frmCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clientes\frmFormCliente.resx">
+      <DependentUpon>frmFormCliente.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="empleados\frmEmpleado.resx">
       <DependentUpon>frmEmpleado.vb</DependentUpon>
     </EmbeddedResource>
@@ -181,7 +199,7 @@
     <EmbeddedResource Include="frmCasetas.resx">
       <DependentUpon>frmCasetas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmClientes.resx">
+    <EmbeddedResource Include="clientes\frmClientes.resx">
       <DependentUpon>frmClientes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDashboard.resx">
@@ -190,10 +208,10 @@
     <EmbeddedResource Include="empleados\frmEmpleados.resx">
       <DependentUpon>frmEmpleados.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmHistorialCasetas.resx">
+    <EmbeddedResource Include="historial\frmHistorialCasetas.resx">
       <DependentUpon>frmHistorialCasetas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmHistorialClientes.resx">
+    <EmbeddedResource Include="historial\frmHistorialClientes.resx">
       <DependentUpon>frmHistorialClientes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMiCuenta.resx">

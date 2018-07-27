@@ -26,27 +26,29 @@ Partial Class frmClientes
         Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"2", "Yonatan Morgades", "yonatan.morgades@anima.edu.uy", "yonatanmorgades", "12345678"}, -1)
         Dim ListViewItem3 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"3", "Elián Pintos", "elian.pintos@anima.edu.uy", "elianpintos", "7894561"}, -1)
         Dim ListViewItem4 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"4", "Anthony Marcelli", "anthony.marcelli@anima.edu.uy", "anthonymarcelli", "79846531"}, -1)
-        Me.lvwEmpleados = New System.Windows.Forms.ListView()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmClientes))
+        Me.lvwClientes = New System.Windows.Forms.ListView()
         Me.columnId = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.columnNombreCompleto = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.columnEmail = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.columnNombreUsuario = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnCedula = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.btnAgregar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'lvwEmpleados
+        'lvwClientes
         '
-        Me.lvwEmpleados.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.columnId, Me.columnNombreCompleto, Me.columnEmail, Me.columnNombreUsuario, Me.ColumnCedula})
-        Me.lvwEmpleados.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lvwEmpleados.FullRowSelect = True
-        Me.lvwEmpleados.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1, ListViewItem2, ListViewItem3, ListViewItem4})
-        Me.lvwEmpleados.Location = New System.Drawing.Point(12, 84)
-        Me.lvwEmpleados.Name = "lvwEmpleados"
-        Me.lvwEmpleados.Size = New System.Drawing.Size(747, 199)
-        Me.lvwEmpleados.TabIndex = 10
-        Me.lvwEmpleados.UseCompatibleStateImageBehavior = False
-        Me.lvwEmpleados.View = System.Windows.Forms.View.Details
+        Me.lvwClientes.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.columnId, Me.columnNombreCompleto, Me.columnEmail, Me.columnNombreUsuario, Me.ColumnCedula})
+        Me.lvwClientes.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lvwClientes.FullRowSelect = True
+        Me.lvwClientes.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1, ListViewItem2, ListViewItem3, ListViewItem4})
+        Me.lvwClientes.Location = New System.Drawing.Point(12, 84)
+        Me.lvwClientes.Name = "lvwClientes"
+        Me.lvwClientes.Size = New System.Drawing.Size(747, 199)
+        Me.lvwClientes.TabIndex = 10
+        Me.lvwClientes.UseCompatibleStateImageBehavior = False
+        Me.lvwClientes.View = System.Windows.Forms.View.Details
         '
         'columnId
         '
@@ -84,14 +86,27 @@ Partial Class frmClientes
         Me.Label3.Text = "Todos los Clientes"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
+        'btnAgregar
+        '
+        Me.btnAgregar.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAgregar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnAgregar.Image = CType(resources.GetObject("btnAgregar.Image"), System.Drawing.Image)
+        Me.btnAgregar.Location = New System.Drawing.Point(709, 12)
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.Size = New System.Drawing.Size(50, 41)
+        Me.btnAgregar.TabIndex = 42
+        Me.btnAgregar.UseVisualStyleBackColor = False
+        '
         'frmClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(771, 313)
+        Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.lvwEmpleados)
+        Me.Controls.Add(Me.lvwClientes)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -104,11 +119,12 @@ Partial Class frmClientes
 
     End Sub
 
-    Friend WithEvents lvwEmpleados As ListView
+    Friend WithEvents lvwClientes As ListView
     Friend WithEvents columnId As ColumnHeader
     Friend WithEvents columnNombreCompleto As ColumnHeader
     Friend WithEvents columnEmail As ColumnHeader
     Friend WithEvents columnNombreUsuario As ColumnHeader
     Friend WithEvents ColumnCedula As ColumnHeader
     Friend WithEvents Label3 As Label
+    Friend WithEvents btnAgregar As Button
 End Class

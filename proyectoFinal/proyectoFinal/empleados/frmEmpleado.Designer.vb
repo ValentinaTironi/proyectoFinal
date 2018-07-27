@@ -42,6 +42,7 @@ Partial Class frmEmpleado
         Me.lblPuestoDeTrabajo = New System.Windows.Forms.Label()
         Me.picPerfil = New System.Windows.Forms.PictureBox()
         Me.btnAtras = New System.Windows.Forms.Button()
+        Me.Label9 = New System.Windows.Forms.Label()
         CType(Me.picPerfil, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -49,7 +50,7 @@ Partial Class frmEmpleado
         '
         Me.lblCedula.AutoSize = True
         Me.lblCedula.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCedula.Location = New System.Drawing.Point(484, 264)
+        Me.lblCedula.Location = New System.Drawing.Point(499, 296)
         Me.lblCedula.Name = "lblCedula"
         Me.lblCedula.Size = New System.Drawing.Size(64, 16)
         Me.lblCedula.TabIndex = 38
@@ -59,7 +60,7 @@ Partial Class frmEmpleado
         '
         Me.lblTelefono.AutoSize = True
         Me.lblTelefono.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTelefono.Location = New System.Drawing.Point(484, 238)
+        Me.lblTelefono.Location = New System.Drawing.Point(499, 270)
         Me.lblTelefono.Name = "lblTelefono"
         Me.lblTelefono.Size = New System.Drawing.Size(71, 16)
         Me.lblTelefono.TabIndex = 37
@@ -69,7 +70,7 @@ Partial Class frmEmpleado
         '
         Me.lblDireccion.AutoSize = True
         Me.lblDireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDireccion.Location = New System.Drawing.Point(484, 208)
+        Me.lblDireccion.Location = New System.Drawing.Point(499, 240)
         Me.lblDireccion.Name = "lblDireccion"
         Me.lblDireccion.Size = New System.Drawing.Size(183, 16)
         Me.lblDireccion.TabIndex = 36
@@ -79,7 +80,7 @@ Partial Class frmEmpleado
         '
         Me.lblFechaNacimiento.AutoSize = True
         Me.lblFechaNacimiento.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFechaNacimiento.Location = New System.Drawing.Point(484, 178)
+        Me.lblFechaNacimiento.Location = New System.Drawing.Point(499, 210)
         Me.lblFechaNacimiento.Name = "lblFechaNacimiento"
         Me.lblFechaNacimiento.Size = New System.Drawing.Size(72, 16)
         Me.lblFechaNacimiento.TabIndex = 35
@@ -89,7 +90,7 @@ Partial Class frmEmpleado
         '
         Me.lblEmail.AutoSize = True
         Me.lblEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEmail.Location = New System.Drawing.Point(484, 149)
+        Me.lblEmail.Location = New System.Drawing.Point(499, 181)
         Me.lblEmail.Name = "lblEmail"
         Me.lblEmail.Size = New System.Drawing.Size(42, 16)
         Me.lblEmail.TabIndex = 34
@@ -99,7 +100,7 @@ Partial Class frmEmpleado
         '
         Me.lblNombre.AutoSize = True
         Me.lblNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombre.Location = New System.Drawing.Point(484, 92)
+        Me.lblNombre.Location = New System.Drawing.Point(499, 124)
         Me.lblNombre.Name = "lblNombre"
         Me.lblNombre.Size = New System.Drawing.Size(64, 16)
         Me.lblNombre.TabIndex = 33
@@ -109,7 +110,7 @@ Partial Class frmEmpleado
         '
         Me.lblNombreusuario.AutoSize = True
         Me.lblNombreusuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombreusuario.Location = New System.Drawing.Point(484, 64)
+        Me.lblNombreusuario.Location = New System.Drawing.Point(499, 96)
         Me.lblNombreusuario.Name = "lblNombreusuario"
         Me.lblNombreusuario.Size = New System.Drawing.Size(90, 16)
         Me.lblNombreusuario.TabIndex = 32
@@ -119,7 +120,7 @@ Partial Class frmEmpleado
         '
         Me.lblApellido.AutoSize = True
         Me.lblApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblApellido.Location = New System.Drawing.Point(484, 122)
+        Me.lblApellido.Location = New System.Drawing.Point(499, 154)
         Me.lblApellido.Name = "lblApellido"
         Me.lblApellido.Size = New System.Drawing.Size(42, 16)
         Me.lblApellido.TabIndex = 31
@@ -129,7 +130,7 @@ Partial Class frmEmpleado
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(279, 264)
+        Me.Label8.Location = New System.Drawing.Point(294, 296)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(51, 16)
         Me.Label8.TabIndex = 30
@@ -139,7 +140,7 @@ Partial Class frmEmpleado
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(278, 238)
+        Me.Label7.Location = New System.Drawing.Point(293, 270)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(62, 16)
         Me.Label7.TabIndex = 29
@@ -149,7 +150,7 @@ Partial Class frmEmpleado
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(279, 208)
+        Me.Label6.Location = New System.Drawing.Point(294, 240)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(65, 16)
         Me.Label6.TabIndex = 28
@@ -159,7 +160,7 @@ Partial Class frmEmpleado
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(279, 178)
+        Me.Label5.Location = New System.Drawing.Point(294, 210)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(133, 16)
         Me.Label5.TabIndex = 27
@@ -169,7 +170,7 @@ Partial Class frmEmpleado
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(279, 149)
+        Me.Label4.Location = New System.Drawing.Point(294, 181)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(42, 16)
         Me.Label4.TabIndex = 26
@@ -179,7 +180,7 @@ Partial Class frmEmpleado
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(279, 64)
+        Me.Label3.Location = New System.Drawing.Point(294, 96)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(123, 16)
         Me.Label3.TabIndex = 25
@@ -189,7 +190,7 @@ Partial Class frmEmpleado
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(279, 122)
+        Me.Label2.Location = New System.Drawing.Point(294, 154)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(58, 16)
         Me.Label2.TabIndex = 24
@@ -199,7 +200,7 @@ Partial Class frmEmpleado
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(279, 92)
+        Me.Label1.Location = New System.Drawing.Point(294, 124)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(57, 16)
         Me.Label1.TabIndex = 23
@@ -209,7 +210,7 @@ Partial Class frmEmpleado
         '
         Me.lblPuestoDeTrabajo.AutoSize = True
         Me.lblPuestoDeTrabajo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPuestoDeTrabajo.Location = New System.Drawing.Point(74, 252)
+        Me.lblPuestoDeTrabajo.Location = New System.Drawing.Point(89, 284)
         Me.lblPuestoDeTrabajo.Name = "lblPuestoDeTrabajo"
         Me.lblPuestoDeTrabajo.Size = New System.Drawing.Size(114, 16)
         Me.lblPuestoDeTrabajo.TabIndex = 22
@@ -218,7 +219,7 @@ Partial Class frmEmpleado
         'picPerfil
         '
         Me.picPerfil.Image = CType(resources.GetObject("picPerfil.Image"), System.Drawing.Image)
-        Me.picPerfil.Location = New System.Drawing.Point(43, 36)
+        Me.picPerfil.Location = New System.Drawing.Point(58, 68)
         Me.picPerfil.Name = "picPerfil"
         Me.picPerfil.Size = New System.Drawing.Size(180, 204)
         Me.picPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -230,11 +231,21 @@ Partial Class frmEmpleado
         Me.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAtras.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnAtras.Image = CType(resources.GetObject("btnAtras.Image"), System.Drawing.Image)
-        Me.btnAtras.Location = New System.Drawing.Point(12, 282)
+        Me.btnAtras.Location = New System.Drawing.Point(12, 12)
         Me.btnAtras.Name = "btnAtras"
         Me.btnAtras.Size = New System.Drawing.Size(47, 41)
         Me.btnAtras.TabIndex = 39
         Me.btnAtras.UseVisualStyleBackColor = True
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(293, 41)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(197, 18)
+        Me.Label9.TabIndex = 40
+        Me.Label9.Text = "Información sobre empleado"
         '
         'frmEmpleado
         '
@@ -242,6 +253,7 @@ Partial Class frmEmpleado
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(757, 341)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.btnAtras)
         Me.Controls.Add(Me.lblCedula)
         Me.Controls.Add(Me.lblTelefono)
@@ -291,4 +303,5 @@ Partial Class frmEmpleado
     Friend WithEvents lblPuestoDeTrabajo As Label
     Friend WithEvents picPerfil As PictureBox
     Friend WithEvents btnAtras As Button
+    Friend WithEvents Label9 As Label
 End Class
