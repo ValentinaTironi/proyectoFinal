@@ -6,29 +6,46 @@
     End Sub
 
     Private Sub btnMiCuenta_Click(sender As Object, e As EventArgs) Handles btnMiCuenta.Click
-        frmMiCuenta.MdiParent = Me
-
-        closeForms()
-
-        frmMiCuenta.Dock = DockStyle.Fill
-        frmMiCuenta.Show()
+        openForm(frmMiCuenta)
     End Sub
 
     Private Sub mnuItemDashboard_Click(sender As Object, e As EventArgs) Handles mnuItemDashboard.Click
-        frmDashboard.MdiParent = Me
-
-        'closeForms()
-        closeForms()
-        'esto hace que el form hijo se adapte al padre
-        frmDashboard.Dock = DockStyle.Fill
-        frmDashboard.Show()
+        openForm(frmDashboard)
     End Sub
 
-    Private Function closeForms()
-        'Cierra todos las ventanas abiertas expecto el actual
+    Private Sub mnuItemEmpleados_Click(sender As Object, e As EventArgs) Handles mnuItemEmpleados.Click
+        openForm(frmEmpleados)
+    End Sub
+
+    Private Sub mnuItemClientes_Click(sender As Object, e As EventArgs) Handles mnuItemClientes.Click
+        openForm(frmClientes)
+    End Sub
+
+    Private Sub mnuItemCasetas_Click(sender As Object, e As EventArgs) Handles mnuItemCasetas.Click
+        openForm(frmCasetas)
+    End Sub
+
+    Private Sub mnuItemHistorialClientes_Click(sender As Object, e As EventArgs) Handles mnuItemHistorialClientes.Click
+        openForm(frmHistorialClientes)
+    End Sub
+
+    Private Sub mnuItemHistorialCasetas_Click(sender As Object, e As EventArgs) Handles mnuItemHistorialCasetas.Click
+        openForm(frmHistorialCasetas)
+    End Sub
+
+    'nuestras funciones
+    Private Sub closeForms(formDontClose As Form)
         My.Application.OpenForms.Cast(Of Form)() _
               .Except({Me}) _
+              .Except({formDontClose}) _
               .ToList() _
               .ForEach(Sub(form) form.Close())
-    End Function
+    End Sub
+
+    Private Sub openForm(form As Form)
+        form.MdiParent = Me
+        closeForms(form)
+        form.Dock = DockStyle.Fill
+        form.Show()
+    End Sub
 End Class

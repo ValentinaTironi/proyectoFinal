@@ -72,10 +72,46 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAdministradores.Designer.vb">
+      <DependentUpon>frmAdministradores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdministradores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCasetas.Designer.vb">
+      <DependentUpon>frmCasetas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCasetas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClientes.Designer.vb">
+      <DependentUpon>frmClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmDashboard.Designer.vb">
       <DependentUpon>frmDashboard.vb</DependentUpon>
     </Compile>
     <Compile Include="frmDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmpleados.Designer.vb">
+      <DependentUpon>frmEmpleados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmpleados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHistorialCasetas.Designer.vb">
+      <DependentUpon>frmHistorialCasetas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHistorialCasetas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHistorialClientes.Designer.vb">
+      <DependentUpon>frmHistorialClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHistorialClientes.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMiCuenta.Designer.vb">
@@ -120,8 +156,26 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmAdministradores.resx">
+      <DependentUpon>frmAdministradores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCasetas.resx">
+      <DependentUpon>frmCasetas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClientes.resx">
+      <DependentUpon>frmClientes.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDashboard.resx">
       <DependentUpon>frmDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmpleados.resx">
+      <DependentUpon>frmEmpleados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHistorialCasetas.resx">
+      <DependentUpon>frmHistorialCasetas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHistorialClientes.resx">
+      <DependentUpon>frmHistorialClientes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMiCuenta.resx">
       <DependentUpon>frmMiCuenta.vb</DependentUpon>

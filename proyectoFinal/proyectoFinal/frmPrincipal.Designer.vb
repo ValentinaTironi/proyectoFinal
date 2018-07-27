@@ -27,21 +27,18 @@ Partial Class frmPrincipal
         Me.btnMiCuenta = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarSesiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuItemDashboard = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AdministradoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HistorialToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EmpleadosToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EquiposToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ClientesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PorUsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RaspberrypiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuItemEmpleados = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuItemClientes = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuItemCasetas = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuItemHistorial = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuItemHistorialClientes = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuItemHistorialCasetas = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuUsuario.SuspendLayout()
         Me.SuspendLayout()
         '
         'mnuUsuario
         '
-        Me.mnuUsuario.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuItemUsuario, Me.mnuItemDashboard, Me.EmpleadosToolStripMenuItem, Me.ClientesToolStripMenuItem, Me.RaspberrypiToolStripMenuItem, Me.HistorialToolStripMenuItem})
+        Me.mnuUsuario.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuItemUsuario, Me.mnuItemDashboard, Me.mnuItemEmpleados, Me.mnuItemClientes, Me.mnuItemCasetas, Me.mnuItemHistorial})
         Me.mnuUsuario.Location = New System.Drawing.Point(0, 0)
         Me.mnuUsuario.Name = "mnuUsuario"
         Me.mnuUsuario.Size = New System.Drawing.Size(763, 24)
@@ -73,61 +70,42 @@ Partial Class frmPrincipal
         Me.mnuItemDashboard.Size = New System.Drawing.Size(76, 20)
         Me.mnuItemDashboard.Text = "Dashboard"
         '
-        'EmpleadosToolStripMenuItem
+        'mnuItemEmpleados
         '
-        Me.EmpleadosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AdministradoresToolStripMenuItem})
-        Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
-        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(77, 20)
-        Me.EmpleadosToolStripMenuItem.Text = "Empleados"
+        Me.mnuItemEmpleados.Name = "mnuItemEmpleados"
+        Me.mnuItemEmpleados.Size = New System.Drawing.Size(77, 20)
+        Me.mnuItemEmpleados.Text = "Empleados"
         '
-        'AdministradoresToolStripMenuItem
+        'mnuItemClientes
         '
-        Me.AdministradoresToolStripMenuItem.Name = "AdministradoresToolStripMenuItem"
-        Me.AdministradoresToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.AdministradoresToolStripMenuItem.Text = "Administradores"
+        Me.mnuItemClientes.Name = "mnuItemClientes"
+        Me.mnuItemClientes.Size = New System.Drawing.Size(61, 20)
+        Me.mnuItemClientes.Text = "Clientes"
         '
-        'ClientesToolStripMenuItem
+        'mnuItemCasetas
         '
-        Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
-        Me.ClientesToolStripMenuItem.Text = "Clientes"
+        Me.mnuItemCasetas.Name = "mnuItemCasetas"
+        Me.mnuItemCasetas.Size = New System.Drawing.Size(59, 20)
+        Me.mnuItemCasetas.Text = "Casetas"
         '
-        'HistorialToolStripMenuItem
+        'mnuItemHistorial
         '
-        Me.HistorialToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmpleadosToolStripMenuItem1, Me.EquiposToolStripMenuItem1, Me.ClientesToolStripMenuItem1, Me.PorUsuariosToolStripMenuItem})
-        Me.HistorialToolStripMenuItem.Name = "HistorialToolStripMenuItem"
-        Me.HistorialToolStripMenuItem.Size = New System.Drawing.Size(63, 20)
-        Me.HistorialToolStripMenuItem.Text = "Historial"
+        Me.mnuItemHistorial.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuItemHistorialClientes, Me.mnuItemHistorialCasetas})
+        Me.mnuItemHistorial.Name = "mnuItemHistorial"
+        Me.mnuItemHistorial.Size = New System.Drawing.Size(63, 20)
+        Me.mnuItemHistorial.Text = "Historial"
         '
-        'EmpleadosToolStripMenuItem1
+        'mnuItemHistorialClientes
         '
-        Me.EmpleadosToolStripMenuItem1.Name = "EmpleadosToolStripMenuItem1"
-        Me.EmpleadosToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
-        Me.EmpleadosToolStripMenuItem1.Text = "Empleados"
+        Me.mnuItemHistorialClientes.Name = "mnuItemHistorialClientes"
+        Me.mnuItemHistorialClientes.Size = New System.Drawing.Size(180, 22)
+        Me.mnuItemHistorialClientes.Text = "Clientes"
         '
-        'EquiposToolStripMenuItem1
+        'mnuItemHistorialCasetas
         '
-        Me.EquiposToolStripMenuItem1.Name = "EquiposToolStripMenuItem1"
-        Me.EquiposToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
-        Me.EquiposToolStripMenuItem1.Text = "Equipos"
-        '
-        'ClientesToolStripMenuItem1
-        '
-        Me.ClientesToolStripMenuItem1.Name = "ClientesToolStripMenuItem1"
-        Me.ClientesToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
-        Me.ClientesToolStripMenuItem1.Text = "Clientes"
-        '
-        'PorUsuariosToolStripMenuItem
-        '
-        Me.PorUsuariosToolStripMenuItem.Name = "PorUsuariosToolStripMenuItem"
-        Me.PorUsuariosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.PorUsuariosToolStripMenuItem.Text = "Por Usuarios"
-        '
-        'RaspberrypiToolStripMenuItem
-        '
-        Me.RaspberrypiToolStripMenuItem.Name = "RaspberrypiToolStripMenuItem"
-        Me.RaspberrypiToolStripMenuItem.Size = New System.Drawing.Size(94, 20)
-        Me.RaspberrypiToolStripMenuItem.Text = "Raspberry-pi's"
+        Me.mnuItemHistorialCasetas.Name = "mnuItemHistorialCasetas"
+        Me.mnuItemHistorialCasetas.Size = New System.Drawing.Size(180, 22)
+        Me.mnuItemHistorialCasetas.Text = "Casetas"
         '
         'frmPrincipal
         '
@@ -138,6 +116,8 @@ Partial Class frmPrincipal
         Me.Controls.Add(Me.mnuUsuario)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.mnuUsuario
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmPrincipal"
         Me.Text = "Clifford"
         Me.mnuUsuario.ResumeLayout(False)
@@ -151,13 +131,10 @@ Partial Class frmPrincipal
     Friend WithEvents btnMiCuenta As ToolStripMenuItem
     Friend WithEvents CerrarSesiónToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents mnuItemDashboard As ToolStripMenuItem
-    Friend WithEvents EmpleadosToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ClientesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents HistorialToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents EmpleadosToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents EquiposToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents ClientesToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents PorUsuariosToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AdministradoresToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents RaspberrypiToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents mnuItemEmpleados As ToolStripMenuItem
+    Friend WithEvents mnuItemClientes As ToolStripMenuItem
+    Friend WithEvents mnuItemHistorial As ToolStripMenuItem
+    Friend WithEvents mnuItemHistorialClientes As ToolStripMenuItem
+    Friend WithEvents mnuItemHistorialCasetas As ToolStripMenuItem
+    Friend WithEvents mnuItemCasetas As ToolStripMenuItem
 End Class

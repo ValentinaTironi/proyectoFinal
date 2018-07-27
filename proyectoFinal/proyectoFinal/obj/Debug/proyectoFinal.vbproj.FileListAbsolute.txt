@@ -29,3 +29,9 @@ C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proye
 C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.xml
 C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.pdb
 C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmDashboard.resources
+C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmEmpleados.resources
+C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmAdministradores.resources
+C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmClientes.resources
+C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmCasetas.resources
+C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmHistorialClientes.resources
+C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmHistorialCasetas.resources
