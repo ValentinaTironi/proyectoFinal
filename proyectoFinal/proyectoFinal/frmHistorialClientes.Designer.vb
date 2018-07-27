@@ -28,10 +28,10 @@ Partial Class frmHistorialClientes
         Dim ListViewItem4 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Cliente cuatro", "Se desactivó el servicio para un cliente", "Anthony", "2018-07-24"}, -1)
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lvwEmpleados = New System.Windows.Forms.ListView()
+        Me.ColumnCliente = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.columnDescripcion = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.columnUsuario = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.columnFecha = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnCliente = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.SuspendLayout()
         '
         'Label3
@@ -58,6 +58,11 @@ Partial Class frmHistorialClientes
         Me.lvwEmpleados.UseCompatibleStateImageBehavior = False
         Me.lvwEmpleados.View = System.Windows.Forms.View.Details
         '
+        'ColumnCliente
+        '
+        Me.ColumnCliente.Text = "Cliente"
+        Me.ColumnCliente.Width = 97
+        '
         'columnDescripcion
         '
         Me.columnDescripcion.Text = "Descripción"
@@ -73,12 +78,7 @@ Partial Class frmHistorialClientes
         Me.columnFecha.Text = "Fecha"
         Me.columnFecha.Width = 86
         '
-        'ColumnCliente
-        '
-        Me.ColumnCliente.Text = "Cliente"
-        Me.ColumnCliente.Width = 97
-        '
-        'frmHistorialEmpleados
+        'frmHistorialClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -87,7 +87,9 @@ Partial Class frmHistorialClientes
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.lvwEmpleados)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "frmHistorialEmpleados"
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
+        Me.Name = "frmHistorialClientes"
         Me.Text = "frmHistorial"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)

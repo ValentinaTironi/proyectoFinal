@@ -26,14 +26,16 @@ Partial Class frmEmpleados
         Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"2", "Yonatan Morgades", "yonatan.morgades@anima.edu.uy", "yonatanmorgades", "QA", "Si"}, -1)
         Dim ListViewItem3 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"3", "Elián Pintos", "elian.pintos@anima.edu.uy", "elianpintos", "Diseño", "No"}, -1)
         Dim ListViewItem4 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"4", "Anthony Marcelli", "anthony.marcelli@anima.edu.uy", "anthonymarcelli", "Redes", "Si"}, -1)
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmEmpleados))
         Me.lvwEmpleados = New System.Windows.Forms.ListView()
         Me.columnId = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.columnNombreCompleto = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.columnEmail = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.columnNombreUsuario = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.ColumnPuesto = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnAdmin = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.btnAgregar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lvwEmpleados
@@ -69,6 +71,16 @@ Partial Class frmEmpleados
         Me.columnNombreUsuario.Text = "Nombre de Usuario"
         Me.columnNombreUsuario.Width = 131
         '
+        'ColumnPuesto
+        '
+        Me.ColumnPuesto.Text = "Puesto de trabajo"
+        Me.ColumnPuesto.Width = 116
+        '
+        'ColumnAdmin
+        '
+        Me.ColumnAdmin.Text = "Administrador"
+        Me.ColumnAdmin.Width = 102
+        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -80,15 +92,17 @@ Partial Class frmEmpleados
         Me.Label3.Text = "Todos los Empleados "
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'ColumnPuesto
+        'btnAgregar
         '
-        Me.ColumnPuesto.Text = "Puesto de trabajo"
-        Me.ColumnPuesto.Width = 116
-        '
-        'ColumnAdmin
-        '
-        Me.ColumnAdmin.Text = "Administrador"
-        Me.ColumnAdmin.Width = 102
+        Me.btnAgregar.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAgregar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnAgregar.Image = CType(resources.GetObject("btnAgregar.Image"), System.Drawing.Image)
+        Me.btnAgregar.Location = New System.Drawing.Point(706, 12)
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.Size = New System.Drawing.Size(50, 41)
+        Me.btnAgregar.TabIndex = 41
+        Me.btnAgregar.UseVisualStyleBackColor = False
         '
         'frmEmpleados
         '
@@ -96,9 +110,12 @@ Partial Class frmEmpleados
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(774, 296)
+        Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.lvwEmpleados)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmEmpleados"
         Me.Text = "frmEmpleados"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
@@ -115,4 +132,5 @@ Partial Class frmEmpleados
     Friend WithEvents Label3 As Label
     Friend WithEvents ColumnPuesto As ColumnHeader
     Friend WithEvents ColumnAdmin As ColumnHeader
+    Friend WithEvents btnAgregar As Button
 End Class

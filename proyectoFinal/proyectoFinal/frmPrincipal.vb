@@ -32,20 +32,4 @@
     Private Sub mnuItemHistorialCasetas_Click(sender As Object, e As EventArgs) Handles mnuItemHistorialCasetas.Click
         openForm(frmHistorialCasetas)
     End Sub
-
-    'nuestras funciones
-    Private Sub closeForms(formDontClose As Form)
-        My.Application.OpenForms.Cast(Of Form)() _
-              .Except({Me}) _
-              .Except({formDontClose}) _
-              .ToList() _
-              .ForEach(Sub(form) form.Close())
-    End Sub
-
-    Private Sub openForm(form As Form)
-        form.MdiParent = Me
-        closeForms(form)
-        form.Dock = DockStyle.Fill
-        form.Show()
-    End Sub
 End Class

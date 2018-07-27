@@ -84,6 +84,8 @@ Partial Class frmCasetas
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.lvwUltimosEventos)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmCasetas"
         Me.Text = "Casetas"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized

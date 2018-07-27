@@ -93,6 +93,8 @@ Partial Class frmHistorialCasetas
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.lvwEmpleados)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmHistorialCasetas"
         Me.Text = "frmHistorialCasetas"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized

@@ -98,13 +98,13 @@ Partial Class frmPrincipal
         'mnuItemHistorialClientes
         '
         Me.mnuItemHistorialClientes.Name = "mnuItemHistorialClientes"
-        Me.mnuItemHistorialClientes.Size = New System.Drawing.Size(180, 22)
+        Me.mnuItemHistorialClientes.Size = New System.Drawing.Size(116, 22)
         Me.mnuItemHistorialClientes.Text = "Clientes"
         '
         'mnuItemHistorialCasetas
         '
         Me.mnuItemHistorialCasetas.Name = "mnuItemHistorialCasetas"
-        Me.mnuItemHistorialCasetas.Size = New System.Drawing.Size(180, 22)
+        Me.mnuItemHistorialCasetas.Size = New System.Drawing.Size(116, 22)
         Me.mnuItemHistorialCasetas.Text = "Casetas"
         '
         'frmPrincipal
@@ -117,7 +117,6 @@ Partial Class frmPrincipal
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.mnuUsuario
         Me.MaximizeBox = False
-        Me.MinimizeBox = False
         Me.Name = "frmPrincipal"
         Me.Text = "Clifford"
         Me.mnuUsuario.ResumeLayout(False)

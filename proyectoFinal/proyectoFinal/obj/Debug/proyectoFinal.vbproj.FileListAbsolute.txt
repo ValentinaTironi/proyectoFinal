@@ -35,3 +35,5 @@ C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proye
 C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmCasetas.resources
 C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmHistorialClientes.resources
 C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmHistorialCasetas.resources
+C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmEmpleado.resources
+C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmFormEmpleado.resources
