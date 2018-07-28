@@ -57,6 +57,7 @@ Partial Class frmCliente
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
+        Me.btnEditar = New System.Windows.Forms.Button()
         CType(Me.picPerfil, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -402,6 +403,17 @@ Partial Class frmCliente
         Me.Label23.TabIndex = 75
         Me.Label23.Text = "Estado de pago"
         '
+        'btnEditar
+        '
+        Me.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEditar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnEditar.Image = CType(resources.GetObject("btnEditar.Image"), System.Drawing.Image)
+        Me.btnEditar.Location = New System.Drawing.Point(719, 15)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(47, 41)
+        Me.btnEditar.TabIndex = 77
+        Me.btnEditar.UseVisualStyleBackColor = True
+        '
         'frmCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -410,6 +422,7 @@ Partial Class frmCliente
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(778, 523)
         Me.ControlBox = False
+        Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.Label22)
         Me.Controls.Add(Me.Label23)
         Me.Controls.Add(Me.Label1)
@@ -487,4 +500,5 @@ Partial Class frmCliente
     Friend WithEvents Label21 As Label
     Friend WithEvents Label22 As Label
     Friend WithEvents Label23 As Label
+    Friend WithEvents btnEditar As Button
 End Class

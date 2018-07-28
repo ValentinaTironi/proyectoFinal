@@ -72,6 +72,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="casetas\frmCaseta.Designer.vb">
+      <DependentUpon>frmCaseta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="casetas\frmCaseta.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="clientes\frmCliente.Designer.vb">
       <DependentUpon>frmCliente.vb</DependentUpon>
     </Compile>
@@ -102,10 +108,10 @@
     <Compile Include="frmAdministradores.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCasetas.Designer.vb">
+    <Compile Include="casetas\frmCasetas.Designer.vb">
       <DependentUpon>frmCasetas.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmCasetas.vb">
+    <Compile Include="casetas\frmCasetas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="clientes\frmClientes.Designer.vb">
@@ -181,6 +187,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="casetas\frmCaseta.resx">
+      <DependentUpon>frmCaseta.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="clientes\frmCliente.resx">
       <DependentUpon>frmCliente.vb</DependentUpon>
     </EmbeddedResource>
@@ -196,7 +205,7 @@
     <EmbeddedResource Include="frmAdministradores.resx">
       <DependentUpon>frmAdministradores.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCasetas.resx">
+    <EmbeddedResource Include="casetas\frmCasetas.resx">
       <DependentUpon>frmCasetas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="clientes\frmClientes.resx">

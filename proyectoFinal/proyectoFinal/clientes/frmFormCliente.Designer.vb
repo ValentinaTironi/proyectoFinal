@@ -44,7 +44,7 @@ Partial Class frmFormCliente
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(387, 86)
+        Me.Label3.Location = New System.Drawing.Point(413, 74)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(82, 192)
         Me.Label3.TabIndex = 21
@@ -54,7 +54,7 @@ Partial Class frmFormCliente
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(85, 86)
+        Me.Label2.Location = New System.Drawing.Point(111, 74)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(131, 176)
         Me.Label2.TabIndex = 20
@@ -64,7 +64,7 @@ Partial Class frmFormCliente
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(233, 32)
+        Me.Label1.Location = New System.Drawing.Point(261, 28)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(185, 20)
         Me.Label1.TabIndex = 19
@@ -72,49 +72,49 @@ Partial Class frmFormCliente
         '
         'txtCuentaBancaria
         '
-        Me.txtCuentaBancaria.Location = New System.Drawing.Point(479, 133)
+        Me.txtCuentaBancaria.Location = New System.Drawing.Point(505, 121)
         Me.txtCuentaBancaria.Name = "txtCuentaBancaria"
         Me.txtCuentaBancaria.Size = New System.Drawing.Size(100, 20)
         Me.txtCuentaBancaria.TabIndex = 14
         '
         'txtEmail
         '
-        Me.txtEmail.Location = New System.Drawing.Point(217, 242)
+        Me.txtEmail.Location = New System.Drawing.Point(243, 230)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(100, 20)
         Me.txtEmail.TabIndex = 17
         '
         'txtPassword
         '
-        Me.txtPassword.Location = New System.Drawing.Point(479, 186)
+        Me.txtPassword.Location = New System.Drawing.Point(505, 174)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(100, 20)
         Me.txtPassword.TabIndex = 16
         '
         'txtNombreUsuario
         '
-        Me.txtNombreUsuario.Location = New System.Drawing.Point(217, 186)
+        Me.txtNombreUsuario.Location = New System.Drawing.Point(243, 174)
         Me.txtNombreUsuario.Name = "txtNombreUsuario"
         Me.txtNombreUsuario.Size = New System.Drawing.Size(100, 20)
         Me.txtNombreUsuario.TabIndex = 15
         '
         'txtCedula
         '
-        Me.txtCedula.Location = New System.Drawing.Point(217, 133)
+        Me.txtCedula.Location = New System.Drawing.Point(243, 121)
         Me.txtCedula.Name = "txtCedula"
         Me.txtCedula.Size = New System.Drawing.Size(100, 20)
         Me.txtCedula.TabIndex = 13
         '
         'txtApellido
         '
-        Me.txtApellido.Location = New System.Drawing.Point(217, 86)
+        Me.txtApellido.Location = New System.Drawing.Point(243, 74)
         Me.txtApellido.Name = "txtApellido"
         Me.txtApellido.Size = New System.Drawing.Size(100, 20)
         Me.txtApellido.TabIndex = 11
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(479, 86)
+        Me.txtNombre.Location = New System.Drawing.Point(505, 74)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(100, 20)
         Me.txtNombre.TabIndex = 12
@@ -123,7 +123,7 @@ Partial Class frmFormCliente
         '
         Me.cbxServicio.FormattingEnabled = True
         Me.cbxServicio.Items.AddRange(New Object() {"Número 1", "Número 2", "Número 3"})
-        Me.cbxServicio.Location = New System.Drawing.Point(475, 242)
+        Me.cbxServicio.Location = New System.Drawing.Point(501, 230)
         Me.cbxServicio.Name = "cbxServicio"
         Me.cbxServicio.Size = New System.Drawing.Size(104, 21)
         Me.cbxServicio.TabIndex = 22
@@ -132,7 +132,7 @@ Partial Class frmFormCliente
         '
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Caseta 1", "Caseta 2", "Caseta 3"})
-        Me.ComboBox1.Location = New System.Drawing.Point(475, 304)
+        Me.ComboBox1.Location = New System.Drawing.Point(501, 292)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(104, 21)
         Me.ComboBox1.TabIndex = 23
@@ -153,7 +153,7 @@ Partial Class frmFormCliente
         Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAgregar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnAgregar.Image = CType(resources.GetObject("btnAgregar.Image"), System.Drawing.Image)
-        Me.btnAgregar.Location = New System.Drawing.Point(652, 11)
+        Me.btnAgregar.Location = New System.Drawing.Point(685, 19)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(47, 41)
         Me.btnAgregar.TabIndex = 61
@@ -163,7 +163,7 @@ Partial Class frmFormCliente
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(387, 305)
+        Me.Label4.Location = New System.Drawing.Point(413, 293)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(70, 32)
         Me.Label4.TabIndex = 62
@@ -174,7 +174,7 @@ Partial Class frmFormCliente
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ClientSize = New System.Drawing.Size(711, 357)
+        Me.ClientSize = New System.Drawing.Size(758, 357)
         Me.ControlBox = False
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.btnAgregar)

@@ -43,6 +43,7 @@ Partial Class frmEmpleado
         Me.picPerfil = New System.Windows.Forms.PictureBox()
         Me.btnAtras = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.btnEditar = New System.Windows.Forms.Button()
         CType(Me.picPerfil, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -247,12 +248,24 @@ Partial Class frmEmpleado
         Me.Label9.TabIndex = 40
         Me.Label9.Text = "Información sobre empleado"
         '
+        'btnEditar
+        '
+        Me.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEditar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnEditar.Image = CType(resources.GetObject("btnEditar.Image"), System.Drawing.Image)
+        Me.btnEditar.Location = New System.Drawing.Point(698, 18)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(47, 41)
+        Me.btnEditar.TabIndex = 41
+        Me.btnEditar.UseVisualStyleBackColor = True
+        '
         'frmEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(757, 341)
+        Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.btnAtras)
         Me.Controls.Add(Me.lblCedula)
@@ -304,4 +317,5 @@ Partial Class frmEmpleado
     Friend WithEvents picPerfil As PictureBox
     Friend WithEvents btnAtras As Button
     Friend WithEvents Label9 As Label
+    Friend WithEvents btnEditar As Button
 End Class
