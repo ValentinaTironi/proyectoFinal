@@ -24,8 +24,8 @@ Partial Class frmPrincipal
     Private Sub InitializeComponent()
         Me.mnuUsuario = New System.Windows.Forms.MenuStrip()
         Me.mnuItemUsuario = New System.Windows.Forms.ToolStripMenuItem()
-        Me.btnMiCuenta = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CerrarSesiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuItemMiCuenta = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuItemCerrarSesion = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuItemDashboard = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuItemEmpleados = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuItemClientes = New System.Windows.Forms.ToolStripMenuItem()
@@ -47,22 +47,22 @@ Partial Class frmPrincipal
         '
         'mnuItemUsuario
         '
-        Me.mnuItemUsuario.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnMiCuenta, Me.CerrarSesiónToolStripMenuItem})
+        Me.mnuItemUsuario.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuItemMiCuenta, Me.mnuItemCerrarSesion})
         Me.mnuItemUsuario.Name = "mnuItemUsuario"
         Me.mnuItemUsuario.Size = New System.Drawing.Size(59, 20)
         Me.mnuItemUsuario.Text = "&Usuario"
         '
-        'btnMiCuenta
+        'mnuItemMiCuenta
         '
-        Me.btnMiCuenta.Name = "btnMiCuenta"
-        Me.btnMiCuenta.Size = New System.Drawing.Size(143, 22)
-        Me.btnMiCuenta.Text = "Mi cuenta"
+        Me.mnuItemMiCuenta.Name = "mnuItemMiCuenta"
+        Me.mnuItemMiCuenta.Size = New System.Drawing.Size(180, 22)
+        Me.mnuItemMiCuenta.Text = "Mi cuenta"
         '
-        'CerrarSesiónToolStripMenuItem
+        'mnuItemCerrarSesion
         '
-        Me.CerrarSesiónToolStripMenuItem.Name = "CerrarSesiónToolStripMenuItem"
-        Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
-        Me.CerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión"
+        Me.mnuItemCerrarSesion.Name = "mnuItemCerrarSesion"
+        Me.mnuItemCerrarSesion.Size = New System.Drawing.Size(180, 22)
+        Me.mnuItemCerrarSesion.Text = "Cerrar Sesión"
         '
         'mnuItemDashboard
         '
@@ -127,8 +127,8 @@ Partial Class frmPrincipal
     End Sub
     Friend WithEvents mnuUsuario As MenuStrip
     Friend WithEvents mnuItemUsuario As ToolStripMenuItem
-    Friend WithEvents btnMiCuenta As ToolStripMenuItem
-    Friend WithEvents CerrarSesiónToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents mnuItemMiCuenta As ToolStripMenuItem
+    Friend WithEvents mnuItemCerrarSesion As ToolStripMenuItem
     Friend WithEvents mnuItemDashboard As ToolStripMenuItem
     Friend WithEvents mnuItemEmpleados As ToolStripMenuItem
     Friend WithEvents mnuItemClientes As ToolStripMenuItem

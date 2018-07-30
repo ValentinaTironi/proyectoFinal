@@ -72,9 +72,7 @@ C:\Users\anshi\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\bin\Debug\
 C:\Users\anshi\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.vbprojResolveAssemblyReference.cache
 C:\Users\anshi\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmCaseta.resources
 C:\Users\anshi\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmCliente.resources
-C:\Users\anshi\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmFormCliente.resources
 C:\Users\anshi\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmEmpleado.resources
-C:\Users\anshi\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmFormEmpleado.resources
 C:\Users\anshi\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmAdministradores.resources
 C:\Users\anshi\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmCasetas.resources
 C:\Users\anshi\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmClientes.resources
@@ -85,10 +83,14 @@ C:\Users\anshi\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\
 C:\Users\anshi\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmMiCuenta.resources
 C:\Users\anshi\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmPresentacion.resources
 C:\Users\anshi\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmPrincipal.resources
-C:\Users\anshi\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.Loginfrm.resources
 C:\Users\anshi\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.Resources.resources
 C:\Users\anshi\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.vbproj.GenerateResource.cache
 C:\Users\anshi\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.vbproj.CoreCompileInputs.cache
 C:\Users\anshi\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.exe
 C:\Users\anshi\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.xml
 C:\Users\anshi\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.pdb
+C:\Users\anshi\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmEditarCliente.resources
+C:\Users\anshi\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmNuevoCliente.resources
+C:\Users\anshi\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmNuevoEmpleado.resources
+C:\Users\anshi\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmEditarEmpleado.resources
+C:\Users\anshi\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmLogin.resources

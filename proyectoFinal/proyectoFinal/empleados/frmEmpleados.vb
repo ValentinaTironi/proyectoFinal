@@ -4,6 +4,6 @@
     End Sub
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
-        openForm(frmFormEmpleado)
+        openForm(frmNuevoEmpleado)
     End Sub
 End Class

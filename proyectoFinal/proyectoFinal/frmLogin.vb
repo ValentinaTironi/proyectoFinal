@@ -1,4 +1,4 @@
-Public Class Loginfrm
+Public Class frmLogin
 
     ' TODO: inserte el código para realizar autenticación personalizada usando el nombre de usuario y la contraseña proporcionada 
     ' (Consulte https://go.microsoft.com/fwlink/?LinkId=35339).  

@@ -4,6 +4,6 @@
     End Sub
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
-        openForm(frmFormCliente)
+        openForm(frmNuevoCliente)
     End Sub
 End Class

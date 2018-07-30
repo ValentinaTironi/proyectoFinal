@@ -5,7 +5,7 @@
         mnuItemDashboard.PerformClick()
     End Sub
 
-    Private Sub btnMiCuenta_Click(sender As Object, e As EventArgs) Handles btnMiCuenta.Click
+    Private Sub mnuItemMiCuenta_Click(sender As Object, e As EventArgs) Handles mnuItemMiCuenta.Click
         openForm(frmMiCuenta)
     End Sub
 
@@ -31,5 +31,10 @@
 
     Private Sub mnuItemHistorialCasetas_Click(sender As Object, e As EventArgs) Handles mnuItemHistorialCasetas.Click
         openForm(frmHistorialCasetas)
+    End Sub
+
+    Private Sub mnuItemCerrarSesion_Click(sender As Object, e As EventArgs) Handles mnuItemCerrarSesion.Click
+        frmLogin.Show()
+        Me.Close()
     End Sub
 End Class

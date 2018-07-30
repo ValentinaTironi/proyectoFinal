@@ -44,6 +44,7 @@ Partial Class frmEmpleado
         Me.btnAtras = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.btnEditar = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
         CType(Me.picPerfil, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -253,11 +254,22 @@ Partial Class frmEmpleado
         Me.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEditar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnEditar.Image = CType(resources.GetObject("btnEditar.Image"), System.Drawing.Image)
-        Me.btnEditar.Location = New System.Drawing.Point(698, 18)
+        Me.btnEditar.Location = New System.Drawing.Point(645, 17)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(47, 41)
         Me.btnEditar.TabIndex = 41
         Me.btnEditar.UseVisualStyleBackColor = True
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEliminar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnEliminar.Image = CType(resources.GetObject("btnEliminar.Image"), System.Drawing.Image)
+        Me.btnEliminar.Location = New System.Drawing.Point(688, 18)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(47, 41)
+        Me.btnEliminar.TabIndex = 79
+        Me.btnEliminar.UseVisualStyleBackColor = True
         '
         'frmEmpleado
         '
@@ -265,6 +277,7 @@ Partial Class frmEmpleado
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(757, 341)
+        Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.btnAtras)
@@ -318,4 +331,5 @@ Partial Class frmEmpleado
     Friend WithEvents btnAtras As Button
     Friend WithEvents Label9 As Label
     Friend WithEvents btnEditar As Button
+    Friend WithEvents btnEliminar As Button
 End Class

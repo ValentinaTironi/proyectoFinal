@@ -84,10 +84,22 @@
     <Compile Include="clientes\frmCliente.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="clientes\frmFormCliente.Designer.vb">
-      <DependentUpon>frmFormCliente.vb</DependentUpon>
+    <Compile Include="clientes\frmEditarCliente.Designer.vb">
+      <DependentUpon>frmEditarCliente.vb</DependentUpon>
     </Compile>
-    <Compile Include="clientes\frmFormCliente.vb">
+    <Compile Include="clientes\frmEditarCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clientes\frmNuevoCliente.Designer.vb">
+      <DependentUpon>frmNuevoCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="clientes\frmNuevoCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="empleados\frmEditarEmpleado.Designer.vb">
+      <DependentUpon>frmEditarEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="empleados\frmEditarEmpleado.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="empleados\frmEmpleado.Designer.vb">
@@ -96,10 +108,10 @@
     <Compile Include="empleados\frmEmpleado.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="empleados\frmFormEmpleado.Designer.vb">
-      <DependentUpon>frmFormEmpleado.vb</DependentUpon>
+    <Compile Include="empleados\frmNuevoEmpleado.Designer.vb">
+      <DependentUpon>frmNuevoEmpleado.vb</DependentUpon>
     </Compile>
-    <Compile Include="empleados\frmFormEmpleado.vb">
+    <Compile Include="empleados\frmNuevoEmpleado.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAdministradores.Designer.vb">
@@ -164,10 +176,10 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GlobalFunctions.vb" />
-    <Compile Include="Loginfrm.Designer.vb">
-      <DependentUpon>Loginfrm.vb</DependentUpon>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="Loginfrm.vb">
+    <Compile Include="frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -193,14 +205,20 @@
     <EmbeddedResource Include="clientes\frmCliente.resx">
       <DependentUpon>frmCliente.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="clientes\frmFormCliente.resx">
-      <DependentUpon>frmFormCliente.vb</DependentUpon>
+    <EmbeddedResource Include="clientes\frmEditarCliente.resx">
+      <DependentUpon>frmEditarCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clientes\frmNuevoCliente.resx">
+      <DependentUpon>frmNuevoCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="empleados\frmEditarEmpleado.resx">
+      <DependentUpon>frmEditarEmpleado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="empleados\frmEmpleado.resx">
       <DependentUpon>frmEmpleado.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="empleados\frmFormEmpleado.resx">
-      <DependentUpon>frmFormEmpleado.vb</DependentUpon>
+    <EmbeddedResource Include="empleados\frmNuevoEmpleado.resx">
+      <DependentUpon>frmNuevoEmpleado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdministradores.resx">
       <DependentUpon>frmAdministradores.vb</DependentUpon>
@@ -232,8 +250,8 @@
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Loginfrm.resx">
-      <DependentUpon>Loginfrm.vb</DependentUpon>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

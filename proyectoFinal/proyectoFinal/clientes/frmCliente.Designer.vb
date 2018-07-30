@@ -58,6 +58,7 @@ Partial Class frmCliente
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.btnEditar = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
         CType(Me.picPerfil, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -408,11 +409,22 @@ Partial Class frmCliente
         Me.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEditar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnEditar.Image = CType(resources.GetObject("btnEditar.Image"), System.Drawing.Image)
-        Me.btnEditar.Location = New System.Drawing.Point(719, 15)
+        Me.btnEditar.Location = New System.Drawing.Point(641, 18)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(47, 41)
         Me.btnEditar.TabIndex = 77
         Me.btnEditar.UseVisualStyleBackColor = True
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEliminar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnEliminar.Image = CType(resources.GetObject("btnEliminar.Image"), System.Drawing.Image)
+        Me.btnEliminar.Location = New System.Drawing.Point(686, 19)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(47, 41)
+        Me.btnEliminar.TabIndex = 78
+        Me.btnEliminar.UseVisualStyleBackColor = True
         '
         'frmCliente
         '
@@ -420,8 +432,9 @@ Partial Class frmCliente
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ClientSize = New System.Drawing.Size(778, 523)
+        Me.ClientSize = New System.Drawing.Size(750, 523)
         Me.ControlBox = False
+        Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.Label22)
         Me.Controls.Add(Me.Label23)
@@ -501,4 +514,5 @@ Partial Class frmCliente
     Friend WithEvents Label22 As Label
     Friend WithEvents Label23 As Label
     Friend WithEvents btnEditar As Button
+    Friend WithEvents btnEliminar As Button
 End Class

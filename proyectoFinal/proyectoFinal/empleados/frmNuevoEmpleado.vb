@@ -1,4 +1,4 @@
-﻿Public Class frmFormEmpleado
+﻿Public Class frmNuevoEmpleado
     Private Sub btnAtras_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
         openForm(frmEmpleados)
     End Sub

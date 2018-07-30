@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 <Global.System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1726")> _
-Partial Class Loginfrm
+Partial Class frmLogin
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -29,7 +29,7 @@ Partial Class Loginfrm
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Loginfrm))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLogin))
         Me.UsernameLabel = New System.Windows.Forms.Label()
         Me.PasswordLabel = New System.Windows.Forms.Label()
         Me.txtUsername = New System.Windows.Forms.TextBox()
@@ -37,7 +37,7 @@ Partial Class Loginfrm
         Me.btnAceptar = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.chkRecordarContraseña = New System.Windows.Forms.CheckBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -107,17 +107,17 @@ Partial Class Loginfrm
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
         '
-        'CheckBox1
+        'chkRecordarContraseña
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(50, 232)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(126, 17)
-        Me.CheckBox1.TabIndex = 7
-        Me.CheckBox1.Text = "Recordar contraseña"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.chkRecordarContraseña.AutoSize = True
+        Me.chkRecordarContraseña.Location = New System.Drawing.Point(50, 232)
+        Me.chkRecordarContraseña.Name = "chkRecordarContraseña"
+        Me.chkRecordarContraseña.Size = New System.Drawing.Size(126, 17)
+        Me.chkRecordarContraseña.TabIndex = 7
+        Me.chkRecordarContraseña.Text = "Recordar contraseña"
+        Me.chkRecordarContraseña.UseVisualStyleBackColor = True
         '
-        'Loginfrm
+        'frmLogin
         '
         Me.AcceptButton = Me.btnAceptar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -126,7 +126,7 @@ Partial Class Loginfrm
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.CancelButton = Me.btnCancelar
         Me.ClientSize = New System.Drawing.Size(438, 290)
-        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.chkRecordarContraseña)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAceptar)
@@ -137,7 +137,7 @@ Partial Class Loginfrm
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "Loginfrm"
+        Me.Name = "frmLogin"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Clifford - Login"
@@ -148,5 +148,5 @@ Partial Class Loginfrm
     End Sub
 
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents chkRecordarContraseña As CheckBox
 End Class
