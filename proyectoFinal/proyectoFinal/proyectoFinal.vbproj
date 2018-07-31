@@ -78,6 +78,12 @@
     <Compile Include="casetas\frmCaseta.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="casetas\frmNuevaCaseta.Designer.vb">
+      <DependentUpon>frmNuevaCaseta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="casetas\frmNuevaCaseta.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="clientes\frmCliente.Designer.vb">
       <DependentUpon>frmCliente.vb</DependentUpon>
     </Compile>
@@ -201,6 +207,9 @@
   <ItemGroup>
     <EmbeddedResource Include="casetas\frmCaseta.resx">
       <DependentUpon>frmCaseta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="casetas\frmNuevaCaseta.resx">
+      <DependentUpon>frmNuevaCaseta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="clientes\frmCliente.resx">
       <DependentUpon>frmCliente.vb</DependentUpon>

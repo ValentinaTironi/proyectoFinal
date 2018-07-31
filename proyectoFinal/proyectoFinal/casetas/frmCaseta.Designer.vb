@@ -43,6 +43,7 @@ Partial Class frmCaseta
         Me.btnAlimentar = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnSuspender = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
         Me.pnlAcciones.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -257,6 +258,17 @@ Partial Class frmCaseta
         Me.btnSuspender.Text = "Suspender servicio"
         Me.btnSuspender.UseVisualStyleBackColor = True
         '
+        'btnEliminar
+        '
+        Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEliminar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnEliminar.Image = CType(resources.GetObject("btnEliminar.Image"), System.Drawing.Image)
+        Me.btnEliminar.Location = New System.Drawing.Point(714, 12)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(47, 41)
+        Me.btnEliminar.TabIndex = 79
+        Me.btnEliminar.UseVisualStyleBackColor = True
+        '
         'frmCaseta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -264,6 +276,7 @@ Partial Class frmCaseta
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(773, 399)
         Me.ControlBox = False
+        Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnSuspender)
         Me.Controls.Add(Me.pnlAcciones)
         Me.Controls.Add(Me.Label9)
@@ -310,4 +323,5 @@ Partial Class frmCaseta
     Friend WithEvents Label10 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents btnSuspender As Button
+    Friend WithEvents btnEliminar As Button
 End Class

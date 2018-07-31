@@ -19,4 +19,8 @@
     Private Sub btnDesinfectar_Click(sender As Object, e As EventArgs) Handles btnDesinfectar.Click
         MsgBox("Se activó el sistema de desinfección con éxito", MsgBoxStyle.Information)
     End Sub
+
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+        MsgBox("¿Está seguro que desea eliminar esta caseta?")
+    End Sub
 End Class

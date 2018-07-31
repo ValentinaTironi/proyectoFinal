@@ -24,12 +24,14 @@ Partial Class frmCasetas
     Private Sub InitializeComponent()
         Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"1", "Valentina Tironi", "12348875", "Activada"}, -1)
         Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"2", "Anthony Marcelli", "46744218", "Desactivada"}, -1)
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCasetas))
         Me.lvwCasetas = New System.Windows.Forms.ListView()
         Me.columnId = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.columnCliente = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.columnRasperry = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.columnEstado = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.btnAgregar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lvwCasetas
@@ -75,12 +77,25 @@ Partial Class frmCasetas
         Me.Label3.TabIndex = 10
         Me.Label3.Text = "Casetas asociadas a clientes"
         '
+        'btnAgregar
+        '
+        Me.btnAgregar.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAgregar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnAgregar.Image = CType(resources.GetObject("btnAgregar.Image"), System.Drawing.Image)
+        Me.btnAgregar.Location = New System.Drawing.Point(708, 12)
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.Size = New System.Drawing.Size(50, 41)
+        Me.btnAgregar.TabIndex = 43
+        Me.btnAgregar.UseVisualStyleBackColor = False
+        '
         'frmCasetas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(770, 304)
+        Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.lvwCasetas)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -100,4 +115,5 @@ Partial Class frmCasetas
     Friend WithEvents columnRasperry As ColumnHeader
     Friend WithEvents columnEstado As ColumnHeader
     Friend WithEvents Label3 As Label
+    Friend WithEvents btnAgregar As Button
 End Class

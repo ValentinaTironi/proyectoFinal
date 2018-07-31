@@ -21,7 +21,6 @@ C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proye
 C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmMiCuenta.resources
 C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmPresentacion.resources
 C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmPrincipal.resources
-C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.Loginfrm.resources
 C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.Resources.resources
 C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.vbproj.GenerateResource.cache
 C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.vbproj.CoreCompileInputs.cache
@@ -36,9 +35,7 @@ C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proye
 C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmHistorialClientes.resources
 C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmHistorialCasetas.resources
 C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmEmpleado.resources
-C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmFormEmpleado.resources
 C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmCliente.resources
-C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmFormCliente.resources
 C:\Users\anshi\Downloads\proyectoFinalAdmin-master\proyectoFinalAdmin-master\proyectoFinal\proyectoFinal\bin\Debug\proyectoFinal.exe.config
 C:\Users\anshi\Downloads\proyectoFinalAdmin-master\proyectoFinalAdmin-master\proyectoFinal\proyectoFinal\bin\Debug\proyectoFinal.exe
 C:\Users\anshi\Downloads\proyectoFinalAdmin-master\proyectoFinalAdmin-master\proyectoFinal\proyectoFinal\bin\Debug\proyectoFinal.pdb
@@ -94,3 +91,10 @@ C:\Users\anshi\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\
 C:\Users\anshi\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmNuevoEmpleado.resources
 C:\Users\anshi\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmEditarEmpleado.resources
 C:\Users\anshi\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmLogin.resources
+C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmCaseta.resources
+C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmEditarCliente.resources
+C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmNuevoCliente.resources
+C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmEditarEmpleado.resources
+C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmNuevoEmpleado.resources
+C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmLogin.resources
+C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmNuevaCaseta.resources
