@@ -37,4 +37,8 @@
         frmLogin.Show()
         Me.Close()
     End Sub
+
+    Private Sub mnuItemServicios_Click(sender As Object, e As EventArgs) Handles mnuItemServicios.Click
+        openForm(frmServicios)
+    End Sub
 End Class

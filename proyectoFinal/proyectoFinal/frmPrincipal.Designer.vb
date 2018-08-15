@@ -27,6 +27,7 @@ Partial Class frmPrincipal
         Me.mnuItemMiCuenta = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuItemCerrarSesion = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuItemDashboard = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuItemServicios = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuItemEmpleados = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuItemClientes = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuItemCasetas = New System.Windows.Forms.ToolStripMenuItem()
@@ -38,7 +39,7 @@ Partial Class frmPrincipal
         '
         'mnuUsuario
         '
-        Me.mnuUsuario.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuItemUsuario, Me.mnuItemDashboard, Me.mnuItemEmpleados, Me.mnuItemClientes, Me.mnuItemCasetas, Me.mnuItemHistorial})
+        Me.mnuUsuario.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuItemUsuario, Me.mnuItemDashboard, Me.mnuItemServicios, Me.mnuItemEmpleados, Me.mnuItemClientes, Me.mnuItemCasetas, Me.mnuItemHistorial})
         Me.mnuUsuario.Location = New System.Drawing.Point(0, 0)
         Me.mnuUsuario.Name = "mnuUsuario"
         Me.mnuUsuario.Size = New System.Drawing.Size(763, 24)
@@ -55,13 +56,13 @@ Partial Class frmPrincipal
         'mnuItemMiCuenta
         '
         Me.mnuItemMiCuenta.Name = "mnuItemMiCuenta"
-        Me.mnuItemMiCuenta.Size = New System.Drawing.Size(180, 22)
+        Me.mnuItemMiCuenta.Size = New System.Drawing.Size(143, 22)
         Me.mnuItemMiCuenta.Text = "Mi cuenta"
         '
         'mnuItemCerrarSesion
         '
         Me.mnuItemCerrarSesion.Name = "mnuItemCerrarSesion"
-        Me.mnuItemCerrarSesion.Size = New System.Drawing.Size(180, 22)
+        Me.mnuItemCerrarSesion.Size = New System.Drawing.Size(143, 22)
         Me.mnuItemCerrarSesion.Text = "Cerrar Sesión"
         '
         'mnuItemDashboard
@@ -69,6 +70,12 @@ Partial Class frmPrincipal
         Me.mnuItemDashboard.Name = "mnuItemDashboard"
         Me.mnuItemDashboard.Size = New System.Drawing.Size(76, 20)
         Me.mnuItemDashboard.Text = "Dashboard"
+        '
+        'mnuItemServicios
+        '
+        Me.mnuItemServicios.Name = "mnuItemServicios"
+        Me.mnuItemServicios.Size = New System.Drawing.Size(65, 20)
+        Me.mnuItemServicios.Text = "Servicios"
         '
         'mnuItemEmpleados
         '
@@ -136,4 +143,5 @@ Partial Class frmPrincipal
     Friend WithEvents mnuItemHistorialClientes As ToolStripMenuItem
     Friend WithEvents mnuItemHistorialCasetas As ToolStripMenuItem
     Friend WithEvents mnuItemCasetas As ToolStripMenuItem
+    Friend WithEvents mnuItemServicios As ToolStripMenuItem
 End Class

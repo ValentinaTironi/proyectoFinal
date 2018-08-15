@@ -162,6 +162,30 @@
     <Compile Include="historial\frmHistorialClientes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="servicios\frmEditarServicio.Designer.vb">
+      <DependentUpon>frmEditarServicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="servicios\frmEditarServicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="servicios\frmNuevoServicio.Designer.vb">
+      <DependentUpon>frmNuevoServicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="servicios\frmNuevoServicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="servicios\frmServicio.Designer.vb">
+      <DependentUpon>frmServicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="servicios\frmServicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="servicios\frmServicios.Designer.vb">
+      <DependentUpon>frmServicios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="servicios\frmServicios.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="usuario\frmEditarUsuario.Designer.vb">
       <DependentUpon>frmEditarUsuario.vb</DependentUpon>
     </Compile>
@@ -255,6 +279,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="historial\frmHistorialClientes.resx">
       <DependentUpon>frmHistorialClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="servicios\frmEditarServicio.resx">
+      <DependentUpon>frmEditarServicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="servicios\frmNuevoServicio.resx">
+      <DependentUpon>frmNuevoServicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="servicios\frmServicio.resx">
+      <DependentUpon>frmServicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="servicios\frmServicios.resx">
+      <DependentUpon>frmServicios.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="usuario\frmEditarUsuario.resx">
       <DependentUpon>frmEditarUsuario.vb</DependentUpon>
