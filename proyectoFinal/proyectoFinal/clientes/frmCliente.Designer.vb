@@ -266,7 +266,7 @@ Partial Class frmCliente
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(505, 464)
+        Me.Label1.Location = New System.Drawing.Point(505, 468)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(72, 16)
         Me.Label1.TabIndex = 74
@@ -298,9 +298,9 @@ Partial Class frmCliente
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.Location = New System.Drawing.Point(505, 378)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(151, 16)
+        Me.Label13.Size = New System.Drawing.Size(143, 16)
         Me.Label13.TabIndex = 71
-        Me.Label13.Text = "El primero de cada mes"
+        Me.Label13.Text = "01 de todos los meses"
         '
         'Label14
         '
@@ -326,7 +326,7 @@ Partial Class frmCliente
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(94, 464)
+        Me.Label16.Location = New System.Drawing.Point(94, 467)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(150, 16)
         Me.Label16.TabIndex = 68

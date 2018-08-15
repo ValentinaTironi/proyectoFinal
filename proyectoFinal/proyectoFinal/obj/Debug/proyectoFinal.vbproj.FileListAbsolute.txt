@@ -98,3 +98,4 @@ C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proye
 C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmNuevoEmpleado.resources
 C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmLogin.resources
 C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmNuevaCaseta.resources
+C:\Users\Alumno\Desktop\proyecto\Proyecto\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmEditarUsuario.resources

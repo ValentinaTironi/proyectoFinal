@@ -26,10 +26,10 @@ Partial Class frmDashboard
         Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"2", "Clifford clifford clifford clifford ", "26-03-2018", "Elián"}, -1)
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lvwUltimosEventos = New System.Windows.Forms.ListView()
+        Me.columnId = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.columnDescripcion = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.columnFecha = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.columnUsuario = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.columnId = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.SuspendLayout()
         '
         'Label3
@@ -55,6 +55,11 @@ Partial Class frmDashboard
         Me.lvwUltimosEventos.UseCompatibleStateImageBehavior = False
         Me.lvwUltimosEventos.View = System.Windows.Forms.View.Details
         '
+        'columnId
+        '
+        Me.columnId.Text = "ID"
+        Me.columnId.Width = 39
+        '
         'columnDescripcion
         '
         Me.columnDescripcion.Text = "Descripción"
@@ -69,11 +74,6 @@ Partial Class frmDashboard
         '
         Me.columnUsuario.Text = "Usuario"
         Me.columnUsuario.Width = 94
-        '
-        'columnId
-        '
-        Me.columnId.Text = "ID"
-        Me.columnId.Width = 39
         '
         'frmDashboard
         '

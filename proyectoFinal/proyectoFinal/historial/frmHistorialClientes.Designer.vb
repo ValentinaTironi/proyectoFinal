@@ -22,10 +22,9 @@ Partial Class frmHistorialClientes
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim ListViewItem9 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Cliente uno", "Se agregó un nuevo cliente", "Valentina", "2018-07-24"}, -1)
-        Dim ListViewItem10 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Cliente dos", "Se editó un cliente", "Yonatan", "2018-07-24"}, -1)
-        Dim ListViewItem11 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Cliente tres", "Se agregó un nuevo cliente", "Elián", "2018-07-24"}, -1)
-        Dim ListViewItem12 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Cliente cuatro", "Se desactivó el servicio para un cliente", "Anthony", "2018-07-24"}, -1)
+        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Cliente uno", "Se agregó un nuevo cliente", "Valentina", "2018-07-24"}, -1)
+        Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Cliente dos", "Se editó un cliente", "Yonatan", "2018-07-24"}, -1)
+        Dim ListViewItem3 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Cliente tres", "Se agregó un nuevo cliente", "Elián", "2018-07-24"}, -1)
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lvwEmpleados = New System.Windows.Forms.ListView()
         Me.ColumnCliente = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -50,7 +49,7 @@ Partial Class frmHistorialClientes
         Me.lvwEmpleados.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnCliente, Me.columnDescripcion, Me.columnUsuario, Me.columnFecha})
         Me.lvwEmpleados.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lvwEmpleados.FullRowSelect = True
-        Me.lvwEmpleados.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem9, ListViewItem10, ListViewItem11, ListViewItem12})
+        Me.lvwEmpleados.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1, ListViewItem2, ListViewItem3})
         Me.lvwEmpleados.Location = New System.Drawing.Point(12, 86)
         Me.lvwEmpleados.Name = "lvwEmpleados"
         Me.lvwEmpleados.Size = New System.Drawing.Size(744, 199)

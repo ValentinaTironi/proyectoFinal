@@ -162,10 +162,16 @@
     <Compile Include="historial\frmHistorialClientes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMiCuenta.Designer.vb">
+    <Compile Include="usuario\frmEditarUsuario.Designer.vb">
+      <DependentUpon>frmEditarUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="usuario\frmEditarUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="usuario\frmMiCuenta.Designer.vb">
       <DependentUpon>frmMiCuenta.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmMiCuenta.vb">
+    <Compile Include="usuario\frmMiCuenta.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPresentacion.Designer.vb">
@@ -250,7 +256,10 @@
     <EmbeddedResource Include="historial\frmHistorialClientes.resx">
       <DependentUpon>frmHistorialClientes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMiCuenta.resx">
+    <EmbeddedResource Include="usuario\frmEditarUsuario.resx">
+      <DependentUpon>frmEditarUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usuario\frmMiCuenta.resx">
       <DependentUpon>frmMiCuenta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPresentacion.resx">

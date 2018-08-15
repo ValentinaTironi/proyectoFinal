@@ -34,6 +34,7 @@ Partial Class frmMiCuenta
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.lblCedula = New System.Windows.Forms.Label()
         Me.lblTelefono = New System.Windows.Forms.Label()
         Me.lblDireccion = New System.Windows.Forms.Label()
@@ -42,7 +43,7 @@ Partial Class frmMiCuenta
         Me.lblNombre = New System.Windows.Forms.Label()
         Me.lblNombreusuario = New System.Windows.Forms.Label()
         Me.lblApellido = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
+        Me.btnEditar = New System.Windows.Forms.Button()
         CType(Me.picPerfil, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -150,6 +151,7 @@ Partial Class frmMiCuenta
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.Controls.Add(Me.btnEditar)
         Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Controls.Add(Me.lblCedula)
         Me.Panel1.Controls.Add(Me.lblTelefono)
@@ -171,8 +173,18 @@ Partial Class frmMiCuenta
         Me.Panel1.Controls.Add(Me.picPerfil)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(663, 331)
+        Me.Panel1.Size = New System.Drawing.Size(734, 331)
         Me.Panel1.TabIndex = 11
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(290, 9)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(78, 20)
+        Me.Label9.TabIndex = 41
+        Me.Label9.Text = "Mi cuenta"
         '
         'lblCedula
         '
@@ -254,22 +266,23 @@ Partial Class frmMiCuenta
         Me.lblApellido.TabIndex = 13
         Me.lblApellido.Text = "Tironi"
         '
-        'Label9
+        'btnEditar
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(290, 9)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(78, 20)
-        Me.Label9.TabIndex = 41
-        Me.Label9.Text = "Mi cuenta"
+        Me.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEditar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnEditar.Image = CType(resources.GetObject("btnEditar.Image"), System.Drawing.Image)
+        Me.btnEditar.Location = New System.Drawing.Point(675, 3)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(47, 41)
+        Me.btnEditar.TabIndex = 78
+        Me.btnEditar.UseVisualStyleBackColor = True
         '
         'frmMiCuenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ClientSize = New System.Drawing.Size(692, 359)
+        Me.ClientSize = New System.Drawing.Size(758, 359)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
@@ -306,4 +319,5 @@ Partial Class frmMiCuenta
     Friend WithEvents lblNombreusuario As Label
     Friend WithEvents lblApellido As Label
     Friend WithEvents Label9 As Label
+    Friend WithEvents btnEditar As Button
 End Class
