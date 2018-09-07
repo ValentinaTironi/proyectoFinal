@@ -103,13 +103,10 @@ Public Class Usuario
 
         Dim reader As SqlDataReader = conn.SelectStatement("SELECT * FROM personas P JOIN empleados E ON P.id = E.id WHERE username = '" + username + "' AND password ='" + password + "'")
         If reader.HasRows Then
-
-
-
             Return True
         End If
 
+        reader.Close()
         Return False
-
     End Function
 End Class

@@ -25,10 +25,11 @@ Public NotInheritable Class DBConn
 
         myCmd.CommandText = sSql
 
-        myConn.Open()
+        If Not (myConn.State = ConnectionState.Open) Then
+            myConn.Open()
+        End If
 
         Return myCmd.ExecuteReader()
-
     End Function
 
 End Class
