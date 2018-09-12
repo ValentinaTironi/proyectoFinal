@@ -29,7 +29,11 @@ Public NotInheritable Class DBConn
             myConn.Open()
         End If
 
-        Return myCmd.ExecuteReader()
+        Dim sqlResult As SqlDataReader = myCmd.ExecuteReader()
+
+        myCmd = Nothing
+
+        Return sqlResult
     End Function
 
 End Class

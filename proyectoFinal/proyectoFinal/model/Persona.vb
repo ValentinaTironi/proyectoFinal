@@ -1,15 +1,16 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class Usuario
+Public Class Persona
+    Inherits Generica
 
     Private _id As Integer
-    Private _cedula As Integer
-    Private _nombre_completo As String
-    Private _username As String
-    Private _password As String
-    Private _email As String
-    Private _numero_cuenta_bancaria As String
-    Private _direccion As String
+    Protected _cedula As Integer
+    Protected _nombre_completo As String
+    Protected _username As String
+    Protected _password As String
+    Protected _email As String
+    Protected _numero_cuenta_bancaria As String
+    Protected _direccion As String
 
     Public Property id() As Integer
         Get
@@ -84,18 +85,20 @@ Public Class Usuario
     End Property
 
     Public Sub New()
-
+        _nombre_tabla = "personas"
     End Sub
 
     Public Sub New(id As Integer, cedula As Integer, nombre_completo As String, username As String, password As String, email As String, numero_cuenta_bancaria As String, direccion As String)
-        Me._id = id
-        Me._cedula = cedula
-        Me._nombre_completo = nombre_completo
-        Me._username = username
-        Me._password = password
-        Me._email = email
-        Me._numero_cuenta_bancaria = numero_cuenta_bancaria
-        Me._direccion = direccion
+        _nombre_tabla = "personas"
+
+        _id = id
+        _cedula = cedula
+        _nombre_completo = nombre_completo
+        _username = username
+        _password = password
+        _email = email
+        _numero_cuenta_bancaria = numero_cuenta_bancaria
+        _direccion = direccion
     End Sub
 
     Public Function login(username As String, password As String) As Boolean

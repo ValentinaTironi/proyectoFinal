@@ -22,11 +22,9 @@ Partial Class frmServicios
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"1", "Servicio 1", "1", "$300", "Programadora", "Si"}, -1)
-        Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"2", "Servicio 2", "2", "$500"}, -1)
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmServicios))
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.lvwAdministradores = New System.Windows.Forms.ListView()
+        Me.lvwServicios = New System.Windows.Forms.ListView()
         Me.columnId = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.columnNombre = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.columnCantCasetas = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -45,18 +43,17 @@ Partial Class frmServicios
         Me.Label3.Text = "Todos los servicios"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'lvwAdministradores
+        'lvwServicios
         '
-        Me.lvwAdministradores.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.columnId, Me.columnNombre, Me.columnCantCasetas, Me.columnPrecio})
-        Me.lvwAdministradores.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lvwAdministradores.FullRowSelect = True
-        Me.lvwAdministradores.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1, ListViewItem2})
-        Me.lvwAdministradores.Location = New System.Drawing.Point(24, 82)
-        Me.lvwAdministradores.Name = "lvwAdministradores"
-        Me.lvwAdministradores.Size = New System.Drawing.Size(712, 199)
-        Me.lvwAdministradores.TabIndex = 12
-        Me.lvwAdministradores.UseCompatibleStateImageBehavior = False
-        Me.lvwAdministradores.View = System.Windows.Forms.View.Details
+        Me.lvwServicios.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.columnId, Me.columnNombre, Me.columnCantCasetas, Me.columnPrecio})
+        Me.lvwServicios.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lvwServicios.FullRowSelect = True
+        Me.lvwServicios.Location = New System.Drawing.Point(24, 82)
+        Me.lvwServicios.Name = "lvwServicios"
+        Me.lvwServicios.Size = New System.Drawing.Size(712, 199)
+        Me.lvwServicios.TabIndex = 12
+        Me.lvwServicios.UseCompatibleStateImageBehavior = False
+        Me.lvwServicios.View = System.Windows.Forms.View.Details
         '
         'columnId
         '
@@ -98,7 +95,7 @@ Partial Class frmServicios
         Me.ClientSize = New System.Drawing.Size(768, 335)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.lvwAdministradores)
+        Me.Controls.Add(Me.lvwServicios)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmServicios"
         Me.Text = "frmServicios"
@@ -108,7 +105,7 @@ Partial Class frmServicios
     End Sub
 
     Friend WithEvents Label3 As Label
-    Friend WithEvents lvwAdministradores As ListView
+    Friend WithEvents lvwServicios As ListView
     Friend WithEvents columnId As ColumnHeader
     Friend WithEvents columnNombre As ColumnHeader
     Friend WithEvents columnCantCasetas As ColumnHeader

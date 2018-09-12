@@ -1,3 +1,5 @@
+Imports System.Data.SqlClient
+
 Public Class frmLogin
 
     ' TODO: inserte el código para realizar autenticación personalizada usando el nombre de usuario y la contraseña proporcionada 
@@ -13,7 +15,7 @@ Public Class frmLogin
         user = Trim(txtUsername.Text())
         password = Trim(txtPassword.Text())
 
-        Dim usuario As New Usuario()
+        Dim usuario As New Persona()
 
         'Que los campos no esten vacíos
         If user = "" Then
