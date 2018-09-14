@@ -22,17 +22,15 @@ Partial Class frmCasetas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"1", "Valentina Tironi", "12348875", "Activada", "true"}, -1)
-        Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"2", "Anthony Marcelli", "46744218", "Desactivada", "false"}, -1)
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCasetas))
         Me.lvwCasetas = New System.Windows.Forms.ListView()
         Me.columnId = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.columnCliente = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.columnRasperry = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.columnEstado = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.columnAutomatico = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnAgregar = New System.Windows.Forms.Button()
-        Me.columnAutomatico = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.SuspendLayout()
         '
         'lvwCasetas
@@ -40,7 +38,6 @@ Partial Class frmCasetas
         Me.lvwCasetas.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.columnId, Me.columnCliente, Me.columnRasperry, Me.columnEstado, Me.columnAutomatico})
         Me.lvwCasetas.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lvwCasetas.FullRowSelect = True
-        Me.lvwCasetas.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1, ListViewItem2})
         Me.lvwCasetas.Location = New System.Drawing.Point(12, 85)
         Me.lvwCasetas.Name = "lvwCasetas"
         Me.lvwCasetas.Size = New System.Drawing.Size(743, 199)
@@ -68,6 +65,11 @@ Partial Class frmCasetas
         Me.columnEstado.Text = "Estado"
         Me.columnEstado.Width = 94
         '
+        'columnAutomatico
+        '
+        Me.columnAutomatico.Text = "Automático"
+        Me.columnAutomatico.Width = 107
+        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -89,11 +91,6 @@ Partial Class frmCasetas
         Me.btnAgregar.Size = New System.Drawing.Size(50, 41)
         Me.btnAgregar.TabIndex = 43
         Me.btnAgregar.UseVisualStyleBackColor = False
-        '
-        'columnAutomatico
-        '
-        Me.columnAutomatico.Text = "Automático"
-        Me.columnAutomatico.Width = 107
         '
         'frmCasetas
         '

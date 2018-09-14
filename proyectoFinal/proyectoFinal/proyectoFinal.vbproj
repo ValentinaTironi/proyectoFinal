@@ -102,6 +102,7 @@
     <Compile Include="clientes\frmNuevoCliente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="model\Caseta.vb" />
     <Compile Include="model\Cliente.vb" />
     <Compile Include="model\DBConn.vb" />
     <Compile Include="empleados\frmEditarEmpleado.Designer.vb">
@@ -216,7 +217,7 @@
       <DependentUpon>frmPrincipal.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GlobalFunctions.vb" />
+    <Compile Include="model\GlobalFunctions.vb" />
     <Compile Include="frmLogin.Designer.vb">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </Compile>

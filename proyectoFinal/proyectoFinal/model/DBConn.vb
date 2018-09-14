@@ -21,13 +21,13 @@ Public NotInheritable Class DBConn
 
     Public Function SelectStatement(sSql As String) As SqlDataReader
 
-        myCmd = myConn.CreateCommand
-
-        myCmd.CommandText = sSql
-
         If Not (myConn.State = ConnectionState.Open) Then
             myConn.Open()
         End If
+
+        myCmd = myConn.CreateCommand
+
+        myCmd.CommandText = sSql
 
         Dim sqlResult As SqlDataReader = myCmd.ExecuteReader()
 

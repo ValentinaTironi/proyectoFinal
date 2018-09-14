@@ -7,4 +7,13 @@
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
         openForm(frmNuevaCaseta)
     End Sub
+
+    Private Sub frmCasetas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim oCaseta As New Caseta()
+        Dim elements As New List(Of String) From {"id", "nombre_completo", "estado", "automatico", "nombre_raspberry"}
+
+        oCaseta.listarElementos(oCaseta.allElements(), elements, lvwCasetas)
+
+        oCaseta.allElements().Close()
+    End Sub
 End Class

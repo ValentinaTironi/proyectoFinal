@@ -7,7 +7,7 @@ Public Class Generica
     Protected _nombre_tabla As String
 
 
-    Public Overridable Function obtenerListado() As SqlDataReader
+    Public Overridable Function allElements() As SqlDataReader
         Return DBConn.Instance().SelectStatement("SELECT * FROM " + _nombre_tabla)
     End Function
 
@@ -15,16 +15,16 @@ Public Class Generica
         If sqlResult.HasRows() Then
             lvw.Items.Clear()
 
+            Dim first_element As String = elements(0)
             While sqlResult.Read
-                Dim lvItem As ListViewItem = lvw.Items.Add(sqlResult(elements(0)).ToString)
-
-                lvItem.SubItems.Add(sqlResult(elements(1)).ToString)
-                lvItem.SubItems.Add(sqlResult(elements(2)).ToString)
-                lvItem.SubItems.Add(sqlResult(elements(3)).ToString)
-                lvItem.SubItems.Add(sqlResult(elements(4)).ToString)
+                Dim lvItem As ListViewItem = lvw.Items.Add(sqlResult(first_element).ToString)
+                For Each element In elements
+                    If element IsNot first_element Then
+                        lvItem.SubItems.Add(sqlResult(element).ToString)
+                    End If
+                Next
             End While
         End If
-
         sqlResult.Close()
     End Sub
 End Class

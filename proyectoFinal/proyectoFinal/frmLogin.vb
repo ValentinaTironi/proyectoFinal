@@ -15,7 +15,7 @@ Public Class frmLogin
         user = Trim(txtUsername.Text())
         password = Trim(txtPassword.Text())
 
-        Dim usuario As New Persona()
+        Dim usuario As New Empleado()
 
         'Que los campos no esten vacíos
         If user = "" Then

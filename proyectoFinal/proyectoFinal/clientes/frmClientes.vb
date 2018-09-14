@@ -12,10 +12,10 @@ Public Class frmClientes
     Private Sub frmClientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim oCliente As New Cliente()
 
-        Dim sqlResult As SqlDataReader = oCliente.obtenerListado()
-
         Dim elements As New List(Of String) From {"id", "nombre_completo", "email", "username", "cedula"}
 
-        oCliente.listarElementos(sqlResult, elements, lvwClientes)
+        oCliente.listarElementos(oCliente.allElements(), elements, lvwClientes)
+
+        oCliente.allElements().Close()
     End Sub
 End Class

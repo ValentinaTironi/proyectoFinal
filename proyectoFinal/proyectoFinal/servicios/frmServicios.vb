@@ -12,19 +12,10 @@ Public Class frmServicios
     Private Sub frmServicios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim oServicio As New Servicio()
 
-        Dim sqlResult As SqlDataReader = oServicio.obtenerListado()
+        Dim elements As New List(Of String) From {"id", "nombre", "cantidad_casetas", "precio"}
 
-        If sqlResult.HasRows() Then
-            lvwServicios.Items.Clear()
+        oServicio.listarElementos(oServicio.allElements(), elements, lvwServicios)
 
-            While sqlResult.Read
-                Dim lvItem As ListViewItem = lvwServicios.Items.Add(sqlResult("id").ToString)
-
-                lvItem.SubItems.Add(sqlResult("nombre").ToString)
-                lvItem.SubItems.Add(sqlResult("cantidad_casetas").ToString)
-                lvItem.SubItems.Add(sqlResult("precio").ToString)
-            End While
-        End If
-        sqlResult.Close()
+        oServicio.allElements().Close()
     End Sub
 End Class

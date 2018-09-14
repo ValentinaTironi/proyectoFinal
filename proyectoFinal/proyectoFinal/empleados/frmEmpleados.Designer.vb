@@ -22,17 +22,12 @@ Partial Class frmEmpleados
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"1", "Valentina Tironi", "valentina.tironi@anima.edu.uy", "valentinatironi", "Programadora", "Si"}, -1)
-        Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"2", "Yonatan Morgades", "yonatan.morgades@anima.edu.uy", "yonatanmorgades", "QA", "Si"}, -1)
-        Dim ListViewItem3 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"3", "Elián Pintos", "elian.pintos@anima.edu.uy", "elianpintos", "Diseño", "No"}, -1)
-        Dim ListViewItem4 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"4", "Anthony Marcelli", "anthony.marcelli@anima.edu.uy", "anthonymarcelli", "Redes", "Si"}, -1)
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmEmpleados))
         Me.lvwEmpleados = New System.Windows.Forms.ListView()
         Me.columnId = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.columnNombreCompleto = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.columnEmail = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.columnNombreUsuario = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnPuesto = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnAdmin = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnAgregar = New System.Windows.Forms.Button()
@@ -40,10 +35,9 @@ Partial Class frmEmpleados
         '
         'lvwEmpleados
         '
-        Me.lvwEmpleados.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.columnId, Me.columnNombreCompleto, Me.columnEmail, Me.columnNombreUsuario, Me.ColumnPuesto, Me.ColumnAdmin})
+        Me.lvwEmpleados.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.columnId, Me.columnNombreCompleto, Me.columnEmail, Me.columnNombreUsuario, Me.ColumnAdmin})
         Me.lvwEmpleados.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lvwEmpleados.FullRowSelect = True
-        Me.lvwEmpleados.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1, ListViewItem2, ListViewItem3, ListViewItem4})
         Me.lvwEmpleados.Location = New System.Drawing.Point(12, 82)
         Me.lvwEmpleados.Name = "lvwEmpleados"
         Me.lvwEmpleados.Size = New System.Drawing.Size(744, 199)
@@ -70,11 +64,6 @@ Partial Class frmEmpleados
         '
         Me.columnNombreUsuario.Text = "Nombre de Usuario"
         Me.columnNombreUsuario.Width = 131
-        '
-        'ColumnPuesto
-        '
-        Me.ColumnPuesto.Text = "Puesto de trabajo"
-        Me.ColumnPuesto.Width = 116
         '
         'ColumnAdmin
         '
@@ -130,7 +119,6 @@ Partial Class frmEmpleados
     Friend WithEvents columnEmail As ColumnHeader
     Friend WithEvents columnNombreUsuario As ColumnHeader
     Friend WithEvents Label3 As Label
-    Friend WithEvents ColumnPuesto As ColumnHeader
     Friend WithEvents ColumnAdmin As ColumnHeader
     Friend WithEvents btnAgregar As Button
 End Class
