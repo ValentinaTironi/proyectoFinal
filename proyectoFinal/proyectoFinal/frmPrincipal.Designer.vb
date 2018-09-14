@@ -31,15 +31,13 @@ Partial Class frmPrincipal
         Me.mnuItemEmpleados = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuItemClientes = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuItemCasetas = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuItemHistorial = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuItemHistorialClientes = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuItemHistorialCasetas = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuUsuario.SuspendLayout()
         Me.SuspendLayout()
         '
         'mnuUsuario
         '
-        Me.mnuUsuario.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuItemUsuario, Me.mnuItemDashboard, Me.mnuItemServicios, Me.mnuItemEmpleados, Me.mnuItemClientes, Me.mnuItemCasetas, Me.mnuItemHistorial})
+        Me.mnuUsuario.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuItemUsuario, Me.mnuItemDashboard, Me.mnuItemServicios, Me.mnuItemEmpleados, Me.mnuItemClientes, Me.mnuItemCasetas, Me.mnuItemHistorialCasetas})
         Me.mnuUsuario.Location = New System.Drawing.Point(0, 0)
         Me.mnuUsuario.Name = "mnuUsuario"
         Me.mnuUsuario.Size = New System.Drawing.Size(763, 24)
@@ -95,24 +93,11 @@ Partial Class frmPrincipal
         Me.mnuItemCasetas.Size = New System.Drawing.Size(59, 20)
         Me.mnuItemCasetas.Text = "Casetas"
         '
-        'mnuItemHistorial
-        '
-        Me.mnuItemHistorial.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuItemHistorialClientes, Me.mnuItemHistorialCasetas})
-        Me.mnuItemHistorial.Name = "mnuItemHistorial"
-        Me.mnuItemHistorial.Size = New System.Drawing.Size(63, 20)
-        Me.mnuItemHistorial.Text = "Historial"
-        '
-        'mnuItemHistorialClientes
-        '
-        Me.mnuItemHistorialClientes.Name = "mnuItemHistorialClientes"
-        Me.mnuItemHistorialClientes.Size = New System.Drawing.Size(116, 22)
-        Me.mnuItemHistorialClientes.Text = "Clientes"
-        '
         'mnuItemHistorialCasetas
         '
         Me.mnuItemHistorialCasetas.Name = "mnuItemHistorialCasetas"
-        Me.mnuItemHistorialCasetas.Size = New System.Drawing.Size(116, 22)
-        Me.mnuItemHistorialCasetas.Text = "Casetas"
+        Me.mnuItemHistorialCasetas.Size = New System.Drawing.Size(63, 20)
+        Me.mnuItemHistorialCasetas.Text = "Historial"
         '
         'frmPrincipal
         '
@@ -139,8 +124,6 @@ Partial Class frmPrincipal
     Friend WithEvents mnuItemDashboard As ToolStripMenuItem
     Friend WithEvents mnuItemEmpleados As ToolStripMenuItem
     Friend WithEvents mnuItemClientes As ToolStripMenuItem
-    Friend WithEvents mnuItemHistorial As ToolStripMenuItem
-    Friend WithEvents mnuItemHistorialClientes As ToolStripMenuItem
     Friend WithEvents mnuItemHistorialCasetas As ToolStripMenuItem
     Friend WithEvents mnuItemCasetas As ToolStripMenuItem
     Friend WithEvents mnuItemServicios As ToolStripMenuItem

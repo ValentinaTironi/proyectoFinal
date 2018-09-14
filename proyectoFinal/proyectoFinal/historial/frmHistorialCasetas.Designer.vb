@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmHistorialCasetas
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,19 +20,14 @@ Partial Class frmHistorialCasetas
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Caseta uno", "Se accionó el sistema de aliemtación", "Valentina", "2018-07-24", "Empleado"}, -1)
-        Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Caseta dos", "Se accionó el sistema de hidratación.", "Yonatan", "2018-07-24", "Empleado"}, -1)
-        Dim ListViewItem3 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Caseta tres", "Se accionó el sistema de desinfección.", "Elián", "2018-07-24", "Cliente"}, -1)
-        Dim ListViewItem4 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Caseta cuatro", "Se dió de baja el perro asociado", "Anthony", "2018-07-24", "Cliente"}, -1)
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.lvwEmpleados = New System.Windows.Forms.ListView()
+        Me.lvwHistorialCasetas = New System.Windows.Forms.ListView()
         Me.ColumnCaseta = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.columnDescripcion = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.columnUsuario = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.columnFecha = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnTipoUsuario = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.SuspendLayout()
         '
         'Label3
@@ -46,18 +41,17 @@ Partial Class frmHistorialCasetas
         Me.Label3.Text = "Historial en relación a casetas"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'lvwEmpleados
+        'lvwHistorialCasetas
         '
-        Me.lvwEmpleados.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnCaseta, Me.columnDescripcion, Me.columnUsuario, Me.columnFecha, Me.ColumnTipoUsuario})
-        Me.lvwEmpleados.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lvwEmpleados.FullRowSelect = True
-        Me.lvwEmpleados.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1, ListViewItem2, ListViewItem3, ListViewItem4})
-        Me.lvwEmpleados.Location = New System.Drawing.Point(12, 98)
-        Me.lvwEmpleados.Name = "lvwEmpleados"
-        Me.lvwEmpleados.Size = New System.Drawing.Size(744, 199)
-        Me.lvwEmpleados.TabIndex = 13
-        Me.lvwEmpleados.UseCompatibleStateImageBehavior = False
-        Me.lvwEmpleados.View = System.Windows.Forms.View.Details
+        Me.lvwHistorialCasetas.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnCaseta, Me.columnDescripcion, Me.columnUsuario, Me.columnFecha})
+        Me.lvwHistorialCasetas.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lvwHistorialCasetas.FullRowSelect = True
+        Me.lvwHistorialCasetas.Location = New System.Drawing.Point(12, 98)
+        Me.lvwHistorialCasetas.Name = "lvwHistorialCasetas"
+        Me.lvwHistorialCasetas.Size = New System.Drawing.Size(744, 199)
+        Me.lvwHistorialCasetas.TabIndex = 13
+        Me.lvwHistorialCasetas.UseCompatibleStateImageBehavior = False
+        Me.lvwHistorialCasetas.View = System.Windows.Forms.View.Details
         '
         'ColumnCaseta
         '
@@ -72,17 +66,12 @@ Partial Class frmHistorialCasetas
         'columnUsuario
         '
         Me.columnUsuario.Text = "Usuario"
-        Me.columnUsuario.Width = 87
+        Me.columnUsuario.Width = 156
         '
         'columnFecha
         '
         Me.columnFecha.Text = "Fecha"
-        Me.columnFecha.Width = 86
-        '
-        'ColumnTipoUsuario
-        '
-        Me.ColumnTipoUsuario.Text = "Tipo de Usuario"
-        Me.ColumnTipoUsuario.Width = 105
+        Me.columnFecha.Width = 121
         '
         'frmHistorialCasetas
         '
@@ -91,7 +80,7 @@ Partial Class frmHistorialCasetas
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(777, 321)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.lvwEmpleados)
+        Me.Controls.Add(Me.lvwHistorialCasetas)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -104,10 +93,9 @@ Partial Class frmHistorialCasetas
     End Sub
 
     Friend WithEvents Label3 As Label
-    Friend WithEvents lvwEmpleados As ListView
+    Friend WithEvents lvwHistorialCasetas As ListView
     Friend WithEvents ColumnCaseta As ColumnHeader
     Friend WithEvents columnDescripcion As ColumnHeader
     Friend WithEvents columnUsuario As ColumnHeader
     Friend WithEvents columnFecha As ColumnHeader
-    Friend WithEvents ColumnTipoUsuario As ColumnHeader
 End Class

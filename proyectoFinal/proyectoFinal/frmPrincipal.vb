@@ -25,14 +25,6 @@
         openForm(frmCasetas)
     End Sub
 
-    Private Sub mnuItemHistorialClientes_Click(sender As Object, e As EventArgs) Handles mnuItemHistorialClientes.Click
-        openForm(frmHistorialClientes)
-    End Sub
-
-    Private Sub mnuItemHistorialCasetas_Click(sender As Object, e As EventArgs) Handles mnuItemHistorialCasetas.Click
-        openForm(frmHistorialCasetas)
-    End Sub
-
     Private Sub mnuItemCerrarSesion_Click(sender As Object, e As EventArgs) Handles mnuItemCerrarSesion.Click
         frmLogin.Show()
         Me.Close()
@@ -40,5 +32,9 @@
 
     Private Sub mnuItemServicios_Click(sender As Object, e As EventArgs) Handles mnuItemServicios.Click
         openForm(frmServicios)
+    End Sub
+
+    Private Sub mnuItemHistorialCasetas_Click(sender As Object, e As EventArgs)
+        openForm(frmHistorialCasetas)
     End Sub
 End Class

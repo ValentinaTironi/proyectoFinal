@@ -69,10 +69,19 @@ Public Class Caseta
     End Sub
 
     Public Overrides Function allElements() As SqlDataReader
-        Return DBConn.Instance().SelectStatement("SELECT C.id, PP.nombre_completo,  R.nombre 'nombre_raspberry', R.estado 'estado', C.automatico 'automatico'
-        FROM casetas C
-        JOIN raspberrys R ON C.id_raspberrypi = R.id
-        JOIN perros P ON C.id = P.id_casetas
-        JOIN personas PP ON P.id_cliente = PP.id")
+        Dim sentence As String = "SELECT C.id, PP.nombre_completo,  R.nombre 'nombre_raspberry', R.estado 'estado', C.automatico 'automatico'
+            FROM casetas C
+            JOIN raspberrys R ON C.id_raspberrypi = R.id
+            JOIN perros P ON C.id = P.id_casetas
+            JOIN personas PP ON P.id_cliente = PP.id"
+        Return DBConn.Instance().SelectStatement(sentence)
+    End Function
+
+    Public Function historial() As SqlDataReader
+        Dim sentence As String = "SELECT C.id, A.descripcion, P.nombre_completo 'nombre_persona', L.fecha_hora FROM log_casetas L
+         JOIN accion A ON A.id = L.id_accion
+         JOIN casetas C ON C.id = L.id_caseta
+         JOIN personas P ON P.id = L.id_persona"
+        Return DBConn.Instance().SelectStatement(sentence)
     End Function
 End Class
