@@ -159,12 +159,6 @@
     <Compile Include="historial\frmHistorialCasetas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="historial\frmHistorialClientes.Designer.vb">
-      <DependentUpon>frmHistorialClientes.vb</DependentUpon>
-    </Compile>
-    <Compile Include="historial\frmHistorialClientes.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="model\Empleado.vb" />
     <Compile Include="model\Generica.vb" />
     <Compile Include="model\Servicio.vb" />
@@ -283,9 +277,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="historial\frmHistorialCasetas.resx">
       <DependentUpon>frmHistorialCasetas.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="historial\frmHistorialClientes.resx">
-      <DependentUpon>frmHistorialClientes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="servicios\frmEditarServicio.resx">
       <DependentUpon>frmEditarServicio.vb</DependentUpon>

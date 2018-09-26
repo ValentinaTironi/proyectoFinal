@@ -34,7 +34,7 @@
         openForm(frmServicios)
     End Sub
 
-    Private Sub mnuItemHistorialCasetas_Click(sender As Object, e As EventArgs)
+    Private Sub mnuItemHistorialCasetas_Click(sender As Object, e As EventArgs) Handles mnuItemHistorialCasetas.Click
         openForm(frmHistorialCasetas)
     End Sub
 End Class

@@ -1,4 +1,6 @@
-﻿Public Class Servicio
+﻿Imports System.Data.SqlClient
+
+Public Class Servicio
     Inherits Generica
 
     Private _id As Integer
@@ -52,15 +54,9 @@
         End Set
     End Property
 
-    Public Sub New(id As Integer, nombre As String, cantidad_casetas As Integer, precio As Double, descripcion As String)
+    Public Sub New(nombre As String, cantidad_casetas As Integer, precio As Double, descripcion As String)
         _nombre_tabla = "servicios"
 
-        Me.Id = id
-        Me.Nombre = nombre
-        Me.Cantidad_casetas = cantidad_casetas
-        Me.Precio = precio
-        Me.Descripcion = descripcion
-        Me.Id = id
         Me.Nombre = nombre
         Me.Cantidad_casetas = cantidad_casetas
         Me.Precio = precio
@@ -71,4 +67,28 @@
         _nombre_tabla = "servicios"
     End Sub
 
+    Public Function Guardar() As Boolean
+        'Dim nombre, descripcion As String
+        'Dim num_casetas As Integer
+        'Dim precio As Double
+
+        'nombre = servicio.Nombre
+        'descripcion = servicio.Descripcion
+        'num_casetas = servicio.Cantidad_casetas
+        'precio = servicio.Precio
+
+        Dim conn As DBConn = DBConn.Instance
+
+        Dim reader As SqlDataReader = conn.SelectStatement("INSERT INTO 
+            servicios(nombre, cantidad_casetas, precio, descripcion)
+            VALUES (" + Me.Nombre + ", " + Me.Cantidad_casetas + ", " + Me.Precio + ", " + Me.Descripcion + ")")
+
+        If reader.HasRows Then
+            reader.Close()
+            Return True
+        End If
+
+        reader.Close()
+        Return False
+    End Function
 End Class

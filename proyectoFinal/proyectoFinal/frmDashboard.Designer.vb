@@ -22,12 +22,11 @@ Partial Class frmDashboard
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"1", "Prueba prueba prueba prueba", "25-02-2018", "Valentina"}, -1)
-        Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"2", "Clifford clifford clifford clifford ", "26-03-2018", "Elián"}, -1)
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.lvwUltimosEventos = New System.Windows.Forms.ListView()
+        Me.lvwUltimosClientes = New System.Windows.Forms.ListView()
         Me.columnId = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.columnDescripcion = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.columnName = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnUsername = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.columnFecha = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.columnUsuario = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.SuspendLayout()
@@ -38,42 +37,46 @@ Partial Class frmDashboard
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(310, 42)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(104, 16)
+        Me.Label3.Size = New System.Drawing.Size(184, 16)
         Me.Label3.TabIndex = 7
-        Me.Label3.Text = "Últimos eventos"
+        Me.Label3.Text = "Últimos cinco nuevos clientes"
         '
-        'lvwUltimosEventos
+        'lvwUltimosClientes
         '
-        Me.lvwUltimosEventos.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.columnId, Me.columnDescripcion, Me.columnFecha, Me.columnUsuario})
-        Me.lvwUltimosEventos.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lvwUltimosEventos.FullRowSelect = True
-        Me.lvwUltimosEventos.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1, ListViewItem2})
-        Me.lvwUltimosEventos.Location = New System.Drawing.Point(12, 81)
-        Me.lvwUltimosEventos.Name = "lvwUltimosEventos"
-        Me.lvwUltimosEventos.Size = New System.Drawing.Size(743, 199)
-        Me.lvwUltimosEventos.TabIndex = 8
-        Me.lvwUltimosEventos.UseCompatibleStateImageBehavior = False
-        Me.lvwUltimosEventos.View = System.Windows.Forms.View.Details
+        Me.lvwUltimosClientes.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.columnId, Me.columnName, Me.ColumnUsername, Me.columnFecha, Me.columnUsuario})
+        Me.lvwUltimosClientes.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lvwUltimosClientes.FullRowSelect = True
+        Me.lvwUltimosClientes.Location = New System.Drawing.Point(12, 81)
+        Me.lvwUltimosClientes.Name = "lvwUltimosClientes"
+        Me.lvwUltimosClientes.Size = New System.Drawing.Size(743, 199)
+        Me.lvwUltimosClientes.TabIndex = 8
+        Me.lvwUltimosClientes.UseCompatibleStateImageBehavior = False
+        Me.lvwUltimosClientes.View = System.Windows.Forms.View.Details
         '
         'columnId
         '
         Me.columnId.Text = "ID"
         Me.columnId.Width = 39
         '
-        'columnDescripcion
+        'columnName
         '
-        Me.columnDescripcion.Text = "Descripción"
-        Me.columnDescripcion.Width = 515
+        Me.columnName.Text = "Nombre completo"
+        Me.columnName.Width = 356
+        '
+        'ColumnUsername
+        '
+        Me.ColumnUsername.Text = "Nombre de Usuario"
+        Me.ColumnUsername.Width = 131
         '
         'columnFecha
         '
         Me.columnFecha.Text = "Fecha"
-        Me.columnFecha.Width = 89
+        Me.columnFecha.Width = 111
         '
         'columnUsuario
         '
-        Me.columnUsuario.Text = "Usuario"
-        Me.columnUsuario.Width = 94
+        Me.columnUsuario.Text = "Agregado por"
+        Me.columnUsuario.Width = 145
         '
         'frmDashboard
         '
@@ -81,7 +84,7 @@ Partial Class frmDashboard
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(767, 292)
-        Me.Controls.Add(Me.lvwUltimosEventos)
+        Me.Controls.Add(Me.lvwUltimosClientes)
         Me.Controls.Add(Me.Label3)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
@@ -95,9 +98,10 @@ Partial Class frmDashboard
     End Sub
 
     Friend WithEvents Label3 As Label
-    Friend WithEvents lvwUltimosEventos As ListView
-    Friend WithEvents columnDescripcion As ColumnHeader
+    Friend WithEvents lvwUltimosClientes As ListView
+    Friend WithEvents columnName As ColumnHeader
     Friend WithEvents columnFecha As ColumnHeader
     Friend WithEvents columnUsuario As ColumnHeader
     Friend WithEvents columnId As ColumnHeader
+    Friend WithEvents ColumnUsername As ColumnHeader
 End Class

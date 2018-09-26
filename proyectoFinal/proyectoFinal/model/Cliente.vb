@@ -53,4 +53,8 @@ Public Class Cliente
     Public Overrides Function allElements() As SqlDataReader
         Return DBConn.Instance.SelectStatement("SELECT * FROM personas P INNER JOIN clientes C ON P.id = C.id")
     End Function
+
+    Public Function lastFiveClients() As SqlDataReader
+        Return DBConn.Instance.SelectStatement("SELECT TOP 5 * FROM personas P INNER JOIN clientes C ON P.id = C.id")
+    End Function
 End Class

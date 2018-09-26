@@ -10,7 +10,7 @@
 
     Private Sub frmCasetas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim oCaseta As New Caseta()
-        Dim elements As New List(Of String) From {"id", "nombre_completo", "estado", "automatico", "nombre_raspberry"}
+        Dim elements As New List(Of String) From {"id", "nombre_completo", "nombre_raspberry", "estado", "automatico"}
 
         oCaseta.listarElementos(oCaseta.allElements(), elements, lvwCasetas)
 

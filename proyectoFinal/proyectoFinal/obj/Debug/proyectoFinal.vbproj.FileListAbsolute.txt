@@ -122,7 +122,6 @@ C:\Users\Alumno\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug
 C:\Users\Alumno\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmDashboard.resources
 C:\Users\Alumno\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmEmpleados.resources
 C:\Users\Alumno\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmHistorialCasetas.resources
-C:\Users\Alumno\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmHistorialClientes.resources
 C:\Users\Alumno\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmEditarServicio.resources
 C:\Users\Alumno\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmNuevoServicio.resources
 C:\Users\Alumno\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmServicio.resources
