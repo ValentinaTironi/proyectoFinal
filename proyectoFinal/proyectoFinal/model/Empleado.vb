@@ -33,7 +33,7 @@ Public Class Empleado
     Public Function login(username As String, password As String) As Boolean
         Dim conn As DBConn = DBConn.Instance
 
-        Dim reader As SqlDataReader = conn.SelectStatement("SELECT * FROM personas P JOIN empleados E ON P.id = E.id WHERE username = '" + username + "' AND password ='" + password + "'")
+        Dim reader As SqlDataReader = conn.SelectStatement("SELECT * FROM personas P JOIN empleados E ON P.id = E.id WHERE username = '" & username & "' AND password ='" & password & "'")
         If reader.HasRows Then
             reader.Close()
             Return True

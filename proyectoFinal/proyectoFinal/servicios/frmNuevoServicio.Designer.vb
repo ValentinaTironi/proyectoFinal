@@ -105,6 +105,8 @@ Partial Class frmNuevoServicio
         '
         'txtNombre
         '
+        Me.txtNombre.BackColor = System.Drawing.Color.White
+        Me.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNombre.Location = New System.Drawing.Point(296, 92)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(100, 20)

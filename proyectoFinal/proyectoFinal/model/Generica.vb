@@ -15,7 +15,7 @@ Public Class Generica
         If sqlResult.HasRows() Then
             lvw.Items.Clear()
 
-            Dim first_element As String = elements(0)
+            Dim first_element As String = elements.First()
             While sqlResult.Read
                 Dim lvItem As ListViewItem = lvw.Items.Add(sqlResult(first_element).ToString)
                 For Each element In elements
@@ -27,4 +27,33 @@ Public Class Generica
         End If
         sqlResult.Close()
     End Sub
+
+    'Public Function Guardar(attributes As List(Of String), values As List(Of String), nombre_tabla As String) As Boolean
+    '    Dim conn As DBConn = DBConn.Instance()
+
+    '    Dim consulta As String = "INSERT INTO '" & nombre_tabla & "'("
+
+    '    ConcatValues(attributes, consulta)
+    '    consulta = consulta & "') VALUES ('"
+    '    ConcatValues(values, consulta)
+
+    '    Dim reader As SqlDataReader = conn.SelectStatement(consulta)
+
+    '    If reader.HasRows Then
+    '        reader.Close()
+    '        Return True
+    '    End If
+
+    '    reader.Close()
+    '    Return False
+    'End Function
+
+    'Private Sub ConcatValues(elements As List(Of String), consulta As String)
+    '    For Each element In elements
+    '        consulta = consulta & element
+    '        If Not element = elements.Last() Then
+    '            consulta = consulta & "',"
+    '        End If
+    '    Next
+    'End Sub
 End Class
