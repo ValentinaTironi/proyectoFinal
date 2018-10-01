@@ -68,17 +68,16 @@ Public Class Servicio
     End Sub
 
     Public Function Guardar() As Boolean
+        Dim existe As Boolean = ChequearSiExiste("nombre", Me.Nombre)
 
-        Dim conn As DBConn = DBConn.Instance
-
-        Dim reader As SqlDataReader = conn.SelectStatement("INSERT INTO servicios(nombre, cantidad_casetas, precio, descripcion) VALUES ('" & Me.Nombre & "', '" & Me.Cantidad_casetas.ToString() & "', '" & Me.Precio.ToString() & "', '" & Me.Descripcion + "')")
-
-        If reader.HasRows Then
+        If existe Then
+            Dim conn As DBConn = DBConn.Instance
+            Dim reader As SqlDataReader = conn.SelectStatement("INSERT INTO servicios(nombre, cantidad_casetas, precio, descripcion) VALUES ('" & Me.Nombre & "', '" & Me.Cantidad_casetas.ToString() & "', '" & Me.Precio.ToString() & "', '" & Me.Descripcion + "')")
             reader.Close()
             Return True
         End If
 
-        reader.Close()
         Return False
     End Function
+
 End Class

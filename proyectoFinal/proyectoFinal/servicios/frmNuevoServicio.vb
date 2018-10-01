@@ -14,7 +14,7 @@
                 nombre = Trim(txtNombre.Text)
                 precio = Convert.ToDouble(txtPrecio.Text)
                 descripcion = Trim(txtDescripcion.Text)
-                num_casetas = Convert.ToInt16(txtNumCasetas.Text)
+                num_casetas = Convert.ToInt32(txtNumCasetas.Text)
 
                 Dim servicio As New Servicio(nombre, num_casetas, precio, descripcion)
 
@@ -22,7 +22,8 @@
                     MsgBox("Se guardó el servicio '" & servicio.Nombre & "' con éxito")
                     ClearInputs()
                 Else
-                    MsgBox("Hubo un error al guardar el servicio, inténtelo de nuevo")
+                    MsgBox("Ya existe un servicio con el nombre " & nombre, MsgBoxStyle.OkOnly)
+                    ClearInputs()
                 End If
             End If
         End If

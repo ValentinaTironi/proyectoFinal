@@ -28,6 +28,19 @@ Public Class Generica
         sqlResult.Close()
     End Sub
 
+    Public Function ChequearSiExiste(atributo As String, value As String) As Boolean
+        Dim conn As DBConn = DBConn.Instance
+
+        Dim check As SqlDataReader = conn.SelectStatement("SELECT * FROM servicios WHERE '" & atributo & "' = '" & value & "'")
+
+        If check.HasRows Then
+            check.Close()
+            Return True
+        End If
+
+        check.Close()
+        Return False
+    End Function
     'Public Function Guardar(attributes As List(Of String), values As List(Of String), nombre_tabla As String) As Boolean
     '    Dim conn As DBConn = DBConn.Instance()
 
