@@ -18,11 +18,11 @@
 
                 Dim servicio As New Servicio(nombre, num_casetas, precio, descripcion)
 
-                If servicio.Guardar() Then
+                If servicio.insertar() > 0 Then
                     MsgBox("Se guardó el servicio '" & servicio.Nombre & "' con éxito")
                     ClearInputs()
                 Else
-                    MsgBox("Ya existe un servicio con el nombre " & nombre, MsgBoxStyle.OkOnly)
+                    MsgBox("No se pudo guardar el servicio " & nombre, MsgBoxStyle.OkOnly)
                     ClearInputs()
                 End If
             End If

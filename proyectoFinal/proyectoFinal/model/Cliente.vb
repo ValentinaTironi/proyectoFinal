@@ -57,18 +57,4 @@ Public Class Cliente
     Public Function lastFiveClients() As SqlDataReader
         Return DBConn.Instance.SelectStatement("SELECT TOP 5 * FROM personas P INNER JOIN clientes C ON P.id = C.id")
     End Function
-
-    Public Function Guardar() As Boolean
-        ' Dim existe As Boolean = ChequearSiExiste("nombre", Me.)
-
-        'If existe Then
-        'Dim conn As DBConn = DBConn.Instance
-        'Dim reader As SqlDataReader = conn.SelectStatement("INSERT INTO personas(nombre, cantidad_casetas, precio, descripcion) VALUES ('" & Me.Nombre & "', '" & Me.Cantidad_casetas.ToString() & "', '" & Me.Precio.ToString() & "', '" & Me.Descripcion + "')")
-        'reader.Close()
-        ' Return True
-        'End If
-
-        'Return False
-        'Return True
-    End Function
 End Class

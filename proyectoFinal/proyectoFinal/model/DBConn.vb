@@ -5,11 +5,29 @@ Public NotInheritable Class DBConn
     Private Shared ReadOnly _instance As New Lazy(Of DBConn) _
         (Function() New DBConn(), System.Threading.LazyThreadSafetyMode.ExecutionAndPublication)
 
-    Private myConn As SqlConnection
-    Private myCmd As SqlCommand
+    Private _myConn As SqlConnection
+    Private _myCmd As SqlCommand
+
+    Public Property MyConn As SqlConnection
+        Get
+            Return _myConn
+        End Get
+        Set(value As SqlConnection)
+            _myConn = value
+        End Set
+    End Property
+
+    Public Property MyCmd As SqlCommand
+        Get
+            Return _myCmd
+        End Get
+        Set(value As SqlCommand)
+            _myCmd = value
+        End Set
+    End Property
 
     Private Sub New()
-        myConn = New SqlConnection("Server=valen-tiron-tic\SQLEXPRESS;Database=clifford;Trusted_Connection=True;")
+        MyConn = New SqlConnection("Server=valen-tiron-tic\SQLEXPRESS;Database=clifford;Trusted_Connection=True;")
     End Sub
 
     Public Shared ReadOnly Property Instance() As DBConn
@@ -19,21 +37,31 @@ Public NotInheritable Class DBConn
 
     End Property
 
-    Public Function SelectStatement(sSql As String) As SqlDataReader
-
-        If Not (myConn.State = ConnectionState.Open) Then
-            myConn.Open()
+    Public Function AbrirConexion() As SqlConnection
+        If Not (MyConn.State = ConnectionState.Open) Then
+            MyConn.Open()
         End If
+        Return MyConn
+    End Function
 
-        myCmd = myConn.CreateCommand
+    Public Function SelectStatement(sSql As String) As SqlDataReader
+        MyCmd = AbrirConexion().CreateCommand
 
-        myCmd.CommandText = sSql
+        MyCmd.CommandText = sSql
 
-        Dim sqlResult As SqlDataReader = myCmd.ExecuteReader()
+        Dim sqlResult As SqlDataReader = MyCmd.ExecuteReader()
 
-        myCmd = Nothing
+        MyCmd = Nothing
 
         Return sqlResult
+    End Function
+
+    Public Function InsertStatement(sqlCmd As SqlCommand) As Integer
+        MyConn = AbrirConexion()
+        sqlCmd.Connection = MyConn
+        Return sqlCmd.ExecuteNonQuery()
+        'TODO: abrir conexion
+        'sqlCmd.executeNonQuery() ---> retorna las rows que afectó, hay que avisar la conexion que va a usar
     End Function
 
 End Class

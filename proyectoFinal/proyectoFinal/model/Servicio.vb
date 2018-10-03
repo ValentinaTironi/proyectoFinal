@@ -56,6 +56,7 @@ Public Class Servicio
 
     Public Sub New(nombre As String, cantidad_casetas As Integer, precio As Double, descripcion As String)
         _nombre_tabla = "servicios"
+        _atributos_insert = {"nombre", "cantidad_casetas", "precio", "descripcion"} 'nombre de los atributos en la tabla db
 
         Me.Nombre = nombre
         Me.Cantidad_casetas = cantidad_casetas
@@ -67,17 +68,17 @@ Public Class Servicio
         _nombre_tabla = "servicios"
     End Sub
 
-    Public Function Guardar() As Boolean
-        Dim existe As Boolean = ChequearSiExiste("nombre", Me.Nombre)
+    'Public Function Guardar() As Boolean
+    '    Dim existe As Boolean = ChequearSiExiste("nombre", Me.Nombre)
 
-        If existe Then
-            Dim conn As DBConn = DBConn.Instance
-            Dim reader As SqlDataReader = conn.SelectStatement("INSERT INTO servicios(nombre, cantidad_casetas, precio, descripcion) VALUES ('" & Me.Nombre & "', '" & Me.Cantidad_casetas.ToString() & "', '" & Me.Precio.ToString() & "', '" & Me.Descripcion + "')")
-            reader.Close()
-            Return True
-        End If
+    '    If existe Then
+    '        Dim conn As DBConn = DBConn.Instance
+    '        Dim reader As SqlDataReader = conn.SelectStatement("INSERT INTO servicios(nombre, cantidad_casetas, precio, descripcion) VALUES ('" & Me.Nombre & "', '" & Me.Cantidad_casetas.ToString() & "', '" & Me.Precio.ToString() & "', '" & Me.Descripcion + "')")
+    '        reader.Close()
+    '        Return True
+    '    End If
 
-        Return False
-    End Function
+    '    Return False
+    'End Function
 
 End Class
