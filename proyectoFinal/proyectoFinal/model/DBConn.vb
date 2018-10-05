@@ -60,8 +60,6 @@ Public NotInheritable Class DBConn
         MyConn = AbrirConexion()
         sqlCmd.Connection = MyConn
         Return sqlCmd.ExecuteNonQuery()
-        'TODO: abrir conexion
-        'sqlCmd.executeNonQuery() ---> retorna las rows que afectó, hay que avisar la conexion que va a usar
     End Function
 
 End Class

@@ -28,8 +28,8 @@ Partial Class frmNuevaCaseta
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.cbxServicio = New System.Windows.Forms.ComboBox()
+        Me.txtTamanio = New System.Windows.Forms.TextBox()
+        Me.cbxRaspberry = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'btnGuardar
@@ -84,21 +84,21 @@ Partial Class frmNuevaCaseta
         Me.Label3.TabIndex = 78
         Me.Label3.Text = "Tamaño del tarro *"
         '
-        'TextBox1
+        'txtTamanio
         '
-        Me.TextBox1.Location = New System.Drawing.Point(354, 157)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 77
+        Me.txtTamanio.Location = New System.Drawing.Point(354, 157)
+        Me.txtTamanio.Name = "txtTamanio"
+        Me.txtTamanio.Size = New System.Drawing.Size(100, 20)
+        Me.txtTamanio.TabIndex = 77
         '
-        'cbxServicio
+        'cbxRaspberry
         '
-        Me.cbxServicio.FormattingEnabled = True
-        Me.cbxServicio.Items.AddRange(New Object() {"Número 1", "Número 2", "Número 3"})
-        Me.cbxServicio.Location = New System.Drawing.Point(354, 106)
-        Me.cbxServicio.Name = "cbxServicio"
-        Me.cbxServicio.Size = New System.Drawing.Size(104, 21)
-        Me.cbxServicio.TabIndex = 79
+        Me.cbxRaspberry.FormattingEnabled = True
+        Me.cbxRaspberry.Items.AddRange(New Object() {"Número 1", "Número 2", "Número 3"})
+        Me.cbxRaspberry.Location = New System.Drawing.Point(354, 106)
+        Me.cbxRaspberry.Name = "cbxRaspberry"
+        Me.cbxRaspberry.Size = New System.Drawing.Size(104, 21)
+        Me.cbxRaspberry.TabIndex = 79
         '
         'frmNuevaCaseta
         '
@@ -107,9 +107,9 @@ Partial Class frmNuevaCaseta
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(751, 278)
         Me.ControlBox = False
-        Me.Controls.Add(Me.cbxServicio)
+        Me.Controls.Add(Me.cbxRaspberry)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtTamanio)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.btnAtras)
         Me.Controls.Add(Me.Label2)
@@ -127,6 +127,6 @@ Partial Class frmNuevaCaseta
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents cbxServicio As ComboBox
+    Friend WithEvents txtTamanio As TextBox
+    Friend WithEvents cbxRaspberry As ComboBox
 End Class

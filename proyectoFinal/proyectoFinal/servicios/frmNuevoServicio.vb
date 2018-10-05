@@ -1,11 +1,11 @@
 ﻿Public Class frmNuevoServicio
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
-        If CheckEmptyTextBox() Then
+        If CheckEmptyTextBox(Me) Then
             MsgBox("Hay campos vacios, por favor, completelos.")
         Else
             Dim result As Integer = MsgBox("¿Estas seguro que desea agregar este servicio?", MsgBoxStyle.YesNo)
             If result = DialogResult.No Then
-                ClearInputs()
+                ClearInputs(Me)
             ElseIf result = DialogResult.Yes Then
                 Dim nombre, descripcion As String
                 Dim num_casetas As Integer
@@ -20,10 +20,10 @@
 
                 If servicio.insertar() > 0 Then
                     MsgBox("Se guardó el servicio '" & servicio.Nombre & "' con éxito")
-                    ClearInputs()
+                    ClearInputs(Me)
                 Else
                     MsgBox("No se pudo guardar el servicio " & nombre, MsgBoxStyle.OkOnly)
-                    ClearInputs()
+                    ClearInputs(Me)
                 End If
             End If
         End If
@@ -33,29 +33,4 @@
     Private Sub btnAtras_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
         openForm(frmServicios)
     End Sub
-
-    Private Sub ClearInputs()
-        Dim ctrl As Control
-        For Each ctrl In Me.Controls
-            If (ctrl.GetType() Is GetType(TextBox)) Then
-                Dim txt As TextBox = CType(ctrl, TextBox)
-                txt.Clear()
-            End If
-        Next
-    End Sub
-
-    Private Function CheckEmptyTextBox() As Boolean
-        Dim ctrl As Control
-        Dim empty As Boolean = False
-        For Each ctrl In Me.Controls
-            If (ctrl.GetType() Is GetType(TextBox)) Then
-                Dim txt As TextBox = CType(ctrl, TextBox)
-                If txt.Text = "" Then
-                    txt.BackColor = Color.LightGray
-                    empty = True
-                End If
-            End If
-        Next
-        Return empty
-    End Function
 End Class

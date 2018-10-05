@@ -58,13 +58,21 @@ Public Class Caseta
         _nombre_tabla = "casetas"
     End Sub
 
-    Public Sub New(id As Integer, tamanio_tarro As String, hora_diaria As String, automatico As Boolean, id_raspberry As Integer)
+    Public Sub New(tamanio_tarro As String, hora_diaria As String, automatico As Boolean, id_raspberry As Integer)
         _nombre_tabla = "casetas"
+        _atributos_insert = {"Id", "TamanioTarro", "HoraDiaria", "Automatico", "IdRaspberry"}
 
-        Me.Id = id
         Me.TamanioTarro = tamanio_tarro
         Me.HoraDiaria = hora_diaria
         Me.Automatico = automatico
+        Me.IdRaspberry = id_raspberry
+    End Sub
+
+    Public Sub New(tamanio_tarro As String, id_raspberry As Integer)
+        _nombre_tabla = "casetas"
+        _atributos_insert = {"Id", "TamanioTarro", "IdRaspberry"}
+
+        Me.TamanioTarro = tamanio_tarro
         Me.IdRaspberry = id_raspberry
     End Sub
 

@@ -161,6 +161,7 @@
     </Compile>
     <Compile Include="model\Empleado.vb" />
     <Compile Include="model\Generica.vb" />
+    <Compile Include="model\Raspberry.vb" />
     <Compile Include="model\Servicio.vb" />
     <Compile Include="servicios\frmEditarServicio.Designer.vb">
       <DependentUpon>frmEditarServicio.vb</DependentUpon>

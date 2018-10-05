@@ -1,9 +1,7 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Reflection
 
 Public Class Generica
-    ' Public: acceso desde cualquier lugar 
-    ' Protected: acceso en clase e hijas
-    ' Private: solo acceso en la clase 
     Protected _nombre_tabla As String
     Protected _atributos_insert() As String
 
@@ -28,7 +26,6 @@ Public Class Generica
         sqlResult.Close()
     End Sub
 
-
     Public Function insertar() As Integer
         Dim conn As DBConn = DBConn.Instance()
 
@@ -36,15 +33,25 @@ Public Class Generica
 
         Dim insert As New SqlCommand(consulta)
 
-        Dim clase As Type = Me.GetType()
-
         For Each atributo In _atributos_insert
-            insert.Parameters.AddWithValue("@" & atributo, clase.GetProperty(atributo))
-        Next
 
-        'TODO: usar atributos para hacer la consulta
-        'arrays tiene funcion para juntar en uns string con un caracter (String.join(",", atributosInsert))
+            Dim pInfo As System.Reflection.PropertyInfo = Me.GetType().GetProperty(atributo)
+            insert.Parameters.AddWithValue("@" & atributo, pInfo.GetValue(Me, Reflection.BindingFlags.GetProperty, Nothing, Nothing, Nothing))
+        Next
         Return conn.InsertStatement(insert)
     End Function
 
+    Public Function editar(values() As Object) As Integer
+        Dim conn As DBConn = DBConn.Instance()
+        Dim update_string As String
+
+        For index = 0 To _atributos_insert.Length
+            update_string += _atributos_insert(index) & "=" & values(index)
+        Next
+
+        Dim consulta As String = "UPDATE '" & _nombre_tabla & "' SET '" & update_string
+        Dim insert As New SqlCommand(consulta)
+
+        Return conn.InsertStatement(insert)
+    End Function
 End Class
