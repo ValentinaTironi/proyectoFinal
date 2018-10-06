@@ -5,10 +5,6 @@ Public Class frmServicios
         openForm(frmNuevoServicio)
     End Sub
 
-    Private Sub lvwAdministradores_DoubleClick(sender As Object, e As EventArgs) Handles lvwServicios.DoubleClick
-        openForm(frmServicio)
-    End Sub
-
     Private Sub frmServicios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim oServicio As New Servicio()
 
@@ -17,5 +13,13 @@ Public Class frmServicios
         oServicio.listarElementos(oServicio.allElements(), elements, lvwServicios)
 
         oServicio.allElements().Close()
+    End Sub
+
+    Private Sub lvwServicios_ItemActivate(sender As Object, e As EventArgs) Handles lvwServicios.ItemActivate
+        Dim id As String = lvwServicios.SelectedItems(0).Text
+        frmServicio.lblid.Text = id
+        Dim servicio As New Servicio
+        servicio.ver(id, frmServicio)
+        openForm(frmServicio)
     End Sub
 End Class

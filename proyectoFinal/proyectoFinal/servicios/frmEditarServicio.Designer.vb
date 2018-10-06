@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmEditarServicio
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmEditarServicio
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmEditarServicio))
         Me.btnAgregar = New System.Windows.Forms.Button()
@@ -28,10 +28,11 @@ Partial Class frmEditarServicio
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtDescripcion = New System.Windows.Forms.TextBox()
-        Me.txtPrecio = New System.Windows.Forms.TextBox()
-        Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.txtNumCasetas = New System.Windows.Forms.TextBox()
+        Me.txtdescripcion = New System.Windows.Forms.TextBox()
+        Me.txtprecio = New System.Windows.Forms.TextBox()
+        Me.txtnombre = New System.Windows.Forms.TextBox()
+        Me.txtcantidad_casetas = New System.Windows.Forms.TextBox()
+        Me.lblid = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'btnAgregar
@@ -82,40 +83,50 @@ Partial Class frmEditarServicio
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(260, 25)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(145, 20)
+        Me.Label1.Size = New System.Drawing.Size(136, 20)
         Me.Label1.TabIndex = 82
-        Me.Label1.Text = "Editar el servicio #1"
+        Me.Label1.Text = "Editar el servicio #"
         '
-        'txtDescripcion
+        'txtdescripcion
         '
-        Me.txtDescripcion.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.txtdescripcion.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtDescripcion.Location = New System.Drawing.Point(297, 222)
-        Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(312, 20)
-        Me.txtDescripcion.TabIndex = 81
+        Me.txtdescripcion.Location = New System.Drawing.Point(297, 222)
+        Me.txtdescripcion.Name = "txtdescripcion"
+        Me.txtdescripcion.Size = New System.Drawing.Size(312, 20)
+        Me.txtdescripcion.TabIndex = 81
         '
-        'txtPrecio
+        'txtprecio
         '
-        Me.txtPrecio.Location = New System.Drawing.Point(297, 128)
-        Me.txtPrecio.Name = "txtPrecio"
-        Me.txtPrecio.Size = New System.Drawing.Size(100, 20)
-        Me.txtPrecio.TabIndex = 80
+        Me.txtprecio.Location = New System.Drawing.Point(297, 128)
+        Me.txtprecio.Name = "txtprecio"
+        Me.txtprecio.Size = New System.Drawing.Size(100, 20)
+        Me.txtprecio.TabIndex = 80
         '
-        'txtNombre
+        'txtnombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(297, 81)
-        Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(100, 20)
-        Me.txtNombre.TabIndex = 78
+        Me.txtnombre.Location = New System.Drawing.Point(297, 81)
+        Me.txtnombre.Name = "txtnombre"
+        Me.txtnombre.Size = New System.Drawing.Size(100, 20)
+        Me.txtnombre.TabIndex = 78
         '
-        'txtNumCasetas
+        'txtcantidad_casetas
         '
-        Me.txtNumCasetas.Location = New System.Drawing.Point(297, 178)
-        Me.txtNumCasetas.Name = "txtNumCasetas"
-        Me.txtNumCasetas.Size = New System.Drawing.Size(100, 20)
-        Me.txtNumCasetas.TabIndex = 79
+        Me.txtcantidad_casetas.Location = New System.Drawing.Point(297, 178)
+        Me.txtcantidad_casetas.Name = "txtcantidad_casetas"
+        Me.txtcantidad_casetas.Size = New System.Drawing.Size(100, 20)
+        Me.txtcantidad_casetas.TabIndex = 79
+        '
+        'lblid
+        '
+        Me.lblid.AutoSize = True
+        Me.lblid.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblid.Location = New System.Drawing.Point(394, 26)
+        Me.lblid.Name = "lblid"
+        Me.lblid.Size = New System.Drawing.Size(15, 16)
+        Me.lblid.TabIndex = 87
+        Me.lblid.Text = "1"
         '
         'frmEditarServicio
         '
@@ -123,15 +134,16 @@ Partial Class frmEditarServicio
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(760, 381)
+        Me.Controls.Add(Me.lblid)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.btnAtras)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.txtDescripcion)
-        Me.Controls.Add(Me.txtPrecio)
-        Me.Controls.Add(Me.txtNombre)
-        Me.Controls.Add(Me.txtNumCasetas)
+        Me.Controls.Add(Me.txtdescripcion)
+        Me.Controls.Add(Me.txtprecio)
+        Me.Controls.Add(Me.txtnombre)
+        Me.Controls.Add(Me.txtcantidad_casetas)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmEditarServicio"
         Me.Text = "frmEditarServicio"
@@ -145,8 +157,9 @@ Partial Class frmEditarServicio
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents txtDescripcion As TextBox
-    Friend WithEvents txtPrecio As TextBox
-    Friend WithEvents txtNombre As TextBox
-    Friend WithEvents txtNumCasetas As TextBox
+    Friend WithEvents txtdescripcion As TextBox
+    Friend WithEvents txtprecio As TextBox
+    Friend WithEvents txtnombre As TextBox
+    Friend WithEvents txtcantidad_casetas As TextBox
+    Friend WithEvents lblid As Label
 End Class

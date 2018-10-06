@@ -66,5 +66,7 @@ Public Class Servicio
 
     Public Sub New()
         _nombre_tabla = "servicios"
+        _atributos_insert = {"Nombre", "Cantidad_casetas", "Precio", "Descripcion"}
     End Sub
+
 End Class

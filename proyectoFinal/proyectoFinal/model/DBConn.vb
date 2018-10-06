@@ -56,11 +56,21 @@ Public NotInheritable Class DBConn
         Return sqlResult
     End Function
 
-    Public Function InsertStatement(sqlCmd As SqlCommand) As Integer
+    Public Function AMDStatement(sqlCmd As SqlCommand) As Integer
         MyConn = AbrirConexion()
         sqlCmd.Connection = MyConn
         Return sqlCmd.ExecuteNonQuery()
     End Function
 
+    Public Function SelectRecord(sqlCmd As SqlCommand) As SqlDataReader
+        MyConn = AbrirConexion()
+
+        sqlCmd.Connection = MyConn
+        Dim sqlResult As SqlDataReader = sqlCmd.ExecuteReader()
+
+        sqlCmd = Nothing
+
+        Return sqlResult
+    End Function
 End Class
 
