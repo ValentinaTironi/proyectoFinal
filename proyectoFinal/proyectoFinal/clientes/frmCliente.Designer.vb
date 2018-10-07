@@ -25,22 +25,20 @@ Partial Class frmCliente
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCliente))
         Me.Label9 = New System.Windows.Forms.Label()
         Me.btnAtras = New System.Windows.Forms.Button()
-        Me.lblCedula = New System.Windows.Forms.Label()
-        Me.lblTelefono = New System.Windows.Forms.Label()
-        Me.lblDireccion = New System.Windows.Forms.Label()
-        Me.lblEmail = New System.Windows.Forms.Label()
-        Me.lblNombre = New System.Windows.Forms.Label()
-        Me.lblNombreusuario = New System.Windows.Forms.Label()
-        Me.lblApellido = New System.Windows.Forms.Label()
+        Me.lblcedula = New System.Windows.Forms.Label()
+        Me.Label90 = New System.Windows.Forms.Label()
+        Me.lbldireccion = New System.Windows.Forms.Label()
+        Me.lblemail = New System.Windows.Forms.Label()
+        Me.lblnombre_completo = New System.Windows.Forms.Label()
+        Me.lblusername = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.lblPuestoDeTrabajo = New System.Windows.Forms.Label()
         Me.picPerfil = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.lblFechaNacimiento = New System.Windows.Forms.Label()
+        Me.lblfecha_creacion = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -59,6 +57,7 @@ Partial Class frmCliente
         Me.Label23 = New System.Windows.Forms.Label()
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.lblid = New System.Windows.Forms.Label()
         CType(Me.picPerfil, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -68,9 +67,9 @@ Partial Class frmCliente
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(245, 18)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(221, 24)
+        Me.Label9.Size = New System.Drawing.Size(236, 24)
         Me.Label9.TabIndex = 60
-        Me.Label9.Text = "Información sobre cliente"
+        Me.Label9.Text = "Información sobre cliente #"
         '
         'btnAtras
         '
@@ -83,75 +82,65 @@ Partial Class frmCliente
         Me.btnAtras.TabIndex = 59
         Me.btnAtras.UseVisualStyleBackColor = True
         '
-        'lblCedula
+        'lblcedula
         '
-        Me.lblCedula.AutoSize = True
-        Me.lblCedula.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCedula.Location = New System.Drawing.Point(505, 225)
-        Me.lblCedula.Name = "lblCedula"
-        Me.lblCedula.Size = New System.Drawing.Size(64, 16)
-        Me.lblCedula.TabIndex = 58
-        Me.lblCedula.Text = "52404551"
+        Me.lblcedula.AutoSize = True
+        Me.lblcedula.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblcedula.Location = New System.Drawing.Point(505, 225)
+        Me.lblcedula.Name = "lblcedula"
+        Me.lblcedula.Size = New System.Drawing.Size(64, 16)
+        Me.lblcedula.TabIndex = 58
+        Me.lblcedula.Text = "52404551"
         '
-        'lblTelefono
+        'Label90
         '
-        Me.lblTelefono.AutoSize = True
-        Me.lblTelefono.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTelefono.Location = New System.Drawing.Point(505, 199)
-        Me.lblTelefono.Name = "lblTelefono"
-        Me.lblTelefono.Size = New System.Drawing.Size(71, 16)
-        Me.lblTelefono.TabIndex = 57
-        Me.lblTelefono.Text = "092807665"
+        Me.Label90.AutoSize = True
+        Me.Label90.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label90.Location = New System.Drawing.Point(505, 199)
+        Me.Label90.Name = "Label90"
+        Me.Label90.Size = New System.Drawing.Size(71, 16)
+        Me.Label90.TabIndex = 57
+        Me.Label90.Text = "092807665"
         '
-        'lblDireccion
+        'lbldireccion
         '
-        Me.lblDireccion.AutoSize = True
-        Me.lblDireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDireccion.Location = New System.Drawing.Point(505, 169)
-        Me.lblDireccion.Name = "lblDireccion"
-        Me.lblDireccion.Size = New System.Drawing.Size(183, 16)
-        Me.lblDireccion.TabIndex = 56
-        Me.lblDireccion.Text = "Daniel García Avecedo10481"
+        Me.lbldireccion.AutoSize = True
+        Me.lbldireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbldireccion.Location = New System.Drawing.Point(505, 169)
+        Me.lbldireccion.Name = "lbldireccion"
+        Me.lbldireccion.Size = New System.Drawing.Size(183, 16)
+        Me.lbldireccion.TabIndex = 56
+        Me.lbldireccion.Text = "Daniel García Avecedo10481"
         '
-        'lblEmail
+        'lblemail
         '
-        Me.lblEmail.AutoSize = True
-        Me.lblEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEmail.Location = New System.Drawing.Point(505, 110)
-        Me.lblEmail.Name = "lblEmail"
-        Me.lblEmail.Size = New System.Drawing.Size(42, 16)
-        Me.lblEmail.TabIndex = 54
-        Me.lblEmail.Text = "Email"
+        Me.lblemail.AutoSize = True
+        Me.lblemail.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblemail.Location = New System.Drawing.Point(505, 110)
+        Me.lblemail.Name = "lblemail"
+        Me.lblemail.Size = New System.Drawing.Size(42, 16)
+        Me.lblemail.TabIndex = 54
+        Me.lblemail.Text = "Email"
         '
-        'lblNombre
+        'lblnombre_completo
         '
-        Me.lblNombre.AutoSize = True
-        Me.lblNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombre.Location = New System.Drawing.Point(91, 259)
-        Me.lblNombre.Name = "lblNombre"
-        Me.lblNombre.Size = New System.Drawing.Size(101, 16)
-        Me.lblNombre.TabIndex = 53
-        Me.lblNombre.Text = "Valentina Tironi"
+        Me.lblnombre_completo.AutoSize = True
+        Me.lblnombre_completo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblnombre_completo.Location = New System.Drawing.Point(91, 272)
+        Me.lblnombre_completo.Name = "lblnombre_completo"
+        Me.lblnombre_completo.Size = New System.Drawing.Size(101, 16)
+        Me.lblnombre_completo.TabIndex = 53
+        Me.lblnombre_completo.Text = "Valentina Tironi"
         '
-        'lblNombreusuario
+        'lblusername
         '
-        Me.lblNombreusuario.AutoSize = True
-        Me.lblNombreusuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombreusuario.Location = New System.Drawing.Point(505, 83)
-        Me.lblNombreusuario.Name = "lblNombreusuario"
-        Me.lblNombreusuario.Size = New System.Drawing.Size(90, 16)
-        Me.lblNombreusuario.TabIndex = 52
-        Me.lblNombreusuario.Text = "valentinatironi"
-        '
-        'lblApellido
-        '
-        Me.lblApellido.AutoSize = True
-        Me.lblApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblApellido.Location = New System.Drawing.Point(152, 257)
-        Me.lblApellido.Name = "lblApellido"
-        Me.lblApellido.Size = New System.Drawing.Size(42, 16)
-        Me.lblApellido.TabIndex = 51
-        Me.lblApellido.Text = "Tironi"
+        Me.lblusername.AutoSize = True
+        Me.lblusername.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblusername.Location = New System.Drawing.Point(505, 83)
+        Me.lblusername.Name = "lblusername"
+        Me.lblusername.Size = New System.Drawing.Size(90, 16)
+        Me.lblusername.TabIndex = 52
+        Me.lblusername.Text = "valentinatironi"
         '
         'Label8
         '
@@ -203,15 +192,6 @@ Partial Class frmCliente
         Me.Label3.TabIndex = 45
         Me.Label3.Text = "Nombre de usuario"
         '
-        'lblPuestoDeTrabajo
-        '
-        Me.lblPuestoDeTrabajo.AutoSize = True
-        Me.lblPuestoDeTrabajo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPuestoDeTrabajo.Location = New System.Drawing.Point(112, 257)
-        Me.lblPuestoDeTrabajo.Name = "lblPuestoDeTrabajo"
-        Me.lblPuestoDeTrabajo.Size = New System.Drawing.Size(0, 16)
-        Me.lblPuestoDeTrabajo.TabIndex = 42
-        '
         'picPerfil
         '
         Me.picPerfil.Image = CType(resources.GetObject("picPerfil.Image"), System.Drawing.Image)
@@ -228,19 +208,19 @@ Partial Class frmCliente
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(300, 139)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(133, 16)
+        Me.Label5.Size = New System.Drawing.Size(120, 16)
         Me.Label5.TabIndex = 47
-        Me.Label5.Text = "Fecha de nacimiento"
+        Me.Label5.Text = "Fecha de creación"
         '
-        'lblFechaNacimiento
+        'lblfecha_creacion
         '
-        Me.lblFechaNacimiento.AutoSize = True
-        Me.lblFechaNacimiento.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFechaNacimiento.Location = New System.Drawing.Point(505, 139)
-        Me.lblFechaNacimiento.Name = "lblFechaNacimiento"
-        Me.lblFechaNacimiento.Size = New System.Drawing.Size(72, 16)
-        Me.lblFechaNacimiento.TabIndex = 55
-        Me.lblFechaNacimiento.Text = "23-12-2000"
+        Me.lblfecha_creacion.AutoSize = True
+        Me.lblfecha_creacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblfecha_creacion.Location = New System.Drawing.Point(505, 139)
+        Me.lblfecha_creacion.Name = "lblfecha_creacion"
+        Me.lblfecha_creacion.Size = New System.Drawing.Size(72, 16)
+        Me.lblfecha_creacion.TabIndex = 55
+        Me.lblfecha_creacion.Text = "23-12-2000"
         '
         'Label10
         '
@@ -426,6 +406,16 @@ Partial Class frmCliente
         Me.btnEliminar.TabIndex = 78
         Me.btnEliminar.UseVisualStyleBackColor = True
         '
+        'lblid
+        '
+        Me.lblid.AutoSize = True
+        Me.lblid.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblid.Location = New System.Drawing.Point(478, 18)
+        Me.lblid.Name = "lblid"
+        Me.lblid.Size = New System.Drawing.Size(20, 24)
+        Me.lblid.TabIndex = 86
+        Me.lblid.Text = "1"
+        '
         'frmCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -434,6 +424,7 @@ Partial Class frmCliente
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(750, 523)
         Me.ControlBox = False
+        Me.Controls.Add(Me.lblid)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.Label22)
@@ -454,21 +445,19 @@ Partial Class frmCliente
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.btnAtras)
-        Me.Controls.Add(Me.lblCedula)
-        Me.Controls.Add(Me.lblTelefono)
-        Me.Controls.Add(Me.lblDireccion)
-        Me.Controls.Add(Me.lblFechaNacimiento)
-        Me.Controls.Add(Me.lblEmail)
-        Me.Controls.Add(Me.lblNombre)
-        Me.Controls.Add(Me.lblNombreusuario)
-        Me.Controls.Add(Me.lblApellido)
+        Me.Controls.Add(Me.lblcedula)
+        Me.Controls.Add(Me.Label90)
+        Me.Controls.Add(Me.lbldireccion)
+        Me.Controls.Add(Me.lblfecha_creacion)
+        Me.Controls.Add(Me.lblemail)
+        Me.Controls.Add(Me.lblnombre_completo)
+        Me.Controls.Add(Me.lblusername)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.lblPuestoDeTrabajo)
         Me.Controls.Add(Me.picPerfil)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmCliente"
@@ -481,22 +470,20 @@ Partial Class frmCliente
 
     Friend WithEvents Label9 As Label
     Friend WithEvents btnAtras As Button
-    Friend WithEvents lblCedula As Label
-    Friend WithEvents lblTelefono As Label
-    Friend WithEvents lblDireccion As Label
-    Friend WithEvents lblEmail As Label
-    Friend WithEvents lblNombre As Label
-    Friend WithEvents lblNombreusuario As Label
-    Friend WithEvents lblApellido As Label
+    Friend WithEvents lblcedula As Label
+    Friend WithEvents Label90 As Label
+    Friend WithEvents lbldireccion As Label
+    Friend WithEvents lblemail As Label
+    Friend WithEvents lblnombre_completo As Label
+    Friend WithEvents lblusername As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents lblPuestoDeTrabajo As Label
     Friend WithEvents picPerfil As PictureBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents lblFechaNacimiento As Label
+    Friend WithEvents lblfecha_creacion As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label1 As Label
@@ -515,4 +502,5 @@ Partial Class frmCliente
     Friend WithEvents Label23 As Label
     Friend WithEvents btnEditar As Button
     Friend WithEvents btnEliminar As Button
+    Friend WithEvents lblid As Label
 End Class

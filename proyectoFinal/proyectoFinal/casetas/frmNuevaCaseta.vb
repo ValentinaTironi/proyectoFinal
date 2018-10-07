@@ -8,8 +8,9 @@
             If result = DialogResult.No Then
                 ClearInputs(Me)
             ElseIf result = DialogResult.Yes Then
-                Dim raspberry, tamanio As String
-                raspberry = Trim(cbxRaspberry.Text)
+                Dim tamanio As String
+                Dim raspberry As Integer
+                raspberry = Convert.ToInt32(cbxRaspberry.SelectedValue)
                 tamanio = Trim(txtTamanio.Text)
 
                 Dim caseta As New Caseta(tamanio, raspberry)
@@ -27,5 +28,10 @@
 
     Private Sub btnAtras_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
         openForm(frmCasetas)
+    End Sub
+
+    Private Sub frmNuevaCaseta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim caseta As New Caseta
+        caseta.getDataSource(cbxRaspberry, "raspberrys", "nombre", "id")
     End Sub
 End Class

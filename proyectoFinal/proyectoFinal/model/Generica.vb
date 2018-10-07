@@ -4,6 +4,7 @@ Imports System.Reflection
 Public Class Generica
     Protected _nombre_tabla As String
     Protected _atributos_insert() As String
+    Protected _id As Integer
 
     Public Overridable Function allElements() As SqlDataReader
         Return DBConn.Instance().SelectStatement("SELECT * FROM " + _nombre_tabla)
@@ -40,43 +41,31 @@ Public Class Generica
         Return conn.AMDStatement(insert)
     End Function
 
-    Public Sub editar(pk As String, form As Form)
+    Public Overridable Sub editar(pk As String, form As Form)
         Dim conn As DBConn = DBConn.Instance()
         Dim consulta As String = "SELECT * FROM " & _nombre_tabla & " WHERE id = " & pk
 
         Dim read As New SqlCommand(consulta)
 
-        Dim sqlResult_show As SqlDataReader = conn.SelectRecord(read)
-        If sqlResult_show.HasRows() Then
-            While sqlResult_show.Read
-                For Each ctrl In form.Controls
-                    If (ctrl.GetType() Is GetType(TextBox)) Then
-                        Dim txtbox As TextBox = CType(ctrl, TextBox)
-                        If txtbox.Name.StartsWith("txt") Then
-                            Dim name_atribute = Replace(txtbox.Name, "txt", "")
-                            Dim atribute_value As String = sqlResult_show(name_atribute)
-                            txtbox.Text = atribute_value
-                        End If
-                    End If
-                Next
-            End While
-        End If
-
-        sqlResult_show.Close()
+        Dim sqlResult As SqlDataReader = conn.SelectRecord(read)
+        llenarTextbox(sqlResult, form)
     End Sub
 
-    Public Function guardarEdicion(pk As String) As Integer
+    Public Overridable Function guardarEdicion(pk As String) As Integer
         Dim conn As DBConn = DBConn.Instance()
 
         Dim consulta_update As String = "UPDATE " & _nombre_tabla & " SET "
-        Dim update_string As String
+        Dim update_string As String = ""
 
         For index = 0 To _atributos_insert.Length - 1
             Dim atributo As String = _atributos_insert(index)
-            update_string += atributo & " = " & "@" & atributo & ", "
+            update_string += atributo & " = " & "@" & atributo
+            If Not atributo = _atributos_insert.Last Then
+                update_string += ", "
+            End If
         Next
 
-        consulta_update += update_string & "WHERE id = " & pk
+        consulta_update += update_string & " WHERE id = " & pk
         Dim insert As New SqlCommand(consulta_update)
 
         For Each atributo In _atributos_insert
@@ -87,29 +76,16 @@ Public Class Generica
         Return conn.AMDStatement(insert)
     End Function
 
-    Public Function ver(id As String, form As Form) As Integer
+    Public Overridable Overloads Sub ver(id As String, form As Form)
         Dim conn As DBConn = DBConn.Instance()
         Dim consulta As String = "SELECT * FROM " & _nombre_tabla & " WHERE id = " & id
 
         Dim read As New SqlCommand(consulta)
 
         Dim sqlResult As SqlDataReader = conn.SelectRecord(read)
-        If sqlResult.HasRows() Then
-            While sqlResult.Read
-                For Each ctrl In form.Controls
-                    If (ctrl.GetType() Is GetType(Label)) Then
-                        Dim label As Label = CType(ctrl, Label)
-                        If label.Name.StartsWith("lbl") Then
-                            Dim name_atribute = Replace(label.Name, "lbl", "")
-                            Dim atribute_value As String = sqlResult(name_atribute)
-                            label.Text = atribute_value
-                        End If
-                    End If
-                Next
-            End While
-        End If
-        sqlResult.Close()
-    End Function
+
+        llenarLabels(sqlResult, form)
+    End Sub
 
     Public Function borrar(id As String) As Integer
         Dim conn As DBConn = DBConn.Instance()
@@ -120,4 +96,59 @@ Public Class Generica
         Return conn.AMDStatement(delete)
     End Function
 
+    Public Function getLastId() As Integer
+        Dim conn As DBConn = DBConn.Instance()
+        Dim consulta As String = "SELECT TOP 1 id FROM " & _nombre_tabla & " ORDER BY id DESC"
+        Dim sqlResult As SqlDataReader = conn.SelectStatement(consulta)
+        While sqlResult.Read
+            Dim id As Integer = sqlResult("id")
+            sqlResult.Close()
+            Return id
+        End While
+        Return 0
+    End Function
+
+    Public Sub getDataSource(combobox As ComboBox, tabla_referencia As String, nombre_atributo As String, value As String)
+        Dim conn As DBConn = DBConn.Instance()
+        Dim data As New SqlCommand("SELECT * FROM " & tabla_referencia)
+        combobox.DataSource = conn.SetDataSource(data)
+        combobox.DisplayMember = nombre_atributo
+        combobox.ValueMember = value
+    End Sub
+
+    Protected Sub llenarTextbox(sqlResult As SqlDataReader, form As Form)
+        If sqlResult.HasRows() Then
+            While sqlResult.Read
+                For Each ctrl In form.Controls
+                    If (ctrl.GetType() Is GetType(TextBox)) Then
+                        Dim txtbox As TextBox = CType(ctrl, TextBox)
+                        If txtbox.Name.StartsWith("txt") Then
+                            Dim name_atribute = Replace(txtbox.Name, "txt", "")
+                            Dim atribute_value As String = sqlResult(name_atribute)
+                            txtbox.Text = atribute_value
+                        End If
+                    End If
+                Next
+            End While
+        End If
+        sqlResult.Close()
+    End Sub
+
+    Protected Sub llenarLabels(sqlResult As SqlDataReader, form As Form)
+        If sqlResult.HasRows() Then
+            While sqlResult.Read
+                For Each ctrl In form.Controls
+                    If (ctrl.GetType() Is GetType(Label)) Then
+                        Dim label As Label = CType(ctrl, Label)
+                        If label.Name.StartsWith("lbl") Then
+                            Dim name_atribute = Replace(label.Name, "lbl", "")
+                            Dim atribute_value As String = sqlResult(name_atribute).ToString
+                            label.Text = atribute_value
+                        End If
+                    End If
+                Next
+            End While
+        End If
+        sqlResult.Close()
+    End Sub
 End Class

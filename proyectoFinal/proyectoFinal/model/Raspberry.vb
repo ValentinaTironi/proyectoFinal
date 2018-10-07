@@ -1,7 +1,7 @@
 ﻿Public Class Raspberry
     Inherits Generica
 
-    Private _id As Integer
+    Shadows _id As Integer
     Private _estado As String
     Private _nombre As String
     Private _mac As String

@@ -3,11 +3,12 @@
 Public Class Cliente
     Inherits Persona
 
+    Shadows _id As Integer
     Private _id_creador As Integer
     Private _activo As Boolean
     Private _fecha_creacion As Date
 
-    Public Property id_creador() As Integer
+    Public Property Id_creador As Integer
         Get
             Return _id_creador
         End Get
@@ -34,20 +35,44 @@ Public Class Cliente
         End Set
     End Property
 
+    Public Property Id As Integer
+        Get
+            Return _id
+        End Get
+        Set(value As Integer)
+            _id = value
+        End Set
+    End Property
+
     Public Sub New()
         _nombre_tabla = "clientes"
+        _atributos_insert = {"Id", "Activo", "Id_creador", "Fecha_creacion"}
     End Sub
 
-    Public Sub New(id As Integer, activo As Boolean, id_creador As Integer, fecha_creacion As Date, cedula As Integer, nombre_completo As String, username As String, password As String, email As String, numero_cuenta_bancaria As String, direccion As String)
-        MyBase.New(id, cedula, nombre_completo, username, password, email, numero_cuenta_bancaria, direccion)
+    Public Sub New(activo As Boolean, id_creador As Integer, fecha_creacion As Date, cedula As Integer, nombre_completo As String, username As String, password As String, email As String, numero_cuenta_bancaria As String, direccion As String)
+        Dim persona As New Persona(cedula, nombre_completo, username, password, email, numero_cuenta_bancaria, direccion)
+        persona.insertar()
 
         _nombre_tabla = "clientes"
+        _atributos_insert = {"Id", "Activo", "Id_creador", "Fecha_creacion"}
 
-        Me.id = id
-        Me.activo = activo
-        Me.id_creador = id_creador
-        Me.fecha_creacion = fecha_creacion
+        Me.Id = persona.getLastId()
+        Me.Activo = activo
+        Me.Id_creador = id_creador
+        Me.Fecha_creacion = fecha_creacion
+    End Sub
 
+    Public Sub New(id As Integer, activo As Boolean, id_creador As Integer, fecha_creacion As Date, cedula As Integer, nombre_completo As String, email As String, numero_cuenta_bancaria As String, direccion As String)
+        MyBase.New(id, cedula, nombre_completo, email, numero_cuenta_bancaria, direccion)
+        MyBase.guardarEdicion(id)
+
+        _nombre_tabla = "clientes"
+        _atributos_insert = {"Id", "Activo", "Id_creador", "Fecha_creacion"}
+
+        Me.Id = id
+        Me.Activo = activo
+        Me.Id_creador = id_creador
+        Me.Fecha_creacion = fecha_creacion
     End Sub
 
     Public Overrides Function allElements() As SqlDataReader
@@ -57,4 +82,25 @@ Public Class Cliente
     Public Function lastFiveClients() As SqlDataReader
         Return DBConn.Instance.SelectStatement("SELECT TOP 5 * FROM personas P INNER JOIN clientes C ON P.id = C.id")
     End Function
+
+    Public Overloads Overrides Sub ver(id As String, form As Form)
+        Dim conn As DBConn = DBConn.Instance()
+        Dim consulta As String = "SELECT * FROM clientes C INNER JOIN personas P ON C.id = " & id & " AND  P.id = " & id
+
+        Dim read As New SqlCommand(consulta)
+
+        Dim sqlResult As SqlDataReader = conn.SelectRecord(read)
+        llenarLabels(sqlResult, form)
+    End Sub
+
+    Public Overrides Sub editar(pk As String, form As Form)
+        Dim conn As DBConn = DBConn.Instance()
+        Dim consulta As String = "SELECT * FROM clientes C INNER JOIN personas P ON C.id = P.id WHERE C.id = " & pk
+
+        Dim read As New SqlCommand(consulta)
+
+        Dim sqlResult As SqlDataReader = conn.SelectRecord(read)
+        llenarTextbox(sqlResult, form)
+    End Sub
+
 End Class

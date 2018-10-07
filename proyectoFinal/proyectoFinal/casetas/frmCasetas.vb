@@ -16,4 +16,12 @@
 
         oCaseta.allElements().Close()
     End Sub
+
+    Private Sub lvwCasetas_ItemActivate(sender As Object, e As EventArgs) Handles lvwCasetas.ItemActivate
+        Dim id As String = lvwCasetas.SelectedItems(0).Text
+        frmCaseta.lblid.Text = id
+        Dim caseta As New Caseta
+        caseta.ver(id, frmCaseta)
+        openForm(frmCaseta)
+    End Sub
 End Class

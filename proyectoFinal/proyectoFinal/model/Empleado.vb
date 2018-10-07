@@ -9,8 +9,8 @@ Public Class Empleado
         _nombre_tabla = "empleados"
     End Sub
 
-    Public Sub New(id As Integer, cedula As String, admin As Boolean, nombre_completo As String, username As String, password As String, email As String, numero_cuenta_bancaria As String, direccion As String)
-        MyBase.New(id, cedula, nombre_completo, username, password, email, numero_cuenta_bancaria, direccion)
+    Public Sub New(cedula As String, admin As Boolean, nombre_completo As String, username As String, password As String, email As String, numero_cuenta_bancaria As String, direccion As String)
+        MyBase.New(cedula, nombre_completo, username, password, email, numero_cuenta_bancaria, direccion)
 
         _nombre_tabla = "empleados"
 

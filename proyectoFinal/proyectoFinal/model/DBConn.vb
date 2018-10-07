@@ -72,5 +72,16 @@ Public NotInheritable Class DBConn
 
         Return sqlResult
     End Function
+
+    Public Function SetDataSource(sqlCmd As SqlCommand) As DataTable
+        MyConn = AbrirConexion()
+        sqlCmd.Connection = MyConn
+
+        Dim adapter As New SqlDataAdapter(sqlCmd)
+        Dim table As New DataTable
+
+        adapter.Fill(table)
+        Return table
+    End Function
 End Class
 

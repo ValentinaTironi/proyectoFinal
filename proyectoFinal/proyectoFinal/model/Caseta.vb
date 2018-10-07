@@ -3,11 +3,11 @@
 Public Class Caseta
     Inherits Generica
 
-    Private _id As Integer
+    Shadows _id As Integer
     Private _tamanio_tarro As String
     Private _hora_diaria As String 'preguntar a paula
     Private _automatico As Boolean
-    Private _id_raspberry As Integer
+    Private _id_raspberrypi As Integer
 
     Public Property Id As Integer
         Get
@@ -18,7 +18,7 @@ Public Class Caseta
         End Set
     End Property
 
-    Public Property TamanioTarro As String
+    Public Property Tamanio_tarro As String
         Get
             Return _tamanio_tarro
         End Get
@@ -27,7 +27,7 @@ Public Class Caseta
         End Set
     End Property
 
-    Public Property HoraDiaria As String
+    Public Property Hora_diaria As String
         Get
             Return _hora_diaria
         End Get
@@ -45,35 +45,36 @@ Public Class Caseta
         End Set
     End Property
 
-    Public Property IdRaspberry As Integer
+    Public Property Id_Raspberrypi As Integer
         Get
-            Return _id_raspberry
+            Return _id_raspberrypi
         End Get
         Set(value As Integer)
-            _id_raspberry = value
+            _id_raspberrypi = value
         End Set
     End Property
 
     Public Sub New()
         _nombre_tabla = "casetas"
+        _atributos_insert = {"Tamanio_tarro", "Id_Raspberrypi"}
     End Sub
 
     Public Sub New(tamanio_tarro As String, hora_diaria As String, automatico As Boolean, id_raspberry As Integer)
         _nombre_tabla = "casetas"
-        _atributos_insert = {"Id", "TamanioTarro", "HoraDiaria", "Automatico", "IdRaspberry"}
+        _atributos_insert = {"TamanioTarro", "HoraDiaria", "Automatico", "IdRaspberry"}
 
-        Me.TamanioTarro = tamanio_tarro
-        Me.HoraDiaria = hora_diaria
+        Me.Tamanio_tarro = tamanio_tarro
+        Me.Hora_diaria = hora_diaria
         Me.Automatico = automatico
-        Me.IdRaspberry = id_raspberry
+        Me.Id_Raspberrypi = id_raspberry
     End Sub
 
     Public Sub New(tamanio_tarro As String, id_raspberry As Integer)
         _nombre_tabla = "casetas"
-        _atributos_insert = {"Id", "TamanioTarro", "IdRaspberry"}
+        _atributos_insert = {"Tamanio_tarro", "Id_Raspberrypi"}
 
-        Me.TamanioTarro = tamanio_tarro
-        Me.IdRaspberry = id_raspberry
+        Me.Tamanio_tarro = tamanio_tarro
+        Me.Id_Raspberrypi = id_raspberry
     End Sub
 
     Public Overrides Function allElements() As SqlDataReader
@@ -92,4 +93,15 @@ Public Class Caseta
          JOIN personas P ON P.id = L.id_persona"
         Return DBConn.Instance().SelectStatement(sentence)
     End Function
+
+    Public Overrides Sub ver(id As String, form As Form)
+        Dim conn As DBConn = DBConn.Instance()
+        Dim consulta As String = "SELECT C.id, PP.nombre_completo, R.estado, C.automatico , C.hora_diaria FROM casetas C JOIN raspberrys R ON C.id_raspberrypi = R.id JOIN perros P ON C.id = P.id_casetas JOIN personas PP ON P.id_cliente = PP.id WHERE C.id = " & id
+
+        Dim read As New SqlCommand(consulta)
+
+        Dim sqlResult As SqlDataReader = conn.SelectRecord(read)
+
+        llenarLabels(sqlResult, form)
+    End Sub
 End Class

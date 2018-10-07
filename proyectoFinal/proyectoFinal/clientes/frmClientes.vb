@@ -18,4 +18,12 @@ Public Class frmClientes
 
         oCliente.allElements().Close()
     End Sub
+
+    Private Sub lvwClientes_ItemActivate(sender As Object, e As EventArgs) Handles lvwClientes.ItemActivate
+        Dim id As String = lvwClientes.SelectedItems(0).Text
+        frmCliente.lblid.Text = id
+        Dim cliente As New Cliente
+        cliente.ver(id, frmCliente)
+        openForm(frmCliente)
+    End Sub
 End Class

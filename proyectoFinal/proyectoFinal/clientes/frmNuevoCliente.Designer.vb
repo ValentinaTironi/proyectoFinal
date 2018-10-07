@@ -26,18 +26,18 @@ Partial Class frmNuevoCliente
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtCuentaBancaria = New System.Windows.Forms.TextBox()
-        Me.txtEmail = New System.Windows.Forms.TextBox()
-        Me.txtPassword = New System.Windows.Forms.TextBox()
-        Me.txtNombreUsuario = New System.Windows.Forms.TextBox()
-        Me.txtCedula = New System.Windows.Forms.TextBox()
-        Me.txtApellido = New System.Windows.Forms.TextBox()
-        Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.cbxServicio = New System.Windows.Forms.ComboBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.txtcedula = New System.Windows.Forms.TextBox()
+        Me.txtnumero_cuenta_bancaria = New System.Windows.Forms.TextBox()
+        Me.txtemail = New System.Windows.Forms.TextBox()
+        Me.txtnombre_completo = New System.Windows.Forms.TextBox()
+        Me.txtusername = New System.Windows.Forms.TextBox()
+        Me.txtpassword = New System.Windows.Forms.TextBox()
+        Me.txtid_servicio = New System.Windows.Forms.ComboBox()
+        Me.txtid_caseta = New System.Windows.Forms.ComboBox()
         Me.btnAtras = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtdireccion = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Label3
@@ -46,9 +46,9 @@ Partial Class frmNuevoCliente
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(413, 74)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(82, 192)
+        Me.Label3.Size = New System.Drawing.Size(82, 144)
         Me.Label3.TabIndex = 21
-        Me.Label3.Text = "Contraseña*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Apellido*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Cédula*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Servicio * " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Asociado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Label3.Text = "Contraseña*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Cédula*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Servicio * " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Asociado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'Label2
         '
@@ -56,9 +56,10 @@ Partial Class frmNuevoCliente
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(111, 74)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(131, 176)
+        Me.Label2.Size = New System.Drawing.Size(131, 224)
         Me.Label2.TabIndex = 20
-        Me.Label2.Text = "Nombre de Usuario*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Nombre*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Email*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Número de " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "cuenta bancaria" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Label2.Text = "Nombre de Usuario*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Nombre completo*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Email*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Número de " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "cuenta banc" &
+    "aria" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Direccion*"
         '
         'Label1
         '
@@ -70,72 +71,65 @@ Partial Class frmNuevoCliente
         Me.Label1.TabIndex = 19
         Me.Label1.Text = "Agregar un nuevo cliente"
         '
-        'txtCuentaBancaria
+        'txtcedula
         '
-        Me.txtCuentaBancaria.Location = New System.Drawing.Point(505, 121)
-        Me.txtCuentaBancaria.Name = "txtCuentaBancaria"
-        Me.txtCuentaBancaria.Size = New System.Drawing.Size(100, 20)
-        Me.txtCuentaBancaria.TabIndex = 14
+        Me.txtcedula.Location = New System.Drawing.Point(505, 121)
+        Me.txtcedula.Name = "txtcedula"
+        Me.txtcedula.Size = New System.Drawing.Size(100, 20)
+        Me.txtcedula.TabIndex = 14
         '
-        'txtEmail
+        'txtnumero_cuenta_bancaria
         '
-        Me.txtEmail.Location = New System.Drawing.Point(243, 230)
-        Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(100, 20)
-        Me.txtEmail.TabIndex = 17
+        Me.txtnumero_cuenta_bancaria.Location = New System.Drawing.Point(243, 230)
+        Me.txtnumero_cuenta_bancaria.Name = "txtnumero_cuenta_bancaria"
+        Me.txtnumero_cuenta_bancaria.Size = New System.Drawing.Size(100, 20)
+        Me.txtnumero_cuenta_bancaria.TabIndex = 17
         '
-        'txtPassword
+        'txtemail
         '
-        Me.txtPassword.Location = New System.Drawing.Point(505, 174)
-        Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(100, 20)
-        Me.txtPassword.TabIndex = 16
+        Me.txtemail.Location = New System.Drawing.Point(243, 174)
+        Me.txtemail.Name = "txtemail"
+        Me.txtemail.Size = New System.Drawing.Size(100, 20)
+        Me.txtemail.TabIndex = 15
         '
-        'txtNombreUsuario
+        'txtnombre_completo
         '
-        Me.txtNombreUsuario.Location = New System.Drawing.Point(243, 174)
-        Me.txtNombreUsuario.Name = "txtNombreUsuario"
-        Me.txtNombreUsuario.Size = New System.Drawing.Size(100, 20)
-        Me.txtNombreUsuario.TabIndex = 15
+        Me.txtnombre_completo.Location = New System.Drawing.Point(243, 121)
+        Me.txtnombre_completo.Name = "txtnombre_completo"
+        Me.txtnombre_completo.Size = New System.Drawing.Size(100, 20)
+        Me.txtnombre_completo.TabIndex = 13
         '
-        'txtCedula
+        'txtusername
         '
-        Me.txtCedula.Location = New System.Drawing.Point(243, 121)
-        Me.txtCedula.Name = "txtCedula"
-        Me.txtCedula.Size = New System.Drawing.Size(100, 20)
-        Me.txtCedula.TabIndex = 13
+        Me.txtusername.Location = New System.Drawing.Point(243, 74)
+        Me.txtusername.Name = "txtusername"
+        Me.txtusername.Size = New System.Drawing.Size(100, 20)
+        Me.txtusername.TabIndex = 11
         '
-        'txtApellido
+        'txtpassword
         '
-        Me.txtApellido.Location = New System.Drawing.Point(243, 74)
-        Me.txtApellido.Name = "txtApellido"
-        Me.txtApellido.Size = New System.Drawing.Size(100, 20)
-        Me.txtApellido.TabIndex = 11
+        Me.txtpassword.Location = New System.Drawing.Point(505, 74)
+        Me.txtpassword.Name = "txtpassword"
+        Me.txtpassword.Size = New System.Drawing.Size(100, 20)
+        Me.txtpassword.TabIndex = 12
         '
-        'txtNombre
+        'txtid_servicio
         '
-        Me.txtNombre.Location = New System.Drawing.Point(505, 74)
-        Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(100, 20)
-        Me.txtNombre.TabIndex = 12
+        Me.txtid_servicio.FormattingEnabled = True
+        Me.txtid_servicio.Items.AddRange(New Object() {"Número 1", "Número 2", "Número 3"})
+        Me.txtid_servicio.Location = New System.Drawing.Point(501, 173)
+        Me.txtid_servicio.Name = "txtid_servicio"
+        Me.txtid_servicio.Size = New System.Drawing.Size(104, 21)
+        Me.txtid_servicio.TabIndex = 22
         '
-        'cbxServicio
+        'txtid_caseta
         '
-        Me.cbxServicio.FormattingEnabled = True
-        Me.cbxServicio.Items.AddRange(New Object() {"Número 1", "Número 2", "Número 3"})
-        Me.cbxServicio.Location = New System.Drawing.Point(501, 230)
-        Me.cbxServicio.Name = "cbxServicio"
-        Me.cbxServicio.Size = New System.Drawing.Size(104, 21)
-        Me.cbxServicio.TabIndex = 22
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Caseta 1", "Caseta 2", "Caseta 3"})
-        Me.ComboBox1.Location = New System.Drawing.Point(501, 292)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(104, 21)
-        Me.ComboBox1.TabIndex = 23
+        Me.txtid_caseta.FormattingEnabled = True
+        Me.txtid_caseta.Items.AddRange(New Object() {"Caseta 1", "Caseta 2", "Caseta 3"})
+        Me.txtid_caseta.Location = New System.Drawing.Point(501, 229)
+        Me.txtid_caseta.Name = "txtid_caseta"
+        Me.txtid_caseta.Size = New System.Drawing.Size(104, 21)
+        Me.txtid_caseta.TabIndex = 23
         '
         'btnAtras
         '
@@ -163,11 +157,18 @@ Partial Class frmNuevoCliente
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(413, 293)
+        Me.Label4.Location = New System.Drawing.Point(413, 218)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(70, 32)
         Me.Label4.TabIndex = 62
         Me.Label4.Text = "Caseta " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "asociada*"
+        '
+        'txtdireccion
+        '
+        Me.txtdireccion.Location = New System.Drawing.Point(243, 278)
+        Me.txtdireccion.Name = "txtdireccion"
+        Me.txtdireccion.Size = New System.Drawing.Size(100, 20)
+        Me.txtdireccion.TabIndex = 63
         '
         'frmNuevoCliente
         '
@@ -176,21 +177,21 @@ Partial Class frmNuevoCliente
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(758, 357)
         Me.ControlBox = False
+        Me.Controls.Add(Me.txtdireccion)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.btnAtras)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.cbxServicio)
+        Me.Controls.Add(Me.txtid_caseta)
+        Me.Controls.Add(Me.txtid_servicio)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.txtCuentaBancaria)
-        Me.Controls.Add(Me.txtEmail)
-        Me.Controls.Add(Me.txtPassword)
-        Me.Controls.Add(Me.txtNombreUsuario)
-        Me.Controls.Add(Me.txtCedula)
-        Me.Controls.Add(Me.txtApellido)
-        Me.Controls.Add(Me.txtNombre)
+        Me.Controls.Add(Me.txtcedula)
+        Me.Controls.Add(Me.txtnumero_cuenta_bancaria)
+        Me.Controls.Add(Me.txtemail)
+        Me.Controls.Add(Me.txtnombre_completo)
+        Me.Controls.Add(Me.txtusername)
+        Me.Controls.Add(Me.txtpassword)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -204,16 +205,16 @@ Partial Class frmNuevoCliente
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents txtCuentaBancaria As TextBox
-    Friend WithEvents txtEmail As TextBox
-    Friend WithEvents txtPassword As TextBox
-    Friend WithEvents txtNombreUsuario As TextBox
-    Friend WithEvents txtCedula As TextBox
-    Friend WithEvents txtApellido As TextBox
-    Friend WithEvents txtNombre As TextBox
-    Friend WithEvents cbxServicio As ComboBox
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents txtcedula As TextBox
+    Friend WithEvents txtnumero_cuenta_bancaria As TextBox
+    Friend WithEvents txtemail As TextBox
+    Friend WithEvents txtnombre_completo As TextBox
+    Friend WithEvents txtusername As TextBox
+    Friend WithEvents txtpassword As TextBox
+    Friend WithEvents txtid_servicio As ComboBox
+    Friend WithEvents txtid_caseta As ComboBox
     Friend WithEvents btnAtras As Button
     Friend WithEvents btnGuardar As Button
     Friend WithEvents Label4 As Label
+    Friend WithEvents txtdireccion As TextBox
 End Class

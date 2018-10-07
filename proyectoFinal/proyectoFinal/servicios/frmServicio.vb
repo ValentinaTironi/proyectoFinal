@@ -20,6 +20,5 @@
             servicio.borrar(pk_value)
             openForm(frmServicios)
         End If
-
     End Sub
 End Class

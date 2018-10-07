@@ -3,7 +3,6 @@
 Public Class Persona
     Inherits Generica
 
-    Private _id As Integer
     Private _cedula As Integer
     Private _nombre_completo As String
     Private _username As String
@@ -11,15 +10,6 @@ Public Class Persona
     Private _email As String
     Private _numero_cuenta_bancaria As String
     Private _direccion As String
-
-    Public Property Id As Integer
-        Get
-            Return _id
-        End Get
-        Set(value As Integer)
-            _id = value
-        End Set
-    End Property
 
     Public Property Cedula As Integer
         Get
@@ -86,16 +76,28 @@ Public Class Persona
 
     Protected Sub New()
         _nombre_tabla = "personas"
+        _atributos_insert = {"Cedula", "Nombre_completo", "Username", "Password", "Email", "Numero_cuenta_bancaria", "Direccion"}
     End Sub
 
-    Protected Sub New(id As Integer, cedula As Integer, nombre_completo As String, username As String, password As String, email As String, numero_cuenta_bancaria As String, direccion As String)
+    Protected Sub New(cedula As Integer, nombre_completo As String, username As String, password As String, email As String, numero_cuenta_bancaria As String, direccion As String)
         _nombre_tabla = "personas"
+        _atributos_insert = {"Cedula", "Nombre_completo", "Username", "Password", "Email", "Numero_cuenta_bancaria", "Direccion"}
 
-        Me.Id = id
         Me.Cedula = cedula
         Me.Nombre_completo = nombre_completo
         Me.Username = username
         Me.Password = password
+        Me.Email = email
+        Me.Numero_cuenta_bancaria = numero_cuenta_bancaria
+        Me.Direccion = direccion
+    End Sub
+
+    Protected Sub New(id As Integer, cedula As Integer, nombre_completo As String, email As String, numero_cuenta_bancaria As String, direccion As String)
+        _nombre_tabla = "personas"
+        _atributos_insert = {"Cedula", "Nombre_completo", "Email", "Numero_cuenta_bancaria", "Direccion"}
+
+        Me.Cedula = cedula
+        Me.Nombre_completo = nombre_completo
         Me.Email = email
         Me.Numero_cuenta_bancaria = numero_cuenta_bancaria
         Me.Direccion = direccion

@@ -25,12 +25,12 @@ Partial Class frmCaseta
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCaseta))
         Me.Label9 = New System.Windows.Forms.Label()
         Me.btnAtras = New System.Windows.Forms.Button()
-        Me.lblDireccion = New System.Windows.Forms.Label()
-        Me.lblFechaNacimiento = New System.Windows.Forms.Label()
-        Me.lblEmail = New System.Windows.Forms.Label()
-        Me.lblNombre = New System.Windows.Forms.Label()
-        Me.lblNombreusuario = New System.Windows.Forms.Label()
-        Me.lblApellido = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.lblhora_diaria = New System.Windows.Forms.Label()
+        Me.lblestado = New System.Windows.Forms.Label()
+        Me.lblnombre_completo = New System.Windows.Forms.Label()
+        Me.lblautomatico = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -44,6 +44,7 @@ Partial Class frmCaseta
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnSuspender = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.lblid = New System.Windows.Forms.Label()
         Me.pnlAcciones.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -53,9 +54,9 @@ Partial Class frmCaseta
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(337, 22)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(91, 18)
+        Me.Label9.Size = New System.Drawing.Size(67, 18)
         Me.Label9.TabIndex = 61
-        Me.Label9.Text = "Caseta #748"
+        Me.Label9.Text = "Caseta #"
         '
         'btnAtras
         '
@@ -68,65 +69,65 @@ Partial Class frmCaseta
         Me.btnAtras.TabIndex = 60
         Me.btnAtras.UseVisualStyleBackColor = True
         '
-        'lblDireccion
+        'Label14
         '
-        Me.lblDireccion.AutoSize = True
-        Me.lblDireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDireccion.Location = New System.Drawing.Point(292, 220)
-        Me.lblDireccion.Name = "lblDireccion"
-        Me.lblDireccion.Size = New System.Drawing.Size(39, 16)
-        Me.lblDireccion.TabIndex = 57
-        Me.lblDireccion.Text = "16:00"
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(292, 220)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(39, 16)
+        Me.Label14.TabIndex = 57
+        Me.Label14.Text = "16:00"
         '
-        'lblFechaNacimiento
+        'Label13
         '
-        Me.lblFechaNacimiento.AutoSize = True
-        Me.lblFechaNacimiento.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFechaNacimiento.Location = New System.Drawing.Point(292, 190)
-        Me.lblFechaNacimiento.Name = "lblFechaNacimiento"
-        Me.lblFechaNacimiento.Size = New System.Drawing.Size(77, 16)
-        Me.lblFechaNacimiento.TabIndex = 56
-        Me.lblFechaNacimiento.Text = "Servir agua"
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(292, 190)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(77, 16)
+        Me.Label13.TabIndex = 56
+        Me.Label13.Text = "Servir agua"
         '
-        'lblEmail
+        'lblhora_diaria
         '
-        Me.lblEmail.AutoSize = True
-        Me.lblEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEmail.Location = New System.Drawing.Point(292, 161)
-        Me.lblEmail.Name = "lblEmail"
-        Me.lblEmail.Size = New System.Drawing.Size(39, 16)
-        Me.lblEmail.TabIndex = 55
-        Me.lblEmail.Text = "12:00"
+        Me.lblhora_diaria.AutoSize = True
+        Me.lblhora_diaria.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblhora_diaria.Location = New System.Drawing.Point(292, 161)
+        Me.lblhora_diaria.Name = "lblhora_diaria"
+        Me.lblhora_diaria.Size = New System.Drawing.Size(88, 16)
+        Me.lblhora_diaria.TabIndex = 55
+        Me.lblhora_diaria.Text = "No tiene hora"
         '
-        'lblNombre
+        'lblestado
         '
-        Me.lblNombre.AutoSize = True
-        Me.lblNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombre.Location = New System.Drawing.Point(292, 104)
-        Me.lblNombre.Name = "lblNombre"
-        Me.lblNombre.Size = New System.Drawing.Size(61, 16)
-        Me.lblNombre.TabIndex = 54
-        Me.lblNombre.Text = "Activado"
+        Me.lblestado.AutoSize = True
+        Me.lblestado.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblestado.Location = New System.Drawing.Point(292, 104)
+        Me.lblestado.Name = "lblestado"
+        Me.lblestado.Size = New System.Drawing.Size(61, 16)
+        Me.lblestado.TabIndex = 54
+        Me.lblestado.Text = "Activado"
         '
-        'lblNombreusuario
+        'lblnombre_completo
         '
-        Me.lblNombreusuario.AutoSize = True
-        Me.lblNombreusuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombreusuario.Location = New System.Drawing.Point(292, 76)
-        Me.lblNombreusuario.Name = "lblNombreusuario"
-        Me.lblNombreusuario.Size = New System.Drawing.Size(101, 16)
-        Me.lblNombreusuario.TabIndex = 53
-        Me.lblNombreusuario.Text = "Valentina Tironi"
+        Me.lblnombre_completo.AutoSize = True
+        Me.lblnombre_completo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblnombre_completo.Location = New System.Drawing.Point(292, 76)
+        Me.lblnombre_completo.Name = "lblnombre_completo"
+        Me.lblnombre_completo.Size = New System.Drawing.Size(101, 16)
+        Me.lblnombre_completo.TabIndex = 53
+        Me.lblnombre_completo.Text = "Valentina Tironi"
         '
-        'lblApellido
+        'lblautomatico
         '
-        Me.lblApellido.AutoSize = True
-        Me.lblApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblApellido.Location = New System.Drawing.Point(292, 134)
-        Me.lblApellido.Name = "lblApellido"
-        Me.lblApellido.Size = New System.Drawing.Size(75, 16)
-        Me.lblApellido.TabIndex = 52
-        Me.lblApellido.Text = "Automática"
+        Me.lblautomatico.AutoSize = True
+        Me.lblautomatico.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblautomatico.Location = New System.Drawing.Point(292, 134)
+        Me.lblautomatico.Name = "lblautomatico"
+        Me.lblautomatico.Size = New System.Drawing.Size(75, 16)
+        Me.lblautomatico.TabIndex = 52
+        Me.lblautomatico.Text = "Automática"
         '
         'Label7
         '
@@ -242,9 +243,9 @@ Partial Class frmCaseta
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(87, 134)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(90, 16)
+        Me.Label2.Size = New System.Drawing.Size(75, 16)
         Me.Label2.TabIndex = 45
-        Me.Label2.Text = "Configuración"
+        Me.Label2.Text = "Automático"
         '
         'btnSuspender
         '
@@ -269,6 +270,16 @@ Partial Class frmCaseta
         Me.btnEliminar.TabIndex = 79
         Me.btnEliminar.UseVisualStyleBackColor = True
         '
+        'lblid
+        '
+        Me.lblid.AutoSize = True
+        Me.lblid.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblid.Location = New System.Drawing.Point(403, 23)
+        Me.lblid.Name = "lblid"
+        Me.lblid.Size = New System.Drawing.Size(15, 16)
+        Me.lblid.TabIndex = 85
+        Me.lblid.Text = "1"
+        '
         'frmCaseta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -276,17 +287,18 @@ Partial Class frmCaseta
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(773, 399)
         Me.ControlBox = False
+        Me.Controls.Add(Me.lblid)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnSuspender)
         Me.Controls.Add(Me.pnlAcciones)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.btnAtras)
-        Me.Controls.Add(Me.lblDireccion)
-        Me.Controls.Add(Me.lblFechaNacimiento)
-        Me.Controls.Add(Me.lblEmail)
-        Me.Controls.Add(Me.lblNombre)
-        Me.Controls.Add(Me.lblNombreusuario)
-        Me.Controls.Add(Me.lblApellido)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.lblhora_diaria)
+        Me.Controls.Add(Me.lblestado)
+        Me.Controls.Add(Me.lblnombre_completo)
+        Me.Controls.Add(Me.lblautomatico)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label4)
@@ -305,12 +317,12 @@ Partial Class frmCaseta
     End Sub
     Friend WithEvents Label9 As Label
     Friend WithEvents btnAtras As Button
-    Friend WithEvents lblDireccion As Label
-    Friend WithEvents lblFechaNacimiento As Label
-    Friend WithEvents lblEmail As Label
-    Friend WithEvents lblNombre As Label
-    Friend WithEvents lblNombreusuario As Label
-    Friend WithEvents lblApellido As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents lblhora_diaria As Label
+    Friend WithEvents lblestado As Label
+    Friend WithEvents lblnombre_completo As Label
+    Friend WithEvents lblautomatico As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label4 As Label
@@ -324,4 +336,5 @@ Partial Class frmCaseta
     Friend WithEvents Label2 As Label
     Friend WithEvents btnSuspender As Button
     Friend WithEvents btnEliminar As Button
+    Friend WithEvents lblid As Label
 End Class
