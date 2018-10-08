@@ -1,19 +1,9 @@
 ﻿Public Class Raspberry
     Inherits Generica
 
-    Shadows _id As Integer
     Private _estado As String
     Private _nombre As String
     Private _mac As String
-
-    Public Property Id As Integer
-        Get
-            Return _id
-        End Get
-        Set(value As Integer)
-            _id = value
-        End Set
-    End Property
 
     Public Property Estado As String
         Get
@@ -43,7 +33,7 @@
     End Property
 
     Public Sub New(id As Integer, estado As String, nombre As String, mac As String)
-        _nombre_tabla = "raspberrys"
+        _nombre_tabla = "raspberries"
         _atributos_insert = {"Id", "Estado", "Nombre", "Mac"}
 
         Me.Id = id

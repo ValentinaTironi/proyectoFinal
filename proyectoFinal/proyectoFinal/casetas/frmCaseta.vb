@@ -21,6 +21,11 @@
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
-        MsgBox("¿Está seguro que desea eliminar esta caseta?")
+        MsgBox("Antes de eliminar la caseta, es necesario asignarle una al cliente")
+        frmEditarAsociacionCliente.lblid_cliente.Text = lblid_cliente.Text
+        frmEditarAsociacionCliente.lblid_perro.Text = lblid_perro.Text
+        frmEditarAsociacionCliente.lblcaseta_vieja.Text = lblid.Text
+
+        frmEditarAsociacionCliente.ShowDialog()
     End Sub
 End Class

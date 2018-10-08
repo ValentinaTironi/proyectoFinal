@@ -16,4 +16,12 @@
 
         oEmpleado.allElements().Close()
     End Sub
+
+    Private Sub lvwEmpleados_ItemActivate(sender As Object, e As EventArgs) Handles lvwEmpleados.ItemActivate
+        Dim id As String = lvwEmpleados.SelectedItems(0).Text
+        frmEmpleado.lblid.Text = id
+        Dim empleado As New Empleado
+        empleado.ver(id, frmEmpleado)
+        openForm(frmEmpleado)
+    End Sub
 End Class

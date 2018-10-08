@@ -32,6 +32,6 @@
 
     Private Sub frmNuevaCaseta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim caseta As New Caseta
-        caseta.getDataSource(cbxRaspberry, "raspberrys", "nombre", "id")
+        caseta.getDataSource(cbxRaspberry, "raspberries", "nombre", "id")
     End Sub
 End Class

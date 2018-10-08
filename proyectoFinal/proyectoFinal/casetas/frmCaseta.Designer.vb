@@ -45,6 +45,10 @@ Partial Class frmCaseta
         Me.btnSuspender = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.lblid = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.lblid_cliente = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.lblid_perro = New System.Windows.Forms.Label()
         Me.pnlAcciones.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -73,7 +77,7 @@ Partial Class frmCaseta
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(292, 220)
+        Me.Label14.Location = New System.Drawing.Point(294, 242)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(39, 16)
         Me.Label14.TabIndex = 57
@@ -83,7 +87,7 @@ Partial Class frmCaseta
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(292, 190)
+        Me.Label13.Location = New System.Drawing.Point(294, 212)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(77, 16)
         Me.Label13.TabIndex = 56
@@ -93,47 +97,43 @@ Partial Class frmCaseta
         '
         Me.lblhora_diaria.AutoSize = True
         Me.lblhora_diaria.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblhora_diaria.Location = New System.Drawing.Point(292, 161)
+        Me.lblhora_diaria.Location = New System.Drawing.Point(294, 183)
         Me.lblhora_diaria.Name = "lblhora_diaria"
-        Me.lblhora_diaria.Size = New System.Drawing.Size(88, 16)
+        Me.lblhora_diaria.Size = New System.Drawing.Size(0, 16)
         Me.lblhora_diaria.TabIndex = 55
-        Me.lblhora_diaria.Text = "No tiene hora"
         '
         'lblestado
         '
         Me.lblestado.AutoSize = True
         Me.lblestado.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblestado.Location = New System.Drawing.Point(292, 104)
+        Me.lblestado.Location = New System.Drawing.Point(294, 126)
         Me.lblestado.Name = "lblestado"
-        Me.lblestado.Size = New System.Drawing.Size(61, 16)
+        Me.lblestado.Size = New System.Drawing.Size(0, 16)
         Me.lblestado.TabIndex = 54
-        Me.lblestado.Text = "Activado"
         '
         'lblnombre_completo
         '
         Me.lblnombre_completo.AutoSize = True
         Me.lblnombre_completo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblnombre_completo.Location = New System.Drawing.Point(292, 76)
+        Me.lblnombre_completo.Location = New System.Drawing.Point(294, 98)
         Me.lblnombre_completo.Name = "lblnombre_completo"
-        Me.lblnombre_completo.Size = New System.Drawing.Size(101, 16)
+        Me.lblnombre_completo.Size = New System.Drawing.Size(0, 16)
         Me.lblnombre_completo.TabIndex = 53
-        Me.lblnombre_completo.Text = "Valentina Tironi"
         '
         'lblautomatico
         '
         Me.lblautomatico.AutoSize = True
         Me.lblautomatico.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblautomatico.Location = New System.Drawing.Point(292, 134)
+        Me.lblautomatico.Location = New System.Drawing.Point(294, 156)
         Me.lblautomatico.Name = "lblautomatico"
-        Me.lblautomatico.Size = New System.Drawing.Size(75, 16)
+        Me.lblautomatico.Size = New System.Drawing.Size(0, 16)
         Me.lblautomatico.TabIndex = 52
-        Me.lblautomatico.Text = "Automática"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(87, 220)
+        Me.Label7.Location = New System.Drawing.Point(89, 242)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(138, 16)
         Me.Label7.TabIndex = 50
@@ -143,7 +143,7 @@ Partial Class frmCaseta
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(87, 190)
+        Me.Label6.Location = New System.Drawing.Point(89, 212)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(89, 16)
         Me.Label6.TabIndex = 49
@@ -153,7 +153,7 @@ Partial Class frmCaseta
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(87, 161)
+        Me.Label4.Location = New System.Drawing.Point(89, 183)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(136, 16)
         Me.Label4.TabIndex = 47
@@ -163,7 +163,7 @@ Partial Class frmCaseta
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(87, 76)
+        Me.Label3.Location = New System.Drawing.Point(89, 98)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(49, 16)
         Me.Label3.TabIndex = 46
@@ -173,7 +173,7 @@ Partial Class frmCaseta
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(87, 104)
+        Me.Label1.Location = New System.Drawing.Point(89, 126)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(51, 16)
         Me.Label1.TabIndex = 44
@@ -241,7 +241,7 @@ Partial Class frmCaseta
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(87, 134)
+        Me.Label2.Location = New System.Drawing.Point(89, 156)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(75, 16)
         Me.Label2.TabIndex = 45
@@ -280,6 +280,44 @@ Partial Class frmCaseta
         Me.lblid.TabIndex = 85
         Me.lblid.Text = "1"
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(89, 72)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(61, 16)
+        Me.Label5.TabIndex = 86
+        Me.Label5.Text = "Id cliente"
+        '
+        'lblid_cliente
+        '
+        Me.lblid_cliente.AutoSize = True
+        Me.lblid_cliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblid_cliente.Location = New System.Drawing.Point(294, 72)
+        Me.lblid_cliente.Name = "lblid_cliente"
+        Me.lblid_cliente.Size = New System.Drawing.Size(0, 16)
+        Me.lblid_cliente.TabIndex = 87
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(89, 267)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(55, 16)
+        Me.Label8.TabIndex = 88
+        Me.Label8.Text = "Id Perro"
+        '
+        'lblid_perro
+        '
+        Me.lblid_perro.AutoSize = True
+        Me.lblid_perro.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblid_perro.Location = New System.Drawing.Point(294, 267)
+        Me.lblid_perro.Name = "lblid_perro"
+        Me.lblid_perro.Size = New System.Drawing.Size(0, 16)
+        Me.lblid_perro.TabIndex = 89
+        '
         'frmCaseta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -287,6 +325,10 @@ Partial Class frmCaseta
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(773, 399)
         Me.ControlBox = False
+        Me.Controls.Add(Me.lblid_perro)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.lblid_cliente)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.lblid)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnSuspender)
@@ -337,4 +379,8 @@ Partial Class frmCaseta
     Friend WithEvents btnSuspender As Button
     Friend WithEvents btnEliminar As Button
     Friend WithEvents lblid As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents lblid_cliente As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents lblid_perro As Label
 End Class

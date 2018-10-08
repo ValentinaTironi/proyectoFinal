@@ -54,10 +54,8 @@ Partial Class frmServicio
         Me.lbldescripcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbldescripcion.Location = New System.Drawing.Point(410, 180)
         Me.lbldescripcion.Name = "lbldescripcion"
-        Me.lbldescripcion.Size = New System.Drawing.Size(284, 64)
+        Me.lbldescripcion.Size = New System.Drawing.Size(0, 16)
         Me.lbldescripcion.TabIndex = 71
-        Me.lbldescripcion.Text = "Este servicio incluye 3 meses fijos de contrato," & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " junto con una casa de tamaño m" &
-    "ediano" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "que incluye alimentación, hidratación y" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "desinfección del canino."
         '
         'lblcantidad_casetas
         '
@@ -65,9 +63,8 @@ Partial Class frmServicio
         Me.lblcantidad_casetas.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblcantidad_casetas.Location = New System.Drawing.Point(413, 123)
         Me.lblcantidad_casetas.Name = "lblcantidad_casetas"
-        Me.lblcantidad_casetas.Size = New System.Drawing.Size(15, 16)
+        Me.lblcantidad_casetas.Size = New System.Drawing.Size(0, 16)
         Me.lblcantidad_casetas.TabIndex = 70
-        Me.lblcantidad_casetas.Text = "1"
         '
         'lblnombre
         '
@@ -75,9 +72,8 @@ Partial Class frmServicio
         Me.lblnombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblnombre.Location = New System.Drawing.Point(410, 95)
         Me.lblnombre.Name = "lblnombre"
-        Me.lblnombre.Size = New System.Drawing.Size(74, 16)
+        Me.lblnombre.Size = New System.Drawing.Size(0, 16)
         Me.lblnombre.TabIndex = 69
-        Me.lblnombre.Text = "Servicio #1"
         '
         'lblprecio
         '
@@ -85,9 +81,8 @@ Partial Class frmServicio
         Me.lblprecio.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblprecio.Location = New System.Drawing.Point(413, 153)
         Me.lblprecio.Name = "lblprecio"
-        Me.lblprecio.Size = New System.Drawing.Size(36, 16)
+        Me.lblprecio.Size = New System.Drawing.Size(0, 16)
         Me.lblprecio.TabIndex = 68
-        Me.lblprecio.Text = "$300"
         '
         'Label4
         '
@@ -177,7 +172,7 @@ Partial Class frmServicio
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ClientSize = New System.Drawing.Size(759, 335)
+        Me.ClientSize = New System.Drawing.Size(739, 335)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.lblid)
         Me.Controls.Add(Me.btnAtras)

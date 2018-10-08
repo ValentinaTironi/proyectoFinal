@@ -3,20 +3,10 @@
 Public Class Caseta
     Inherits Generica
 
-    Shadows _id As Integer
     Private _tamanio_tarro As String
     Private _hora_diaria As String 'preguntar a paula
     Private _automatico As Boolean
     Private _id_raspberrypi As Integer
-
-    Public Property Id As Integer
-        Get
-            Return _id
-        End Get
-        Set(value As Integer)
-            _id = value
-        End Set
-    End Property
 
     Public Property Tamanio_tarro As String
         Get
@@ -80,8 +70,8 @@ Public Class Caseta
     Public Overrides Function allElements() As SqlDataReader
         Dim sentence As String = "SELECT C.id, PP.nombre_completo,  R.nombre 'nombre_raspberry', R.estado 'estado', C.automatico 'automatico'
             FROM casetas C
-            JOIN raspberrys R ON C.id_raspberrypi = R.id
-            JOIN perros P ON C.id = P.id_casetas
+            JOIN raspberries R ON C.id_raspberrypi = R.id
+            JOIN perros P ON C.id = P.id_caseta
             JOIN personas PP ON P.id_cliente = PP.id"
         Return DBConn.Instance().SelectStatement(sentence)
     End Function
@@ -96,7 +86,7 @@ Public Class Caseta
 
     Public Overrides Sub ver(id As String, form As Form)
         Dim conn As DBConn = DBConn.Instance()
-        Dim consulta As String = "SELECT C.id, PP.nombre_completo, R.estado, C.automatico , C.hora_diaria FROM casetas C JOIN raspberrys R ON C.id_raspberrypi = R.id JOIN perros P ON C.id = P.id_casetas JOIN personas PP ON P.id_cliente = PP.id WHERE C.id = " & id
+        Dim consulta As String = "SELECT C.id, PP.nombre_completo, R.estado, C.automatico, C.hora_diaria, P.id_perro, Cl.id 'id_cliente' FROM casetas C INNER JOIN raspberries R ON R.id = C.id_raspberrypi INNER JOIN perros P ON P.id_caseta = C.id INNER JOIN clientes Cl ON Cl.id = P.id_cliente INNER JOIN personas PP ON Cl.id = PP.id WHERE C.id = " & id
 
         Dim read As New SqlCommand(consulta)
 

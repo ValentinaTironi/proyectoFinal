@@ -27,8 +27,6 @@ Partial Class frmEditarCliente
         Me.btnAtras = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblid = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtid_caseta = New System.Windows.Forms.ComboBox()
         Me.txtid_servicio = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -80,25 +78,6 @@ Partial Class frmEditarCliente
         Me.lblid.Size = New System.Drawing.Size(15, 16)
         Me.lblid.TabIndex = 88
         Me.lblid.Text = "1"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(411, 175)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(70, 32)
-        Me.Label4.TabIndex = 99
-        Me.Label4.Text = "Caseta " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "asociada*"
-        '
-        'txtid_caseta
-        '
-        Me.txtid_caseta.FormattingEnabled = True
-        Me.txtid_caseta.Items.AddRange(New Object() {"Caseta 1", "Caseta 2", "Caseta 3"})
-        Me.txtid_caseta.Location = New System.Drawing.Point(498, 182)
-        Me.txtid_caseta.Name = "txtid_caseta"
-        Me.txtid_caseta.Size = New System.Drawing.Size(104, 21)
-        Me.txtid_caseta.TabIndex = 98
         '
         'txtid_servicio
         '
@@ -170,8 +149,6 @@ Partial Class frmEditarCliente
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(736, 315)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.txtid_caseta)
         Me.Controls.Add(Me.txtid_servicio)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -196,8 +173,6 @@ Partial Class frmEditarCliente
     Friend WithEvents btnAtras As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents lblid As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents txtid_caseta As ComboBox
     Friend WithEvents txtid_servicio As ComboBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label

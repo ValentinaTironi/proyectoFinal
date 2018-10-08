@@ -33,11 +33,11 @@ Partial Class frmNuevoCliente
         Me.txtusername = New System.Windows.Forms.TextBox()
         Me.txtpassword = New System.Windows.Forms.TextBox()
         Me.txtid_servicio = New System.Windows.Forms.ComboBox()
-        Me.txtid_caseta = New System.Windows.Forms.ComboBox()
         Me.btnAtras = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtdireccion = New System.Windows.Forms.TextBox()
+        Me.txtid_caseta = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'Label3
@@ -46,9 +46,9 @@ Partial Class frmNuevoCliente
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(413, 74)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(82, 144)
+        Me.Label3.Size = New System.Drawing.Size(82, 176)
         Me.Label3.TabIndex = 21
-        Me.Label3.Text = "Contraseña*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Cédula*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Servicio * " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Asociado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Label3.Text = "Contraseña*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Cédula*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Servicio * " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Asociado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Caseta *" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Asociada" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'Label2
         '
@@ -117,19 +117,10 @@ Partial Class frmNuevoCliente
         '
         Me.txtid_servicio.FormattingEnabled = True
         Me.txtid_servicio.Items.AddRange(New Object() {"Número 1", "Número 2", "Número 3"})
-        Me.txtid_servicio.Location = New System.Drawing.Point(501, 173)
+        Me.txtid_servicio.Location = New System.Drawing.Point(504, 173)
         Me.txtid_servicio.Name = "txtid_servicio"
         Me.txtid_servicio.Size = New System.Drawing.Size(104, 21)
         Me.txtid_servicio.TabIndex = 22
-        '
-        'txtid_caseta
-        '
-        Me.txtid_caseta.FormattingEnabled = True
-        Me.txtid_caseta.Items.AddRange(New Object() {"Caseta 1", "Caseta 2", "Caseta 3"})
-        Me.txtid_caseta.Location = New System.Drawing.Point(501, 229)
-        Me.txtid_caseta.Name = "txtid_caseta"
-        Me.txtid_caseta.Size = New System.Drawing.Size(104, 21)
-        Me.txtid_caseta.TabIndex = 23
         '
         'btnAtras
         '
@@ -159,9 +150,8 @@ Partial Class frmNuevoCliente
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(413, 218)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(70, 32)
+        Me.Label4.Size = New System.Drawing.Size(0, 16)
         Me.Label4.TabIndex = 62
-        Me.Label4.Text = "Caseta " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "asociada*"
         '
         'txtdireccion
         '
@@ -170,6 +160,15 @@ Partial Class frmNuevoCliente
         Me.txtdireccion.Size = New System.Drawing.Size(100, 20)
         Me.txtdireccion.TabIndex = 63
         '
+        'txtid_caseta
+        '
+        Me.txtid_caseta.FormattingEnabled = True
+        Me.txtid_caseta.Items.AddRange(New Object() {"Número 1", "Número 2", "Número 3"})
+        Me.txtid_caseta.Location = New System.Drawing.Point(505, 221)
+        Me.txtid_caseta.Name = "txtid_caseta"
+        Me.txtid_caseta.Size = New System.Drawing.Size(104, 21)
+        Me.txtid_caseta.TabIndex = 64
+        '
         'frmNuevoCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -177,11 +176,11 @@ Partial Class frmNuevoCliente
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(758, 357)
         Me.ControlBox = False
+        Me.Controls.Add(Me.txtid_caseta)
         Me.Controls.Add(Me.txtdireccion)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.btnAtras)
-        Me.Controls.Add(Me.txtid_caseta)
         Me.Controls.Add(Me.txtid_servicio)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -212,9 +211,9 @@ Partial Class frmNuevoCliente
     Friend WithEvents txtusername As TextBox
     Friend WithEvents txtpassword As TextBox
     Friend WithEvents txtid_servicio As ComboBox
-    Friend WithEvents txtid_caseta As ComboBox
     Friend WithEvents btnAtras As Button
     Friend WithEvents btnGuardar As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents txtdireccion As TextBox
+    Friend WithEvents txtid_caseta As ComboBox
 End Class

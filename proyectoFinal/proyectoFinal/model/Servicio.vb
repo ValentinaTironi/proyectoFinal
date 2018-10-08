@@ -3,20 +3,10 @@
 Public Class Servicio
     Inherits Generica
 
-    Shadows _id As Integer
     Private _nombre As String
     Private _cantidad_casetas As Integer
     Private _precio As Double
     Private _descripcion As String
-
-    Public Property Id As Integer
-        Get
-            Return _id
-        End Get
-        Set(value As Integer)
-            _id = value
-        End Set
-    End Property
 
     Public Property Nombre As String
         Get

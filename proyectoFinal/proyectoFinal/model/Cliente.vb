@@ -35,15 +35,6 @@ Public Class Cliente
         End Set
     End Property
 
-    Public Property Id As Integer
-        Get
-            Return _id
-        End Get
-        Set(value As Integer)
-            _id = value
-        End Set
-    End Property
-
     Public Sub New()
         _nombre_tabla = "clientes"
         _atributos_insert = {"Id", "Activo", "Id_creador", "Fecha_creacion"}
@@ -54,7 +45,7 @@ Public Class Cliente
         persona.insertar()
 
         _nombre_tabla = "clientes"
-        _atributos_insert = {"Id", "Activo", "Id_creador", "Fecha_creacion"}
+        _atributos_insert = {"Id", "Activo", "Id_creador"}
 
         Me.Id = persona.getLastId()
         Me.Activo = activo
@@ -85,7 +76,7 @@ Public Class Cliente
 
     Public Overloads Overrides Sub ver(id As String, form As Form)
         Dim conn As DBConn = DBConn.Instance()
-        Dim consulta As String = "SELECT * FROM clientes C INNER JOIN personas P ON C.id = " & id & " AND  P.id = " & id
+        Dim consulta As String = "SELECT C.id, PP.nombre_completo, PP.username, PP.email, C.fecha_creacion, PP.direccion, PP.cedula, S.nombre 'nombre_servicio', CC.fecha 'fecha_contrato', CC.fecha_pago 'fecha_pago_contrato', S.cantidad_casetas 'cantidad_casetas_servicio'  FROM clientes C INNER JOIN personas PP ON C.id = PP.id INNER JOIN contrato CC ON CC.id_cliente = C.id INNER JOIN servicios S ON S.id = CC.id_servicio WHERE C.id = " & id
 
         Dim read As New SqlCommand(consulta)
 
@@ -95,7 +86,7 @@ Public Class Cliente
 
     Public Overrides Sub editar(pk As String, form As Form)
         Dim conn As DBConn = DBConn.Instance()
-        Dim consulta As String = "SELECT * FROM clientes C INNER JOIN personas P ON C.id = P.id WHERE C.id = " & pk
+        Dim consulta As String = "SELECT C.id, PP.nombre_completo, PP.username, PP.numero_cuenta_bancaria, PP.email, PP.direccion, PP.cedula FROM clientes C INNER JOIN personas PP ON C.id = PP.id INNER JOIN contrato CC ON CC.id_cliente = C.id INNER JOIN servicios S ON S.id = CC.id_servicio WHERE C.id = " & pk
 
         Dim read As New SqlCommand(consulta)
 

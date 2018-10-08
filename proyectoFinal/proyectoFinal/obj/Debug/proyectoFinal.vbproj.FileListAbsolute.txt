@@ -137,3 +137,4 @@ C:\Users\Alumno\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug
 C:\Users\Alumno\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.exe
 C:\Users\Alumno\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.xml
 C:\Users\Alumno\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.pdb
+C:\Users\Alumno\Desktop\proyectoFinalAdmin\proyectoFinal\proyectoFinal\obj\Debug\proyectoFinal.frmEditarAsociacionCliente.resources

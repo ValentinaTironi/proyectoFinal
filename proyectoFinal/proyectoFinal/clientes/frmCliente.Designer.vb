@@ -43,10 +43,10 @@ Partial Class frmCliente
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
+        Me.lblcantidad_casetas_servicio = New System.Windows.Forms.Label()
+        Me.lblfecha_pago_contrato = New System.Windows.Forms.Label()
+        Me.lblfecha_contrato = New System.Windows.Forms.Label()
+        Me.lblnombre_servicio = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
@@ -88,9 +88,8 @@ Partial Class frmCliente
         Me.lblcedula.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblcedula.Location = New System.Drawing.Point(505, 225)
         Me.lblcedula.Name = "lblcedula"
-        Me.lblcedula.Size = New System.Drawing.Size(64, 16)
+        Me.lblcedula.Size = New System.Drawing.Size(0, 16)
         Me.lblcedula.TabIndex = 58
-        Me.lblcedula.Text = "52404551"
         '
         'Label90
         '
@@ -98,9 +97,8 @@ Partial Class frmCliente
         Me.Label90.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label90.Location = New System.Drawing.Point(505, 199)
         Me.Label90.Name = "Label90"
-        Me.Label90.Size = New System.Drawing.Size(71, 16)
+        Me.Label90.Size = New System.Drawing.Size(0, 16)
         Me.Label90.TabIndex = 57
-        Me.Label90.Text = "092807665"
         '
         'lbldireccion
         '
@@ -108,9 +106,8 @@ Partial Class frmCliente
         Me.lbldireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbldireccion.Location = New System.Drawing.Point(505, 169)
         Me.lbldireccion.Name = "lbldireccion"
-        Me.lbldireccion.Size = New System.Drawing.Size(183, 16)
+        Me.lbldireccion.Size = New System.Drawing.Size(0, 16)
         Me.lbldireccion.TabIndex = 56
-        Me.lbldireccion.Text = "Daniel García Avecedo10481"
         '
         'lblemail
         '
@@ -118,9 +115,8 @@ Partial Class frmCliente
         Me.lblemail.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblemail.Location = New System.Drawing.Point(505, 110)
         Me.lblemail.Name = "lblemail"
-        Me.lblemail.Size = New System.Drawing.Size(42, 16)
+        Me.lblemail.Size = New System.Drawing.Size(0, 16)
         Me.lblemail.TabIndex = 54
-        Me.lblemail.Text = "Email"
         '
         'lblnombre_completo
         '
@@ -138,9 +134,8 @@ Partial Class frmCliente
         Me.lblusername.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblusername.Location = New System.Drawing.Point(505, 83)
         Me.lblusername.Name = "lblusername"
-        Me.lblusername.Size = New System.Drawing.Size(90, 16)
+        Me.lblusername.Size = New System.Drawing.Size(0, 16)
         Me.lblusername.TabIndex = 52
-        Me.lblusername.Text = "valentinatironi"
         '
         'Label8
         '
@@ -218,9 +213,8 @@ Partial Class frmCliente
         Me.lblfecha_creacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblfecha_creacion.Location = New System.Drawing.Point(505, 139)
         Me.lblfecha_creacion.Name = "lblfecha_creacion"
-        Me.lblfecha_creacion.Size = New System.Drawing.Size(72, 16)
+        Me.lblfecha_creacion.Size = New System.Drawing.Size(0, 16)
         Me.lblfecha_creacion.TabIndex = 55
-        Me.lblfecha_creacion.Text = "23-12-2000"
         '
         'Label10
         '
@@ -262,45 +256,41 @@ Partial Class frmCliente
         Me.Label2.TabIndex = 73
         Me.Label2.Text = "15-07-2018"
         '
-        'Label12
+        'lblcantidad_casetas_servicio
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(505, 408)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(15, 16)
-        Me.Label12.TabIndex = 72
-        Me.Label12.Text = "5"
+        Me.lblcantidad_casetas_servicio.AutoSize = True
+        Me.lblcantidad_casetas_servicio.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblcantidad_casetas_servicio.Location = New System.Drawing.Point(505, 408)
+        Me.lblcantidad_casetas_servicio.Name = "lblcantidad_casetas_servicio"
+        Me.lblcantidad_casetas_servicio.Size = New System.Drawing.Size(0, 16)
+        Me.lblcantidad_casetas_servicio.TabIndex = 72
         '
-        'Label13
+        'lblfecha_pago_contrato
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(505, 378)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(143, 16)
-        Me.Label13.TabIndex = 71
-        Me.Label13.Text = "01 de todos los meses"
+        Me.lblfecha_pago_contrato.AutoSize = True
+        Me.lblfecha_pago_contrato.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblfecha_pago_contrato.Location = New System.Drawing.Point(505, 378)
+        Me.lblfecha_pago_contrato.Name = "lblfecha_pago_contrato"
+        Me.lblfecha_pago_contrato.Size = New System.Drawing.Size(0, 16)
+        Me.lblfecha_pago_contrato.TabIndex = 71
         '
-        'Label14
+        'lblfecha_contrato
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(505, 349)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(72, 16)
-        Me.Label14.TabIndex = 70
-        Me.Label14.Text = "12-05-2017"
+        Me.lblfecha_contrato.AutoSize = True
+        Me.lblfecha_contrato.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblfecha_contrato.Location = New System.Drawing.Point(505, 349)
+        Me.lblfecha_contrato.Name = "lblfecha_contrato"
+        Me.lblfecha_contrato.Size = New System.Drawing.Size(0, 16)
+        Me.lblfecha_contrato.TabIndex = 70
         '
-        'Label15
+        'lblnombre_servicio
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(505, 322)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(66, 16)
-        Me.Label15.TabIndex = 69
-        Me.Label15.Text = "Número 1"
+        Me.lblnombre_servicio.AutoSize = True
+        Me.lblnombre_servicio.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblnombre_servicio.Location = New System.Drawing.Point(505, 322)
+        Me.lblnombre_servicio.Name = "lblnombre_servicio"
+        Me.lblnombre_servicio.Size = New System.Drawing.Size(0, 16)
+        Me.lblnombre_servicio.TabIndex = 69
         '
         'Label16
         '
@@ -431,10 +421,10 @@ Partial Class frmCliente
         Me.Controls.Add(Me.Label23)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label12)
-        Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.lblcantidad_casetas_servicio)
+        Me.Controls.Add(Me.lblfecha_pago_contrato)
+        Me.Controls.Add(Me.lblfecha_contrato)
+        Me.Controls.Add(Me.lblnombre_servicio)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.Label18)
@@ -488,10 +478,10 @@ Partial Class frmCliente
     Friend WithEvents Label11 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label15 As Label
+    Friend WithEvents lblcantidad_casetas_servicio As Label
+    Friend WithEvents lblfecha_pago_contrato As Label
+    Friend WithEvents lblfecha_contrato As Label
+    Friend WithEvents lblnombre_servicio As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents Label17 As Label
     Friend WithEvents Label18 As Label

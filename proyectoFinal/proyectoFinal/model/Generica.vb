@@ -4,7 +4,16 @@ Imports System.Reflection
 Public Class Generica
     Protected _nombre_tabla As String
     Protected _atributos_insert() As String
-    Protected _id As Integer
+    Public _id As Integer
+
+    Public Property Id As Integer
+        Get
+            Return _id
+        End Get
+        Set(value As Integer)
+            _id = value
+        End Set
+    End Property
 
     Public Overridable Function allElements() As SqlDataReader
         Return DBConn.Instance().SelectStatement("SELECT * FROM " + _nombre_tabla)
@@ -87,7 +96,7 @@ Public Class Generica
         llenarLabels(sqlResult, form)
     End Sub
 
-    Public Function borrar(id As String) As Integer
+    Public Overridable Function borrar(id As String) As Integer
         Dim conn As DBConn = DBConn.Instance()
 
         Dim consulta As String = "DELETE FROM " & _nombre_tabla & " WHERE id = " & id
