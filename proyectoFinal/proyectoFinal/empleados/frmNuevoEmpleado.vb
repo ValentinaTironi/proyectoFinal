@@ -31,7 +31,8 @@
                     MsgBox("Se guardó el empleado " & empleado.Nombre_completo & " con éxito")
                     Dim rol_empleado As New RolEmpleado(empleado.getLastId(), id_rol)
                     rol_empleado.insertar()
-                    empleado.ver(empleado.Id, frmCliente)
+                    empleado.ver(empleado.Id, frmEmpleado)
+                    openForm(frmEmpleado)
                 Else
                     MsgBox("No se pudo guardar el cliente " & nombre_completo, MsgBoxStyle.OkOnly)
                 End If

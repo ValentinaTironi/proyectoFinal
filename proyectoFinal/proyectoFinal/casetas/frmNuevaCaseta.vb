@@ -17,10 +17,10 @@
 
                 If caseta.insertar() > 0 Then
                     MsgBox("Se guardó la caseta con éxito")
-                    ClearInputs(Me)
+                    caseta.ver(caseta.getLastId, frmCaseta)
+                    openForm(frmCaseta)
                 Else
                     MsgBox("No se pudo guardar la caseta", MsgBoxStyle.OkOnly)
-                    ClearInputs(Me)
                 End If
             End If
         End If

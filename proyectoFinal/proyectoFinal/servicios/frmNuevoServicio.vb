@@ -20,10 +20,10 @@
 
                 If servicio.insertar() > 0 Then
                     MsgBox("Se guardó el servicio '" & servicio.Nombre & "' con éxito")
-                    ClearInputs(Me)
+                    servicio.ver(servicio.getLastId(), frmServicio)
+                    openForm(frmServicio)
                 Else
                     MsgBox("No se pudo guardar el servicio " & nombre, MsgBoxStyle.OkOnly)
-                    ClearInputs(Me)
                 End If
             End If
         End If
