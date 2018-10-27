@@ -66,6 +66,19 @@ Public Class Cliente
         Me.Fecha_creacion = fecha_creacion
     End Sub
 
+    Public Sub New(id As Integer, activo As Boolean, id_creador As Integer, fecha_creacion As Date, cedula As Integer, nombre_completo As String, username As String, password As String, email As String, numero_cuenta_bancaria As String, direccion As String)
+        MyBase.New(id, cedula, nombre_completo, username, password, email, numero_cuenta_bancaria, direccion)
+        MyBase.guardarEdicion(id)
+
+        _nombre_tabla = "clientes"
+        _atributos_insert = {"Id", "Activo", "Id_creador", "Fecha_creacion"}
+
+        Me.Id = id
+        Me.Activo = activo
+        Me.Id_creador = id_creador
+        Me.Fecha_creacion = fecha_creacion
+    End Sub
+
     Public Overrides Function allElements() As SqlDataReader
         Return DBConn.Instance.SelectStatement("SELECT * FROM personas P INNER JOIN clientes C ON P.id = C.id")
     End Function

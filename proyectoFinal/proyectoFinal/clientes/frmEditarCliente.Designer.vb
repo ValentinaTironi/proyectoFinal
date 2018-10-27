@@ -35,6 +35,7 @@ Partial Class frmEditarCliente
         Me.txtemail = New System.Windows.Forms.TextBox()
         Me.txtnombre_completo = New System.Windows.Forms.TextBox()
         Me.txtdireccion = New System.Windows.Forms.TextBox()
+        Me.txtusername = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'btnGuardar
@@ -94,9 +95,9 @@ Partial Class frmEditarCliente
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(411, 74)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(68, 96)
+        Me.Label3.Size = New System.Drawing.Size(70, 128)
         Me.Label3.TabIndex = 96
-        Me.Label3.Text = "Cédula*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Servicio * " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Asociado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Label3.Text = "Cédula*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Servicio * " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Asociado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Direccion*"
         '
         'Label2
         '
@@ -104,9 +105,10 @@ Partial Class frmEditarCliente
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(109, 74)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(121, 176)
+        Me.Label2.Size = New System.Drawing.Size(131, 208)
         Me.Label2.TabIndex = 95
-        Me.Label2.Text = "Nombre completo*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Email*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Número de " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "cuenta bancaria" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Direccion*"
+        Me.Label2.Text = "Nombre completo*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Nombre de Usuario*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Email*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Número de " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "cuenta banc" &
+    "aria" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'txtcedula
         '
@@ -117,14 +119,14 @@ Partial Class frmEditarCliente
         '
         'txtnumero_cuenta_bancaria
         '
-        Me.txtnumero_cuenta_bancaria.Location = New System.Drawing.Point(241, 175)
+        Me.txtnumero_cuenta_bancaria.Location = New System.Drawing.Point(241, 227)
         Me.txtnumero_cuenta_bancaria.Name = "txtnumero_cuenta_bancaria"
         Me.txtnumero_cuenta_bancaria.Size = New System.Drawing.Size(100, 20)
         Me.txtnumero_cuenta_bancaria.TabIndex = 94
         '
         'txtemail
         '
-        Me.txtemail.Location = New System.Drawing.Point(241, 127)
+        Me.txtemail.Location = New System.Drawing.Point(241, 167)
         Me.txtemail.Name = "txtemail"
         Me.txtemail.Size = New System.Drawing.Size(100, 20)
         Me.txtemail.TabIndex = 93
@@ -138,10 +140,17 @@ Partial Class frmEditarCliente
         '
         'txtdireccion
         '
-        Me.txtdireccion.Location = New System.Drawing.Point(241, 230)
+        Me.txtdireccion.Location = New System.Drawing.Point(498, 180)
         Me.txtdireccion.Name = "txtdireccion"
         Me.txtdireccion.Size = New System.Drawing.Size(100, 20)
         Me.txtdireccion.TabIndex = 89
+        '
+        'txtusername
+        '
+        Me.txtusername.Location = New System.Drawing.Point(242, 117)
+        Me.txtusername.Name = "txtusername"
+        Me.txtusername.Size = New System.Drawing.Size(100, 20)
+        Me.txtusername.TabIndex = 98
         '
         'frmEditarCliente
         '
@@ -149,6 +158,7 @@ Partial Class frmEditarCliente
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(736, 315)
+        Me.Controls.Add(Me.txtusername)
         Me.Controls.Add(Me.txtid_servicio)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -181,4 +191,5 @@ Partial Class frmEditarCliente
     Friend WithEvents txtemail As TextBox
     Friend WithEvents txtnombre_completo As TextBox
     Friend WithEvents txtdireccion As TextBox
+    Friend WithEvents txtusername As TextBox
 End Class
