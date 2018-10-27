@@ -48,8 +48,11 @@ Public Class Empleado
     Public Function login(username As String, password As String) As Boolean
         Dim conn As DBConn = DBConn.Instance
 
-        Dim reader As SqlDataReader = conn.SelectStatement("SELECT * FROM personas P JOIN empleados E ON P.id = E.id WHERE username = '" & username & "' AND password ='" & password & "'")
+        Dim reader As SqlDataReader = conn.SelectStatement("SELECT P.id 'id_usuario' FROM personas P JOIN empleados E ON P.id = E.id WHERE username = '" & username & "' AND password ='" & password & "'")
         If reader.HasRows Then
+            While reader.Read
+                frmMiCuenta.lblid.Text = reader("id_usuario").ToString
+            End While
             reader.Close()
             Return True
         End If
@@ -60,7 +63,7 @@ Public Class Empleado
 
     Public Overloads Overrides Sub ver(id As String, form As Form)
         Dim conn As DBConn = DBConn.Instance()
-        Dim consulta As String = "SELECT E.id, PP.nombre_completo, PP.username, PP.email, PP.direccion, PP.cedula, R.nombre 'rol' FROM empleados E INNER JOIN personas PP ON E.id = PP.id INNER JOIN rol_empleado RE ON RE.id_empleado = E.id INNER JOIN roles R ON RE.id_rol = R.id  WHERE E.id = " & id
+        Dim consulta As String = "SELECT E.id, PP.nombre_completo, PP.username, PP.email, PP.direccion, PP.cedula, PP.fecha_nacimiento, R.nombre 'rol' FROM empleados E INNER JOIN personas PP ON E.id = PP.id INNER JOIN rol_empleado RE ON RE.id_empleado = E.id INNER JOIN roles R ON RE.id_rol = R.id  WHERE E.id = " & id
 
         Dim read As New SqlCommand(consulta)
 

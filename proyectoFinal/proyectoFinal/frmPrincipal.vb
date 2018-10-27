@@ -6,6 +6,9 @@
     End Sub
 
     Private Sub mnuItemMiCuenta_Click(sender As Object, e As EventArgs) Handles mnuItemMiCuenta.Click
+        Dim user_id = frmMiCuenta.lblid.Text
+        Dim empleado As New Empleado
+        empleado.ver(user_id, frmMiCuenta)
         openForm(frmMiCuenta)
     End Sub
 

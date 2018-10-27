@@ -147,17 +147,30 @@ Public Class Generica
         If sqlResult.HasRows() Then
             While sqlResult.Read
                 For Each ctrl In form.Controls
-                    If (ctrl.GetType() Is GetType(Label)) Then
-                        Dim label As Label = CType(ctrl, Label)
-                        If label.Name.StartsWith("lbl") Then
-                            Dim name_atribute = Replace(label.Name, "lbl", "")
-                            Dim atribute_value As String = sqlResult(name_atribute).ToString
-                            label.Text = atribute_value
-                        End If
+                    If (ctrl.GetType() Is GetType(Panel)) Then
+                        ' si el control es un panel, entonces debemos iterar dentro de sus elementos
+                        For Each control In ctrl.Controls
+                            siLabelLlenarla(control, sqlResult)
+                        Next
+                    Else
+                        ' si el control no es un panel se hace la pregunta nomás
+                        siLabelLlenarla(ctrl, sqlResult)
                     End If
+
                 Next
             End While
         End If
         sqlResult.Close()
+    End Sub
+
+    Private Sub siLabelLlenarla(ctrl As Control, sqlResult As SqlDataReader)
+        If (ctrl.GetType() Is GetType(Label)) Then
+            Dim label As Label = CType(ctrl, Label)
+            If label.Name.StartsWith("lbl") Then
+                Dim name_atribute = Replace(label.Name, "lbl", "")
+                Dim atribute_value As String = sqlResult(name_atribute).ToString
+                label.Text = atribute_value
+            End If
+        End If
     End Sub
 End Class
