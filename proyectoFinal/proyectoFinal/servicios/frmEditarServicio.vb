@@ -25,6 +25,8 @@
                 Else
                     MsgBox("No se pudo guardar el servicio " & nombre, MsgBoxStyle.OkOnly)
                 End If
+                servicio.ver(id, frmServicio)
+                openForm(frmServicio)
             End If
         End If
     End Sub
