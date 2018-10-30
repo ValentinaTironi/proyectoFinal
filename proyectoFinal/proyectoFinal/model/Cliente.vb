@@ -40,12 +40,12 @@ Public Class Cliente
         _atributos_insert = {"Id", "Activo", "Id_creador", "Fecha_creacion"}
     End Sub
 
-    Public Sub New(activo As Boolean, id_creador As Integer, fecha_creacion As Date, cedula As Integer, nombre_completo As String, username As String, password As String, email As String, numero_cuenta_bancaria As String, direccion As String)
-        Dim persona As New Persona(cedula, nombre_completo, username, password, email, numero_cuenta_bancaria, direccion)
+    Public Sub New(activo As Boolean, id_creador As Integer, fecha_creacion As Date, cedula As Integer, nombre_completo As String, username As String, password As String, email As String, numero_cuenta_bancaria As String, direccion As String, fecha_nacimiento As String)
+        Dim persona As New Persona(cedula, nombre_completo, username, password, email, numero_cuenta_bancaria, direccion, fecha_nacimiento)
         persona.insertar()
 
         _nombre_tabla = "clientes"
-        _atributos_insert = {"Id", "Activo", "Id_creador"}
+        _atributos_insert = {"Id", "Activo", "Id_creador", "Fecha_creacion"}
 
         Me.Id = persona.getLastId()
         Me.Activo = activo
@@ -53,8 +53,8 @@ Public Class Cliente
         Me.Fecha_creacion = fecha_creacion
     End Sub
 
-    Public Sub New(id As Integer, activo As Boolean, id_creador As Integer, fecha_creacion As Date, cedula As Integer, nombre_completo As String, email As String, numero_cuenta_bancaria As String, direccion As String)
-        MyBase.New(id, cedula, nombre_completo, email, numero_cuenta_bancaria, direccion)
+    Public Sub New(id As Integer, activo As Boolean, id_creador As Integer, fecha_creacion As Date, cedula As Integer, nombre_completo As String, email As String, numero_cuenta_bancaria As String, direccion As String, fecha_nacimiento As String)
+        MyBase.New(id, cedula, nombre_completo, email, numero_cuenta_bancaria, direccion, fecha_nacimiento)
         MyBase.guardarEdicion(id)
 
         _nombre_tabla = "clientes"
@@ -66,8 +66,8 @@ Public Class Cliente
         Me.Fecha_creacion = fecha_creacion
     End Sub
 
-    Public Sub New(id As Integer, activo As Boolean, id_creador As Integer, fecha_creacion As Date, cedula As Integer, nombre_completo As String, username As String, password As String, email As String, numero_cuenta_bancaria As String, direccion As String)
-        MyBase.New(id, cedula, nombre_completo, username, password, email, numero_cuenta_bancaria, direccion)
+    Public Sub New(id As Integer, activo As Boolean, id_creador As Integer, fecha_creacion As Date, cedula As Integer, nombre_completo As String, username As String, password As String, email As String, numero_cuenta_bancaria As String, direccion As String, fecha_nacimiento As String)
+        MyBase.New(id, cedula, nombre_completo, username, password, email, numero_cuenta_bancaria, direccion, fecha_nacimiento)
         MyBase.guardarEdicion(id)
 
         _nombre_tabla = "clientes"
@@ -107,4 +107,8 @@ Public Class Cliente
         llenarTextbox(sqlResult, form)
     End Sub
 
+    Public Function ultimosCincoClientes() As SqlDataReader
+        Dim sentence As String = "SELECT TOP 5 * FROM personas P INNER JOIN clientes C ON P.id = C.id"
+        Return DBConn.Instance().SelectStatement(sentence)
+    End Function
 End Class

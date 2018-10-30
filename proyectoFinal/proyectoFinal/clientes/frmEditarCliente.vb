@@ -7,7 +7,7 @@
             If result = DialogResult.No Then
                 ClearInputs(Me)
             ElseIf result = DialogResult.Yes Then
-                Dim nombre_completo, cedula, email, numero_cuenta, direccion, id_servicio As String
+                Dim nombre_completo, cedula, email, numero_cuenta, direccion, id_servicio, fecha_nacimiento As String
                 Dim id As Integer = Convert.ToInt32(lblid.Text)
 
                 nombre_completo = Trim(txtnombre_completo.Text)
@@ -15,9 +15,10 @@
                 email = Trim(txtemail.Text)
                 numero_cuenta = Trim(txtnumero_cuenta_bancaria.Text)
                 direccion = Trim(txtdireccion.Text)
+                fecha_nacimiento = Trim(txtfecha_nacimiento.Text)
                 id_servicio = Trim(txtid_servicio.Text)
 
-                Dim cliente As New Cliente(id, "true", "1", "9-10-2018", cedula, nombre_completo, email, numero_cuenta, direccion)
+                Dim cliente As New Cliente(id, "true", "1", "9-10-2018", cedula, nombre_completo, email, numero_cuenta, direccion, fecha_nacimiento)
 
                 If cliente.guardarEdicion(cliente.Id) > 0 Then
                     MsgBox("se guardó el cliente '" & cliente.Nombre_completo & "' con éxito")

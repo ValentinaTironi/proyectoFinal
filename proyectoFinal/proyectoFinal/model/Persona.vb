@@ -10,6 +10,7 @@ Public Class Persona
     Private _email As String
     Private _numero_cuenta_bancaria As String
     Private _direccion As String
+    Private _fecha_nacimiento As String
 
     Public Property Cedula As Integer
         Get
@@ -74,14 +75,23 @@ Public Class Persona
         End Set
     End Property
 
+    Public Property Fecha_nacimiento As String
+        Get
+            Return _fecha_nacimiento
+        End Get
+        Set(value As String)
+            _fecha_nacimiento = value
+        End Set
+    End Property
+
     Protected Sub New()
         _nombre_tabla = "personas"
         _atributos_insert = {"Cedula", "Nombre_completo", "Username", "Password", "Email", "Numero_cuenta_bancaria", "Direccion"}
     End Sub
 
-    Protected Sub New(cedula As Integer, nombre_completo As String, username As String, password As String, email As String, numero_cuenta_bancaria As String, direccion As String)
+    Protected Sub New(cedula As Integer, nombre_completo As String, username As String, password As String, email As String, numero_cuenta_bancaria As String, direccion As String, fecha_nacimiento As String)
         _nombre_tabla = "personas"
-        _atributos_insert = {"Cedula", "Nombre_completo", "Username", "Password", "Email", "Numero_cuenta_bancaria", "Direccion"}
+        _atributos_insert = {"Cedula", "Nombre_completo", "Username", "Password", "Email", "Numero_cuenta_bancaria", "Direccion", "Fecha_nacimiento"}
 
         Me.Cedula = cedula
         Me.Nombre_completo = nombre_completo
@@ -90,22 +100,24 @@ Public Class Persona
         Me.Email = email
         Me.Numero_cuenta_bancaria = numero_cuenta_bancaria
         Me.Direccion = direccion
+        Me.Fecha_nacimiento = fecha_nacimiento
     End Sub
 
-    Protected Sub New(id As Integer, cedula As Integer, nombre_completo As String, email As String, numero_cuenta_bancaria As String, direccion As String)
+    Protected Sub New(id As Integer, cedula As Integer, nombre_completo As String, email As String, numero_cuenta_bancaria As String, direccion As String, fecha_nacimiento As String)
         _nombre_tabla = "personas"
-        _atributos_insert = {"Cedula", "Nombre_completo", "Email", "Numero_cuenta_bancaria", "Direccion"}
+        _atributos_insert = {"Cedula", "Nombre_completo", "Email", "Numero_cuenta_bancaria", "Direccion", "Fecha_nacimiento"}
 
         Me.Cedula = cedula
         Me.Nombre_completo = nombre_completo
         Me.Email = email
         Me.Numero_cuenta_bancaria = numero_cuenta_bancaria
         Me.Direccion = direccion
+        Me.Fecha_nacimiento = fecha_nacimiento
     End Sub
 
-    Protected Sub New(id As Integer, cedula As Integer, nombre_completo As String, username As String, password As String, email As String, numero_cuenta_bancaria As String, direccion As String)
+    Protected Sub New(id As Integer, cedula As Integer, nombre_completo As String, username As String, password As String, email As String, numero_cuenta_bancaria As String, direccion As String, fecha_nacimiento As String)
         _nombre_tabla = "personas"
-        _atributos_insert = {"Cedula", "Nombre_completo", "Email", "Username", "Password", "Numero_cuenta_bancaria", "Direccion"}
+        _atributos_insert = {"Cedula", "Nombre_completo", "Email", "Username", "Password", "Numero_cuenta_bancaria", "Direccion", "Fecha_nacimiento"}
 
         Me.Cedula = cedula
         Me.Nombre_completo = nombre_completo
@@ -114,5 +126,6 @@ Public Class Persona
         Me.Email = email
         Me.Numero_cuenta_bancaria = numero_cuenta_bancaria
         Me.Direccion = direccion
+        Me.Fecha_nacimiento = fecha_nacimiento
     End Sub
 End Class

@@ -24,11 +24,11 @@ Partial Class frmDashboard
     Private Sub InitializeComponent()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lvwUltimosClientes = New System.Windows.Forms.ListView()
-        Me.columnId = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.columnName = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnUsername = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.columnFecha = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.columnUsuario = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.columnNombreCompleto = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.columnEmail = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.columnNombreUsuario = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnCedula = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.SuspendLayout()
         '
         'Label3
@@ -43,40 +43,40 @@ Partial Class frmDashboard
         '
         'lvwUltimosClientes
         '
-        Me.lvwUltimosClientes.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.columnId, Me.columnName, Me.ColumnUsername, Me.columnFecha, Me.columnUsuario})
+        Me.lvwUltimosClientes.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.columnNombreCompleto, Me.columnEmail, Me.columnNombreUsuario, Me.ColumnCedula})
         Me.lvwUltimosClientes.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lvwUltimosClientes.FullRowSelect = True
-        Me.lvwUltimosClientes.Location = New System.Drawing.Point(12, 81)
+        Me.lvwUltimosClientes.Location = New System.Drawing.Point(8, 68)
         Me.lvwUltimosClientes.Name = "lvwUltimosClientes"
-        Me.lvwUltimosClientes.Size = New System.Drawing.Size(743, 199)
-        Me.lvwUltimosClientes.TabIndex = 8
+        Me.lvwUltimosClientes.Size = New System.Drawing.Size(747, 199)
+        Me.lvwUltimosClientes.TabIndex = 11
         Me.lvwUltimosClientes.UseCompatibleStateImageBehavior = False
         Me.lvwUltimosClientes.View = System.Windows.Forms.View.Details
         '
-        'columnId
+        'ColumnHeader1
         '
-        Me.columnId.Text = "ID"
-        Me.columnId.Width = 39
+        Me.ColumnHeader1.Text = "ID"
+        Me.ColumnHeader1.Width = 39
         '
-        'columnName
+        'columnNombreCompleto
         '
-        Me.columnName.Text = "Nombre completo"
-        Me.columnName.Width = 356
+        Me.columnNombreCompleto.Text = "Nombre Completo"
+        Me.columnNombreCompleto.Width = 231
         '
-        'ColumnUsername
+        'columnEmail
         '
-        Me.ColumnUsername.Text = "Nombre de Usuario"
-        Me.ColumnUsername.Width = 131
+        Me.columnEmail.Text = "Email"
+        Me.columnEmail.Width = 205
         '
-        'columnFecha
+        'columnNombreUsuario
         '
-        Me.columnFecha.Text = "Fecha"
-        Me.columnFecha.Width = 111
+        Me.columnNombreUsuario.Text = "Nombre de Usuario"
+        Me.columnNombreUsuario.Width = 149
         '
-        'columnUsuario
+        'ColumnCedula
         '
-        Me.columnUsuario.Text = "Agregado por"
-        Me.columnUsuario.Width = 145
+        Me.ColumnCedula.Text = "Cédula"
+        Me.ColumnCedula.Width = 116
         '
         'frmDashboard
         '
@@ -99,9 +99,9 @@ Partial Class frmDashboard
 
     Friend WithEvents Label3 As Label
     Friend WithEvents lvwUltimosClientes As ListView
-    Friend WithEvents columnName As ColumnHeader
-    Friend WithEvents columnFecha As ColumnHeader
-    Friend WithEvents columnUsuario As ColumnHeader
-    Friend WithEvents columnId As ColumnHeader
-    Friend WithEvents ColumnUsername As ColumnHeader
+    Friend WithEvents ColumnHeader1 As ColumnHeader
+    Friend WithEvents columnNombreCompleto As ColumnHeader
+    Friend WithEvents columnEmail As ColumnHeader
+    Friend WithEvents columnNombreUsuario As ColumnHeader
+    Friend WithEvents ColumnCedula As ColumnHeader
 End Class

@@ -36,6 +36,7 @@ Partial Class frmEditarCliente
         Me.txtnombre_completo = New System.Windows.Forms.TextBox()
         Me.txtdireccion = New System.Windows.Forms.TextBox()
         Me.txtusername = New System.Windows.Forms.TextBox()
+        Me.txtfecha_nacimiento = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'btnGuardar
@@ -95,9 +96,9 @@ Partial Class frmEditarCliente
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(411, 74)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(70, 128)
+        Me.Label3.Size = New System.Drawing.Size(73, 192)
         Me.Label3.TabIndex = 96
-        Me.Label3.Text = "Cédula*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Servicio * " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Asociado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Direccion*"
+        Me.Label3.Text = "Cédula*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Servicio * " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Asociado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Direccion*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Fecha de *" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "nacimiento"
         '
         'Label2
         '
@@ -152,12 +153,20 @@ Partial Class frmEditarCliente
         Me.txtusername.Size = New System.Drawing.Size(100, 20)
         Me.txtusername.TabIndex = 98
         '
+        'txtfecha_nacimiento
+        '
+        Me.txtfecha_nacimiento.Location = New System.Drawing.Point(502, 236)
+        Me.txtfecha_nacimiento.Name = "txtfecha_nacimiento"
+        Me.txtfecha_nacimiento.Size = New System.Drawing.Size(100, 20)
+        Me.txtfecha_nacimiento.TabIndex = 99
+        '
         'frmEditarCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(736, 315)
+        Me.Controls.Add(Me.txtfecha_nacimiento)
         Me.Controls.Add(Me.txtusername)
         Me.Controls.Add(Me.txtid_servicio)
         Me.Controls.Add(Me.Label3)
@@ -192,4 +201,5 @@ Partial Class frmEditarCliente
     Friend WithEvents txtnombre_completo As TextBox
     Friend WithEvents txtdireccion As TextBox
     Friend WithEvents txtusername As TextBox
+    Friend WithEvents txtfecha_nacimiento As TextBox
 End Class

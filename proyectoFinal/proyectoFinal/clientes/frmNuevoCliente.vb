@@ -11,7 +11,7 @@
             If result = DialogResult.No Then
                 ClearInputs(Me)
             ElseIf result = DialogResult.Yes Then
-                Dim nombre_completo, cedula, username, password, email, numero_cuenta, direccion, id_servicio, id_caseta As String
+                Dim nombre_completo, cedula, username, password, email, numero_cuenta, direccion, id_servicio, id_caseta, fecha_nacimiento As String
 
                 nombre_completo = Trim(txtnombre_completo.Text)
                 cedula = Trim(txtcedula.Text)
@@ -20,10 +20,11 @@
                 email = Trim(txtemail.Text)
                 numero_cuenta = Trim(txtnumero_cuenta_bancaria.Text)
                 direccion = Trim(txtdireccion.Text)
+                fecha_nacimiento = Trim(txtfecha_nacimiento.Text)
                 id_servicio = Trim(txtid_servicio.SelectedValue)
                 id_caseta = Trim(txtid_caseta.SelectedValue)
 
-                Dim cliente As New Cliente("true", "1", "9-10-2018", cedula, nombre_completo, username, password, email, numero_cuenta, direccion)
+                Dim cliente As New Cliente("true", "1", "9-10-2018", cedula, nombre_completo, username, password, email, numero_cuenta, direccion, fecha_nacimiento)
 
                 If cliente.insertar() > 0 Then
                     MsgBox("Se guardó el cliente " & cliente.Nombre_completo & " con éxito")
