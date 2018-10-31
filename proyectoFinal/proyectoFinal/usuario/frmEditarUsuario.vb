@@ -42,6 +42,6 @@
 
     Private Sub frmEditarUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim empleado As New Empleado
-        empleado.getDataSource(txtrol, "roles", "nombre", "id")
+        empleado.getDataSource(txtrol, "roles", "nombre", "id", False, "", "")
     End Sub
 End Class

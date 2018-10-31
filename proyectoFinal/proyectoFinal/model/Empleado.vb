@@ -19,8 +19,8 @@ Public Class Empleado
         _atributos_insert = {"Id", "Admin"}
     End Sub
 
-    Public Sub New(admin As Boolean, cedula As String, nombre_completo As String, username As String, password As String, email As String, numero_cuenta_bancaria As String, direccion As String)
-        Dim persona As New Persona(cedula, nombre_completo, username, password, email, numero_cuenta_bancaria, direccion)
+    Public Sub New(admin As Boolean, cedula As String, nombre_completo As String, username As String, password As String, email As String, numero_cuenta_bancaria As String, direccion As String, fecha_nacimiento As Date)
+        Dim persona As New Persona(cedula, nombre_completo, username, password, email, numero_cuenta_bancaria, direccion, fecha_nacimiento)
         persona.insertar()
 
         _nombre_tabla = "empleados"
@@ -30,8 +30,8 @@ Public Class Empleado
         Me.Admin = admin
     End Sub
 
-    Public Sub New(id As Integer, admin As Boolean, cedula As String, nombre_completo As String, username As String, password As String, email As String, numero_cuenta_bancaria As String, direccion As String)
-        MyBase.New(id, cedula, nombre_completo, username, password, email, numero_cuenta_bancaria, direccion)
+    Public Sub New(id As Integer, admin As Boolean, cedula As String, nombre_completo As String, username As String, password As String, email As String, numero_cuenta_bancaria As String, direccion As String, fecha_nacimiento As Date)
+        MyBase.New(id, cedula, nombre_completo, username, password, email, numero_cuenta_bancaria, direccion, fecha_nacimiento)
         MyBase.guardarEdicion(id)
 
         _nombre_tabla = "empleados"
@@ -73,7 +73,7 @@ Public Class Empleado
 
     Public Overrides Sub editar(id As String, form As Form)
         Dim conn As DBConn = DBConn.Instance()
-        Dim consulta As String = "SELECT E.id, PP.nombre_completo, PP.username, PP.password, PP.email, PP.direccion, PP.cedula, PP.numero_cuenta_bancaria, R.nombre 'rol' FROM empleados E INNER JOIN personas PP ON E.id = PP.id INNER JOIN rol_empleado RE ON RE.id_empleado = E.id INNER JOIN roles R ON RE.id_rol = R.id  WHERE E.id = " & id
+        Dim consulta As String = "SELECT E.id, PP.nombre_completo, PP.username, PP.password, PP.email, PP.direccion, PP.cedula, PP.fecha_nacimiento, PP.numero_cuenta_bancaria, R.nombre 'rol' FROM empleados E INNER JOIN personas PP ON E.id = PP.id INNER JOIN rol_empleado RE ON RE.id_empleado = E.id INNER JOIN roles R ON RE.id_rol = R.id  WHERE E.id = " & id
 
         Dim read As New SqlCommand(consulta)
 

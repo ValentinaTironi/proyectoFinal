@@ -24,11 +24,11 @@
                 id_servicio = Trim(txtid_servicio.SelectedValue)
                 id_caseta = Trim(txtid_caseta.SelectedValue)
 
-                Dim cliente As New Cliente("true", "1", "9-10-2018", cedula, nombre_completo, username, password, email, numero_cuenta, direccion, fecha_nacimiento)
+                Dim cliente As New Cliente("true", "1", DateTime.Now.ToString("yyyy/MM/dd"), cedula, nombre_completo, username, password, email, numero_cuenta, direccion, fecha_nacimiento)
 
                 If cliente.insertar() > 0 Then
                     MsgBox("Se guardó el cliente " & cliente.Nombre_completo & " con éxito")
-                    Dim contrato As New Contrato(cliente.getLastId(), id_servicio, "reglamentado", 3)
+                    Dim contrato As New Contrato(cliente.getLastId(), id_servicio, DateTime.Now.ToString("yyyy/MM/dd"), "reglamentado", 3)
                     If contrato.insertar() > 0 Then
                         MsgBox("Se generó el contrato para el cliente " & cliente.Nombre_completo & " con éxito")
                         Dim perro As New Perro(cliente.getLastId(), id_caseta)
@@ -46,7 +46,7 @@
 
     Private Sub frmNuevoCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim cliente As New Cliente
-        cliente.getDataSource(txtid_servicio, "servicios", "nombre", "id")
-        cliente.getDataSource(txtid_caseta, "casetas", "id", "id")
+        cliente.getDataSource(txtid_servicio, "servicios", "nombre", "id", False, "", "")
+        cliente.getDataSource(txtid_caseta, "casetas", "id", "id", True, "perros", "id_caseta")
     End Sub
 End Class

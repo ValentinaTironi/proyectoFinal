@@ -53,7 +53,7 @@ Public Class Cliente
         Me.Fecha_creacion = fecha_creacion
     End Sub
 
-    Public Sub New(id As Integer, activo As Boolean, id_creador As Integer, fecha_creacion As Date, cedula As Integer, nombre_completo As String, email As String, numero_cuenta_bancaria As String, direccion As String, fecha_nacimiento As String)
+    Public Sub New(id As Integer, activo As Boolean, id_creador As Integer, fecha_creacion As Date, cedula As Integer, nombre_completo As String, email As String, numero_cuenta_bancaria As String, direccion As String, fecha_nacimiento As Date)
         MyBase.New(id, cedula, nombre_completo, email, numero_cuenta_bancaria, direccion, fecha_nacimiento)
         MyBase.guardarEdicion(id)
 
@@ -66,7 +66,7 @@ Public Class Cliente
         Me.Fecha_creacion = fecha_creacion
     End Sub
 
-    Public Sub New(id As Integer, activo As Boolean, id_creador As Integer, fecha_creacion As Date, cedula As Integer, nombre_completo As String, username As String, password As String, email As String, numero_cuenta_bancaria As String, direccion As String, fecha_nacimiento As String)
+    Public Sub New(id As Integer, activo As Boolean, id_creador As Integer, fecha_creacion As Date, cedula As Integer, nombre_completo As String, username As String, password As String, email As String, numero_cuenta_bancaria As String, direccion As String, fecha_nacimiento As Date)
         MyBase.New(id, cedula, nombre_completo, username, password, email, numero_cuenta_bancaria, direccion, fecha_nacimiento)
         MyBase.guardarEdicion(id)
 
@@ -99,7 +99,7 @@ Public Class Cliente
 
     Public Overrides Sub editar(pk As String, form As Form)
         Dim conn As DBConn = DBConn.Instance()
-        Dim consulta As String = "SELECT C.id, PP.nombre_completo, PP.username, PP.numero_cuenta_bancaria, PP.email, PP.direccion, PP.cedula FROM clientes C INNER JOIN personas PP ON C.id = PP.id INNER JOIN contrato CC ON CC.id_cliente = C.id INNER JOIN servicios S ON S.id = CC.id_servicio WHERE C.id = " & pk
+        Dim consulta As String = "SELECT C.id, PP.nombre_completo, PP.username, PP.numero_cuenta_bancaria, PP.email, PP.direccion, PP.cedula, PP.fecha_nacimiento FROM clientes C INNER JOIN personas PP ON C.id = PP.id INNER JOIN contrato CC ON CC.id_cliente = C.id INNER JOIN servicios S ON S.id = CC.id_servicio WHERE C.id = " & pk
 
         Dim read As New SqlCommand(consulta)
 
@@ -108,7 +108,7 @@ Public Class Cliente
     End Sub
 
     Public Function ultimosCincoClientes() As SqlDataReader
-        Dim sentence As String = "SELECT TOP 5 * FROM personas P INNER JOIN clientes C ON P.id = C.id"
+        Dim sentence As String = "SELECT TOP 5 * FROM personas P INNER JOIN clientes C ON P.id = C.id  ORDER BY C.fecha_creacion DESC"
         Return DBConn.Instance().SelectStatement(sentence)
     End Function
 End Class

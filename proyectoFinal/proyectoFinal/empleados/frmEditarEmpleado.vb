@@ -7,7 +7,7 @@
             If result = DialogResult.No Then
                 ClearInputs(Me)
             ElseIf result = DialogResult.Yes Then
-                Dim nombre_completo, cedula, username, password, email, numero_cuenta, direccion As String
+                Dim nombre_completo, cedula, username, password, email, numero_cuenta, direccion, fecha_nacimiento As String
                 Dim admin As Boolean
                 Dim id_rol, id As Integer
 
@@ -20,9 +20,10 @@
                 numero_cuenta = Trim(txtnumero_cuenta_bancaria.Text)
                 direccion = Trim(txtdireccion.Text)
                 id_rol = Trim(txtrol.SelectedValue)
+                fecha_nacimiento = Trim(txtfecha_nacimiento.Text)
                 admin = txtadmin.Checked
 
-                Dim empleado As New Empleado(id, admin, cedula, nombre_completo, username, password, email, numero_cuenta, direccion)
+                Dim empleado As New Empleado(id, admin, cedula, nombre_completo, username, password, email, numero_cuenta, direccion, fecha_nacimiento)
 
                 If empleado.guardarEdicion(id) > 0 Then
                     MsgBox("Se guardó el empleado " & empleado.Nombre_completo & " con éxito")
@@ -39,6 +40,6 @@
 
     Private Sub frmEditarEmpleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim empleado As New Empleado
-        empleado.getDataSource(txtrol, "roles", "nombre", "id")
+        empleado.getDataSource(txtrol, "roles", "nombre", "id", False, "", "")
     End Sub
 End Class

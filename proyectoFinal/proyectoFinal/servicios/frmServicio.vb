@@ -12,7 +12,7 @@
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
-        Dim result As Integer = MsgBox("¿Estas seguro que desea borrar este servicio?", MsgBoxStyle.YesNo)
+        Dim result As Integer = MsgBox("¿Estas seguro que desea borrar_caseta este servicio?", MsgBoxStyle.YesNo)
         If result = DialogResult.Yes Then
             Dim servicio As New Servicio
             Dim pk_value As String = lblid.Text

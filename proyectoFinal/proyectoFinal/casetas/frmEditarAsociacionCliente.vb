@@ -1,7 +1,7 @@
 ﻿Public Class frmEditarAsociacionCliente
     Private Sub EditarAsociacionCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim caseta As New Caseta
-        caseta.getDataSource(cbxCasetas, "casetas", "id", "id")
+        caseta.getDataSource(cbxCasetas, "casetas", "id", "id", True, "perros", "id_caseta")
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
@@ -16,7 +16,7 @@
             perro.guardarEdiciones(id_perro, id_cliente)
 
             Dim caseta As New Caseta
-            caseta.borrar(id_caseta_vieja)
+            caseta.borrar_caseta(id_caseta_vieja, id_caseta)
         End If
         openForm(frmCasetas)
     End Sub

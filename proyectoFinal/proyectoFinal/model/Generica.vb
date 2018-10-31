@@ -117,9 +117,14 @@ Public Class Generica
         Return 0
     End Function
 
-    Public Sub getDataSource(combobox As ComboBox, tabla_referencia As String, nombre_atributo As String, value As String)
+    Public Sub getDataSource(combobox As ComboBox, tabla_referencia As String, nombre_atributo As String, value As String, check_disponibilidad As Boolean, tabla_disponibilidad As String, atributo_disponibilidad As String)
         Dim conn As DBConn = DBConn.Instance()
-        Dim data As New SqlCommand("SELECT * FROM " & tabla_referencia)
+        Dim consulta As String = "SELECT * FROM " & tabla_referencia
+        If check_disponibilidad Then
+            Dim condicion As String = "SELECT " & atributo_disponibilidad & " FROM " & tabla_disponibilidad
+            consulta += " WHERE " & tabla_referencia & "." & value & " NOT IN (" & condicion & ")"
+        End If
+        Dim data As New SqlCommand(consulta)
         combobox.DataSource = conn.SetDataSource(data)
         combobox.DisplayMember = nombre_atributo
         combobox.ValueMember = value

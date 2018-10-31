@@ -52,12 +52,13 @@
         End Set
     End Property
 
-    Public Sub New(id_cliente As Integer, id_servicio As Integer, duracion As String, fecha_pago As Integer)
+    Public Sub New(id_cliente As Integer, id_servicio As Integer, fecha As Date, duracion As String, fecha_pago As Integer)
         _nombre_tabla = "contrato"
-        _atributos_insert = {"Id_cliente", "Id_servicio", "Duracion", "Fecha_pago"}
+        _atributos_insert = {"Id_cliente", "Id_servicio", "Fecha", "Duracion", "Fecha_pago"}
 
         Me.Id_cliente = id_cliente
         Me.Id_servicio = id_servicio
+        Me.Fecha = fecha
         Me.Duracion = duracion
         Me.Fecha_pago = fecha_pago
     End Sub

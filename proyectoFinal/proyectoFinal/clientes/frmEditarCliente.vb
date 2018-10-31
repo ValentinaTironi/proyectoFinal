@@ -40,6 +40,6 @@
 
     Private Sub frmEditarCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim cliente As New Cliente
-        cliente.getDataSource(txtid_servicio, "servicios", "nombre", "id")
+        cliente.getDataSource(txtid_servicio, "servicios", "nombre", "id", False, "", "")
     End Sub
 End Class

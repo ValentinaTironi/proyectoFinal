@@ -94,4 +94,15 @@ Public Class Caseta
 
         llenarLabels(sqlResult, form)
     End Sub
+
+    Public Function borrar_caseta(id_vieja As String, id_nueva As String) As Integer
+        Dim conn As DBConn = DBConn.Instance()
+        'Update a logs de la caseta
+        Dim update_consulta As String = "UPDATE log_casetas SET id_caseta = " & id_nueva & " WHERE id_caseta = " & id_vieja
+        Dim update As New SqlCommand(update_consulta)
+        conn.AMDStatement(update)
+        Dim consulta As String = "DELETE FROM " & _nombre_tabla & " WHERE id = " & id_vieja
+        Dim delete As New SqlCommand(consulta)
+        Return conn.AMDStatement(delete)
+    End Function
 End Class

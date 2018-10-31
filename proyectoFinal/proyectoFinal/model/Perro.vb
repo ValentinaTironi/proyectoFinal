@@ -6,7 +6,7 @@ Public Class Perro
     Private _id_cliente As Integer
     Private _id_perro As Integer
     Private _nombre As String
-    Private _edad As Double
+    Private _fecha_nacimiento As Date
     Private _raza As String
     Private _peso As Double
     Private _id_caseta As Integer
@@ -38,12 +38,12 @@ Public Class Perro
         End Set
     End Property
 
-    Public Property Edad As Double
+    Public Property Fecha_nacimiento As Date
         Get
-            Return _edad
+            Return _fecha_nacimiento
         End Get
-        Set(value As Double)
-            _edad = value
+        Set(value As Date)
+            _fecha_nacimiento = value
         End Set
     End Property
 
@@ -76,13 +76,13 @@ Public Class Perro
 
     Public Sub New(id_cliente As Integer, id_caseta As Integer)
         _nombre_tabla = "perros"
-        _atributos_insert = {"Id_cliente", "id_caseta", "Id_perro", "Nombre", "Edad", "Raza", "Peso"}
+        _atributos_insert = {"Id_cliente", "Id_caseta", "Id_perro", "Nombre", "Fecha_nacimiento", "Raza", "Peso"}
 
         Me.Id_cliente = id_cliente
-        Me.id_caseta = id_caseta
+        Me.Id_caseta = id_caseta
         Me.Id_perro = getNewId(id_cliente)
         Me.Nombre = "nombre"
-        Me.Edad = 0.0
+        Me.Fecha_nacimiento = "2018-01-01"
         Me.Raza = "raza"
         Me.Peso = 1.0
     End Sub
@@ -91,7 +91,7 @@ Public Class Perro
         _nombre_tabla = "perros"
         _atributos_insert = {"Id_caseta"}
 
-        Me.id_caseta = id_caseta
+        Me.Id_caseta = id_caseta
     End Sub
 
     Private Function getNewId(id_cliente As Integer) As Integer

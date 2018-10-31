@@ -13,7 +13,7 @@
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
-        Dim result As Integer = MsgBox("¿Estas seguro que desea borrar este empleado?", MsgBoxStyle.YesNo)
+        Dim result As Integer = MsgBox("¿Estas seguro que desea borrar_caseta este empleado?", MsgBoxStyle.YesNo)
         If result = DialogResult.Yes Then
             Dim empleado As New Empleado
             Dim rol_empleado As New RolEmpleado

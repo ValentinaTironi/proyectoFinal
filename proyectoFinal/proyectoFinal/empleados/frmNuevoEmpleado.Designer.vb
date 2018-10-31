@@ -38,6 +38,7 @@ Partial Class frmNuevoEmpleado
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.txtroles = New System.Windows.Forms.ComboBox()
         Me.txtdireccion = New System.Windows.Forms.TextBox()
+        Me.txtfecha_nacimiento = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'txtpassword
@@ -96,12 +97,12 @@ Partial Class frmNuevoEmpleado
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(95, 80)
+        Me.Label2.Location = New System.Drawing.Point(93, 80)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(131, 176)
+        Me.Label2.Size = New System.Drawing.Size(133, 240)
         Me.Label2.TabIndex = 9
-        Me.Label2.Text = "Nombre de Usuario*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Nombre completo*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Email*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Número de " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "cuenta banc" &
-    "aria" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Label2.Text = "Nombre de Usuario*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Nombre completo*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Email*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Número de *" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "cuenta ban" &
+    "caria" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Fecha de nacimiento" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'Label3
         '
@@ -169,12 +170,20 @@ Partial Class frmNuevoEmpleado
         Me.txtdireccion.Size = New System.Drawing.Size(100, 20)
         Me.txtdireccion.TabIndex = 64
         '
+        'txtfecha_nacimiento
+        '
+        Me.txtfecha_nacimiento.Location = New System.Drawing.Point(227, 283)
+        Me.txtfecha_nacimiento.Name = "txtfecha_nacimiento"
+        Me.txtfecha_nacimiento.Size = New System.Drawing.Size(100, 20)
+        Me.txtfecha_nacimiento.TabIndex = 65
+        '
         'frmNuevoEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(737, 338)
+        Me.Controls.Add(Me.txtfecha_nacimiento)
         Me.Controls.Add(Me.txtdireccion)
         Me.Controls.Add(Me.txtroles)
         Me.Controls.Add(Me.btnAgregar)
@@ -216,4 +225,5 @@ Partial Class frmNuevoEmpleado
     Friend WithEvents btnAgregar As Button
     Friend WithEvents txtroles As ComboBox
     Friend WithEvents txtdireccion As TextBox
+    Friend WithEvents txtfecha_nacimiento As TextBox
 End Class
